@@ -1,0 +1,25 @@
+load_file("nrngui.hoc")
+
+
+proc signalDA() {local i, counter, tmpDA, num_vta, num_ecell, nsyn_max
+    num_vta = $1
+    num_ecell = $2
+    nsyn_max = $3
+    counter = 0
+    tmpDA = cells.object(0).synlist.object(2).forDA
+    tmpDA = tmpDA * 0.9999995
+    for i=0, num_vta-1 {
+	counter = counter + 1
+	if(cells.object(i).synlist.object(2).forSpike==1){
+	    cells.object(i).synlist.object(2).forSpike = 0
+	    tmpDA = tmpDA + 1
+	    printf("%d th cell in VTAp is firing\n",counter)
+	}
+    }
+//    tmpDA = tmpDA * 0.995 //if following Izhikevich, here should be this discription
+    for i=0, num_ecell-1 {
+	for j=0, nsyn_max-1 {
+	    cells.object(i).synlist.object(j+2).forDA = tmpDA
+	}
+    }
+}

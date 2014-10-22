@@ -1,0 +1,102 @@
+//the next case problem
+//add the DA-signaling section from plusDA
+
+load_file("nrngui.hoc")
+//load cell template
+//setting
+v_init = -65
+NCELL = 100
+NCELL_E = 80 //must be (<NCELL)
+NCELL_VTA = 10
+NCELL_CS = 10
+NSYN = 10
+NSYN_MAX = (NCELL-1)*NSYN
+
+tstop = 200//500//100000
+dt = 0.025//<-for test0.1//0.025
+t = 0
+stimInt = 20//1000
+stimNum = 7//int(tstop/stimInt)
+dur = tstop
+//identify the VTA parameter
+vta_flag = 0
+else_flag = 2
+
+load_file("cells.hoc")
+load_file("connectCells.hoc")
+load_file("setStim.hoc")
+load_file("signalDA.hoc")
+
+
+makeCells(NCELL,NCELL_E)
+
+initCount()
+connectCells(NCELL_E, NSYN, NCELL_VTA, NSYN_MAX)
+
+
+
+objref sav_connect
+sav_connect = new File()
+sav_connect.wopen("connect.dat")
+for i=0, cells.count-1 {
+    for j=0, NSYN-1 {
+//	sav_connect.printf("%g\t%g\n",int(rec_connect[i][j]),nclist.object(i*NSYN+j).weight)
+	sav_connect.printf("%g\n",int(rec_connect[i][j]))
+    }
+    sav_connect.printf("\n")
+}
+sav_connect.close()
+
+
+
+
+setStim(stimNum, NCELL_VTA, dur, NCELL_CS,stimInt)
+/////////////////for record and watching section///////////////////////
+load_file("graph.ses")
+objref rect, recv
+rect = new Vector()
+recv = new Vector()
+
+rect.record(&t)
+recv.record(&cells.object(0).soma.v(0.5))
+////////////////continue to save section///////////////////////////////
+finitialize(v_init)
+fcurrent()
+//signalDA(NCELL_VTA, NCELL_E, NSYN_MAX)
+
+///////////////execute section///////////////////////////////////////
+run()
+/////////////end execute section//////////////////////////////////////
+
+
+
+
+//////////////save section/////////////////////////////////////
+objref savv
+savv = new File()
+savv.wopen("volt.dat")
+for i=0,rect.size()-1{
+    savv.printf("%g %g\n",rect.x(i),recv.x(i))
+}
+savv.close()
+
+objref sav_connect
+sav_connect = new File()
+sav_connect.wopen("connect.dat")
+for i=0, cells.count-1 {
+    for j=0, NSYN-1 {
+	sav_connect.printf("%g\t%g\n",int(rec_connect[i][j]),nclist.object(i*NSYN+j).weight)
+    }
+    sav_connect.printf("\n")
+}
+sav_connect.close()
+
+objref savSpike
+savSpike = new File()
+savSpike.wopen("spike.dat")
+for i=0, tvec.size()-1 {
+    savSpike.printf("%g\t%g\n",tvec.x(i),idvec.x(i))
+}
+savSpike.close()
+
+/////////////end of save section///////////////////////////////

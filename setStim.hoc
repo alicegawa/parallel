@@ -1,0 +1,52 @@
+/************************************************************************************************
+in the spontaneous section, whether the frequency that cells are firing is suited or not is unclear:
+1. cells are injected current that makes cells fired 2 Hz in separated situation (now is this)
+2. cells in network are fired in 2Hz on average ( each in network is firing in 2 Hz??) 
+************************************************************************************************/
+load_file("nrngui.hoc")
+
+objref nclist_us, nclist_spon, nclist_cs
+objectvar us[NCELL_VTA], sponFire[NCELL], cs[NCELL_CS]
+
+//ins setStim section, it is remained to describe that what cells is potentiated by DA. So, let's add in next case.
+proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc
+    stim_num = $1
+    num_vta = $2
+    dur = $3
+    num_cs = $4
+    stim_int = $5
+    
+    nclist_us = new List()
+    for i=0, num_vta-1 {
+	us[i] = new NetStim()
+	us[i].number = stim_num
+	us[i].start = 25
+	us[i].interval = stim_int
+	us[i].noise = 0.1
+	
+	nclist_us.append(new NetCon(us[i], cells.object(i).synlist.object(0),0,0,0.02))//weight should be modified
+    }
+    nclist_cs = new List()
+    for i=0, num_cs-1{    
+	cs[i] = new NetStim()
+	cs[i].number = stim_num
+	cs[i].start = 45
+	cs[i].interval = stim_int
+	cs[i].noise = 0.1
+//	printf("%d\n",num_cs)
+	nclist_cs.append(new NetCon(cs[i],cells.object(num_cs+i).synlist.object(0),0,0,0.02))//sasiatari No. NCELL_CS~ no 10 ko wo sitei
+    }
+    
+    nclist_spon = new List()
+    for i=0, cells.count-1 {
+	cells.object[i].soma {
+	    sponFire[i] = new GammaNoise(0.85)
+	    sponFire[i].amp = 0.065
+	    sponFire[i].dur = dur
+	    sponFire[i].del = 20
+	    nc = new NetCon(sponFire[i],cells.object(i).synlist.object(1),0,0,0.02)
+	    nclist_spon.append(nc)
+	    //nclist_spon.append(new NetCon(sponFire[i],cells.object(i).synlist.object(1),0,0,0.02))//0.02 ha imanotokoro koteide
+	}
+    }
+}
