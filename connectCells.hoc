@@ -14,7 +14,7 @@ proc initCount() { local i
 }
 
 
-proc connectCells() { local i, num_ecell, num_syn, num_vta, nsyn_max localobj src, target, syn, nc
+proc connectCells() { local i, targid, num_ecell, num_syn, num_vta, nsyn_max localobj src, target, syn, nc
     num_ecell = $1
     num_syn = $2
     num_vta = $3
@@ -27,13 +27,11 @@ proc connectCells() { local i, num_ecell, num_syn, num_vta, nsyn_max localobj sr
 	for j=0, num_syn-1 {
 	    if(i<num_ecell){
 		mem = int((i+r.uniform(1,cells.count-1)))%cells.count
-		target = cells.object(mem)
 		if(mem<num_vta){
-		    cells.object(mem).synlist.object(2).forSpike = 0//need to consider(the number of times when it recieves the spike. if all expsynstdp responces, the increase of DA is much larger than expected.(?)->this description shows that when a cell in vta is fired, only one synapse is responded. on hasu!!
+		    cells.object(mem).synlist.object(2).forSpike = 0
 		}
 	    }else{
 		mem = int((r.uniform(0,num_ecell)-1))
-		target = cells.object(mem)
 	    }
 	    if(count[mem]>=nsyn_max){
 		continue
@@ -43,7 +41,13 @@ proc connectCells() { local i, num_ecell, num_syn, num_vta, nsyn_max localobj sr
 		mem = 3//int((r.uniform(1,cells.count-1))%cells.count
 	    }*/
 	    rec_connect[i][j] = mem
-	    //kokomade ha OK
+	    
+	    targid = mem
+	    if(!pc.gid_exists(targid)){
+		continue
+	    }
+	    target = pc.gid2cell(targid)
+	    
 	    syn = target.synlist.object(2+int(count[mem]))
 	    count[mem] = count[mem] + 1
 	    //below sentense, it confirms whether count is updated or not.
@@ -52,10 +56,15 @@ proc connectCells() { local i, num_ecell, num_syn, num_vta, nsyn_max localobj sr
 		syn.e = -100 //???
 		//printf("inhibit mem = %d, count[mem]=%d\n",mem,int(count[mem]))
 	    }
+	    nc = pc.gid_connect(i,syn)
+	    nclist.append(nc)
+	    nc.delay = 0
 	    if(i<num_ecell){
-		cells.object(i).soma nclist.append(new NetCon(&v(0.5),syn,0,0,0.02))//in this section, this writing manner describes that various neurons input to one neuron at only one synapse. this should be modified.->add some codes by introducing the count[NCELL]
+		nc.weight = 0.0002
+		//cells.object(i).soma nclist.append(new NetCon(&v(0.5),syn,0,0,0.0002))
 	    }else{
-		cells.object(i).soma nclist.append(new NetCon(&v(0.5),syn,0,0,0.1))//weight should be modified following to Izhikevidh 2007.
+		nc.weight = 0.1
+		//cells.object(i).soma nclist.append(new NetCon(&v(0.5),syn,0,0,0.1))
 	    }
 	}
     }

@@ -21,7 +21,8 @@ dur = tstop
 //identify the VTA parameter
 vta_flag = 0
 else_flag = 2
-
+objref pc
+pc = new ParallelContext()
 load_file("cells.hoc")
 load_file("connectCells.hoc")
 load_file("setStim.hoc")
@@ -51,7 +52,23 @@ sav_connect.close()
 
 
 setStim(stimNum, NCELL_VTA, dur, NCELL_CS,stimInt)
+
+objref tvec, idvec
+
+proc setSpikeRecord() {local i localobj nc, nil
+    tvec = new Vector()
+    idvec = new Vector()
+    
+    for i=0, cells.count-1 {
+	nc = cells.object(i).connect2target(nil)
+	nc.record(tvec,idvec,nc.srcgid)
+    }
+}
+
+setSpikeRecord()
+
 /////////////////for record and watching section///////////////////////
+/*
 load_file("graph.ses")
 objref rect, recv
 rect = new Vector()
@@ -59,6 +76,7 @@ recv = new Vector()
 
 rect.record(&t)
 recv.record(&cells.object(0).soma.v(0.5))
+*/
 ////////////////continue to save section///////////////////////////////
 finitialize(v_init)
 fcurrent()
@@ -72,6 +90,7 @@ run()
 
 
 //////////////save section/////////////////////////////////////
+/*
 objref savv
 savv = new File()
 savv.wopen("volt.dat")
@@ -90,13 +109,26 @@ for i=0, cells.count-1 {
     sav_connect.printf("\n")
 }
 sav_connect.close()
+*/
+pc.set_maxstep(10)
+stdinit()
+pc.psolve(tstop)
 
+pc.barrier()
 objref savSpike
 savSpike = new File()
 savSpike.wopen("spike.dat")
-for i=0, tvec.size()-1 {
-    savSpike.printf("%g\t%g\n",tvec.x(i),idvec.x(i))
+for rank=0, pc.nhost-1{
+    if(rank==pc.id){
+	for i=0, tvec.size()-1 {
+	    savSpike.printf("%g\t%g\n",tvec.x(i),idvec.x(i))
+	}
+    }
+    pc.barrier()
 }
 savSpike.close()
+spikeout()
+pc.runworker()
+pc.done()
 
 /////////////end of save section///////////////////////////////

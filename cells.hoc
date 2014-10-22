@@ -1,7 +1,7 @@
 load_file("nrngui.hoc")
 begintemplate HHneuronE
 
-public soma, synlist
+public soma, synlist, connect2target
 create soma
 objref esyn, esyn_for_spon, esynSTDP
 objref synlist
@@ -35,11 +35,19 @@ proc init(){local x, y, z, nsyn, i
     }
 }
 
+obfunc connect2target() { localobj nc
+    soma nc = new NetCon(&v(0.5), $o1)
+    nc.threshold = 10
+    if(numarg()==2){ $o2 = nc}
+    return nc
+}
+
+
 endtemplate HHneuronE
 
 begintemplate HHneuronI
 
-public soma, synlist
+public soma, synlist, connect2target
 create soma
 objref synlist
 objref esyn_for_spon, dammy, esyn
@@ -66,32 +74,46 @@ proc init(){local x, y, z, nsyn, i
     }
 }
 
+
+obfunc connect2target() { localobj nc
+    soma nc = new NetCon(&v(0.5), $o1)
+    nc.threshold = 10
+    if(numarg()==2){ $o2 = nc}
+    return nc
+}
+
+
 endtemplate HHneuronI
 
 
 objref cells
 objref recordSpike
 objref nil
-objref tvec, idvec
+//objref tvec, idvec
 
-proc makeCells(){local i, num_cell, num_ecell localobj cell
+
+proc makeCells(){local i, num_cell, num_ecell localobj cell, nc
     num_cell = $1
     num_ecell = $2
     cells = new List()
     recordSpike = new List()
-    tvec = new Vector()
-    idvec = new Vector()
+    //tvec = new Vector()
+    //idvec = new Vector()
     counter = 0
     counter2 = 0
-    for i=0, num_cell-1 {
+    for (i=0; i<num_cell; i += pc.nhost) {
 	if(i<num_ecell){
 	    cell = new HHneuronE(160*counter2,20*(i%10),0, NSYN_MAX)
 	}else{
 	    cell = new HHneuronI(160*counter2,20*(i%10), 0, NSYN_MAX)
 	}
 	cells.append(cell)
-	cells.object(i).soma recordSpike.append(new NetCon(&v(0.5),nil,0.0,0,1.0))
-	recordSpike.object(i).record(tvec, idvec)
+	pc.set_gid2node(i,pc.id)
+	nc = cells.object(i).connect2target(nil)
+	pc.cell(i,nc)
+	
+	//cells.object(i).soma recordSpike.append(new NetCon(&v(0.5),nil,0.0,0,1.0))
+	//recordSpike.object(i).record(tvec, idvec)
 	counter = counter + 1
 	if(counter==10){
 	    counter = 0
