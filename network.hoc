@@ -28,8 +28,9 @@ load_file("connectCells.hoc")
 load_file("setStim.hoc")
 load_file("signalDA.hoc")
 
-
+printf("\n\n\naaa\n\n\n")
 makeCells(NCELL,NCELL_E)
+printf("\n\n\nbbb\n\n\n")
 
 initCount()
 connectCells(NCELL_E, NSYN, NCELL_VTA, NSYN_MAX)
@@ -127,7 +128,6 @@ for rank=0, pc.nhost-1{
     pc.barrier()
 }
 savSpike.close()
-spikeout()
 pc.runworker()
 pc.done()
 

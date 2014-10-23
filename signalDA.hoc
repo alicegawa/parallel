@@ -12,7 +12,7 @@ proc signalDA() {local i, counter, tmpDA, num_vta, num_ecell, nsyn_max
 	counter = counter + 1
 	if(cells.object(i).synlist.object(2).forSpike==1){
 	    cells.object(i).synlist.object(2).forSpike = 0
-	    tmpDA = tmpDA + 1
+	    tmpDA = tmpDA + 0.04
 	    printf("%d th cell in VTAp is firing\n",counter)
 	}
     }
