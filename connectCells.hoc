@@ -13,52 +13,67 @@ proc initCount() { local i
     }
 }
 
+proc checkgid() {local i, exist
+    for i=0, NCELL-1 {
+	exist = pc.gid_exists(i)
+	printf("%dth result is %d\n",i,exist)
+    }
+}
 
-proc connectCells() { local i, targid, num_ecell, num_syn, num_vta, nsyn_max localobj src, target, syn, nc
+proc connectCells() { local i, targid, num_ecell, num_syn, num_vta, nsyn_max localobj src, target, syn, nc, nil
     num_ecell = $1
     num_syn = $2
     num_vta = $3
     nsyn_max = $4
     nclist = new List()
     r = new Random(25525)
-    mem = -1//?
-    for i=0, cells.count-1 {
-	src = cells.object(i)
+    mem = -1
+    
+    for i=0, NCELL-1{
+	if(pc.gid_exists(i)){
+	    for j=0, num_syn-1{
+		src = pc.gid2obj(i)
+		pc.set_gid2node(1000000+i*num_syn+j, pc.id)
+		src.soma nc = new NetCon(&v(0.5),nil,0,0,0.1)
+		pc.cell(1000000+i*num_syn+j,nc)
+		nclist.append(nc)
+		nc.delay = 0.1
+		if(i<num_ecell){
+		    nc.weight = 0.0002
+		}else{
+		    nc.weight = 0.1
+		}
+	    }
+	}
+    }
+    pc.barrier()
+    
+    //for i=0, cells.count-1 {
+    for i=0, NCELL-1{
+	//src = cells.object(i)
 	for j=0, num_syn-1 {
 	    if(i<num_ecell){
-		mem = int((i+r.uniform(1,cells.count-1)))%cells.count
-		if(mem<num_vta){
-		    cells.object(mem).synlist.object(2).forSpike = 0
-		}
+		mem=int((i+r.uniform(1,NCELL-1)))%NCELL
 	    }else{
-		mem = int((r.uniform(0,num_ecell)-1))
+		mem = int((r.uniform(0,num_ecell-1)))
 	    }
-	    if(count[mem]>=nsyn_max){
-		continue
-	    }//for avoiding error
-	    /*
-	    if(mem==0 || mem==1){
-		mem = 3//int((r.uniform(1,cells.count-1))%cells.count
-	    }*/
-	    rec_connect[i][j] = mem
-	    
 	    targid = mem
 	    if(!pc.gid_exists(targid)){
 		continue
 	    }
 	    target = pc.gid2cell(targid)
-	    
-	    syn = target.synlist.object(2+int(count[mem]))
-	    count[mem] = count[mem] + 1
-	    //below sentense, it confirms whether count is updated or not.
-	    //printf("mem = %d, count[%d] = %d \n",mem,mem,int(count[mem]))
-	    if(i>=num_ecell){
-		syn.e = -100 //???
+	    /****************************TODO***************************************/
+	    syn = target.makeSyn(targid,NCELL_E,NCELL_VTA)//tabun kokode tukuttahouga raku!!
+	    /***********************************************************************/
+	    /****************kokokara shitamademo TODO ni ireyou*******************/
+	    //if(i>=num_ecell){
+	//	syn.e = -100 //???
 		//printf("inhibit mem = %d, count[mem]=%d\n",mem,int(count[mem]))
-	    }
-	    nc = pc.gid_connect(i,syn)
+	  //  }
+	    /*********************************************************************/
+	    nc = pc.gid_connect(1000000+i*num_syn+j,syn)
 	    nclist.append(nc)
-	    nc.delay = 0
+	    nc.delay = 0.1
 	    if(i<num_ecell){
 		nc.weight = 0.0002
 		//cells.object(i).soma nclist.append(new NetCon(&v(0.5),syn,0,0,0.0002))

@@ -23,6 +23,7 @@ vta_flag = 0
 else_flag = 2
 objref pc
 pc = new ParallelContext()
+NPROC = 10
 load_file("cells.hoc")
 load_file("connectCells.hoc")
 load_file("setStim.hoc")
@@ -31,11 +32,13 @@ load_file("signalDA.hoc")
 printf("\n\n\naaa\n\n\n")
 makeCells(NCELL,NCELL_E)
 printf("\n\n\nbbb\n\n\n")
-
+pc.barrier()
+//checkgid()
+pc.barrier()
 initCount()
 connectCells(NCELL_E, NSYN, NCELL_VTA, NSYN_MAX)
-
-
+pc.barrier()
+printf("finish connect section\n")
 
 objref sav_connect
 sav_connect = new File()
@@ -43,7 +46,7 @@ sav_connect.wopen("connect.dat")
 for i=0, cells.count-1 {
     for j=0, NSYN-1 {
 //	sav_connect.printf("%g\t%g\n",int(rec_connect[i][j]),nclist.object(i*NSYN+j).weight)
-	sav_connect.printf("%g\n",int(rec_connect[i][j]))
+//	sav_connect.printf("%g\n",int(rec_connect[i][j]))
     }
     sav_connect.printf("\n")
 }
@@ -69,8 +72,9 @@ proc setSpikeRecord() {local i localobj nc, nil
 setSpikeRecord()
 
 /////////////////for record and watching section///////////////////////
+
+//load_file("graph.ses")
 /*
-load_file("graph.ses")
 objref rect, recv
 rect = new Vector()
 recv = new Vector()
