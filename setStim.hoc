@@ -34,7 +34,7 @@ proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc
 		us[i].interval = stim_int
 		us[i].noise = 0.1
 		
-		nclist_us.append(new NetCon(us[i], pc.gid2cell(i).synlist.object(0),0,0,0.02))//weight should be modified
+		nclist_us.append(new NetCon(us[i], pc.gid2cell(i).synlist.object(0),0,0.1,0.02))//weight should be modified
 	    }
 	}
     }
@@ -48,7 +48,7 @@ proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc
 		cs[i].interval = stim_int
 		cs[i].noise = 0.1
 		//	printf("%d\n",num_cs)
-		nclist_cs.append(new NetCon(cs[i],pc.gid2cell(num_cs+i).synlist.object(0),0,0,0.02))//sasiatari No. NCELL_CS~ no 10 ko wo sitei
+		nclist_cs.append(new NetCon(cs[i],pc.gid2cell(num_cs+i).synlist.object(0),0,0.1,0.02))//sasiatari No. NCELL_CS~ no 10 ko wo sitei
 	    }
 	}
     }
@@ -60,7 +60,7 @@ proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc
 		sponFire[i].amp = 0.065
 		sponFire[i].dur = dur
 		sponFire[i].del = 20
-		nc = new NetCon(sponFire[i],pc.gid2cell(i).synlist.object(1),0,0,0.02)
+		nc = new NetCon(sponFire[i],pc.gid2cell(i).synlist.object(1),0,0.1,0.02)
 		nclist_spon.append(nc)
 		//nclist_spon.append(new NetCon(sponFire[i],cells.object(i).synlist.object(1),0,0,0.02))//0.02 ha imanotokoro koteide
 	    }

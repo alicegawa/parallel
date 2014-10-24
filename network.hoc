@@ -74,14 +74,16 @@ setSpikeRecord()
 /////////////////for record and watching section///////////////////////
 
 //load_file("graph.ses")
-/*
+
 objref rect, recv
 rect = new Vector()
 recv = new Vector()
 
 rect.record(&t)
-recv.record(&cells.object(0).soma.v(0.5))
-*/
+if(pc.gid_exists(0)){
+    recv.record(&pc.gid2cell(0).soma.v(0.5))
+}
+
 ////////////////continue to save section///////////////////////////////
 finitialize(v_init)
 fcurrent()
@@ -103,7 +105,8 @@ for i=0,rect.size()-1{
     savv.printf("%g %g\n",rect.x(i),recv.x(i))
 }
 savv.close()
-
+*/
+/*
 objref sav_connect
 sav_connect = new File()
 sav_connect.wopen("connect.dat")
@@ -120,18 +123,51 @@ stdinit()
 pc.psolve(tstop)
 
 pc.barrier()
+
 objref savSpike
-savSpike = new File()
-savSpike.wopen("spike.dat")
+
 for rank=0, pc.nhost-1{
     if(rank==pc.id){
+	savSpike = new File()
+	if(pc.id==0){
+	    savSpike.wopen("spike0.txt")
+	}
+	if(pc.id==1){
+	    savSpike.wopen("spike1.txt")
+	}
+	if(pc.id==2){
+	    savSpike.wopen("spike2.txt")
+	}
+	if(pc.id==3){
+	    savSpike.wopen("spike3.txt")
+	}
+	if(pc.id==4){
+	    savSpike.wopen("spike4.txt")
+	}
+	if(pc.id==5){
+	    savSpike.wopen("spike5.txt")
+	}
+	if(pc.id==6){
+	    savSpike.wopen("spike6.txt")
+	}
+	if(pc.id==7){
+	    savSpike.wopen("spike7.txt")
+	}
+	if(pc.id==8){
+	    savSpike.wopen("spike8.txt")
+	}
+	if(pc.id==9){
+	    savSpike.wopen("spike9.txt")
+	}
 	for i=0, tvec.size()-1 {
 	    savSpike.printf("%g\t%g\n",tvec.x(i),idvec.x(i))
 	}
+	savSpike.close()
     }
     pc.barrier()
 }
-savSpike.close()
+
+//savSpike.close()
 pc.runworker()
 pc.done()
 

@@ -90,6 +90,7 @@ proc makeCells(){local i, num_cell, num_ecell, ratio, e_num localobj cell, nc, n
 	cells.append(cell)
 	pc.set_gid2node(i,pc.id)
 	nc = cell.connect2target(nil)
+	nc.weight = 1
 	pc.cell(i,nc)
 	
 	//cells.object(i).soma recordSpike.append(new NetCon(&v(0.5),nil,0.0,0,1.0))

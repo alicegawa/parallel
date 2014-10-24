@@ -28,7 +28,7 @@ proc connectCells() { local i, targid, num_ecell, num_syn, num_vta, nsyn_max loc
     nclist = new List()
     r = new Random(25525)
     mem = -1
-    
+    /*
     for i=0, NCELL-1{
 	if(pc.gid_exists(i)){
 	    for j=0, num_syn-1{
@@ -47,7 +47,7 @@ proc connectCells() { local i, targid, num_ecell, num_syn, num_vta, nsyn_max loc
 	}
     }
     pc.barrier()
-    
+    */
     //for i=0, cells.count-1 {
     for i=0, NCELL-1{
 	//src = cells.object(i)
@@ -61,17 +61,25 @@ proc connectCells() { local i, targid, num_ecell, num_syn, num_vta, nsyn_max loc
 	    if(!pc.gid_exists(targid)){
 		continue
 	    }
+	    //kokode targid wo kakunin
+	    for k=0, pc.nhost-1{
+		if(k==pc.id){
+		    printf("%dth process, aite=%d\n",k,targid)
+		}
+	    }
+	    //yappari process nai desika tunagatte nai mitai?????
 	    target = pc.gid2cell(targid)
 	    /****************************TODO***************************************/
 	    syn = target.makeSyn(targid,NCELL_E,NCELL_VTA)//tabun kokode tukuttahouga raku!!
 	    /***********************************************************************/
 	    /****************kokokara shitamademo TODO ni ireyou*******************/
 	    //if(i>=num_ecell){
-	//	syn.e = -100 //???
-		//printf("inhibit mem = %d, count[mem]=%d\n",mem,int(count[mem]))
-	  //  }
+	    //	syn.e = -100 //???
+	    //printf("inhibit mem = %d, count[mem]=%d\n",mem,int(count[mem]))
+	    //  }
 	    /*********************************************************************/
-	    nc = pc.gid_connect(1000000+i*num_syn+j,syn)
+	    //nc = pc.gid_connect(1000000+i*num_syn+j,syn)
+	    nc = pc.gid_connect(i,syn)
 	    nclist.append(nc)
 	    nc.delay = 0.1
 	    if(i<num_ecell){
