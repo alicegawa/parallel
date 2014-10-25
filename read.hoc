@@ -1,0 +1,7 @@
+load_file("nrngui.hoc")
+
+/*************************************************************************************************/
+//NCELL * NCELL no matrix ni kakunou site, 
+objref file
+file = new File()
+file.ropen("con.dat")

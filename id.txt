@@ -1,92 +1,64 @@
 numprocs=10
-			1 
-1 
-		1 
-	1 
 				1 
+		1 
 	1 
 1 
-1 
+	1 
+		1 
+	1 1 
+
 	1 
 			1 
-1 
-1 1 
-		
 	1 
-		1 
-	1 
-	1 1 
-
-		1 
 1 
 	1 
-	1 1 
-
 	1 
-	
-
-
-aaa
-
-
-	9 
 	1 
+	1 
+1 	
 		1 
+	1 
 1 	1 
+	1 
 
 	1 
-1 
 	1 
 	1 
 	1 
-1 
+		1 
+
 
 
 aaa
-
 
 
 	9 
-			1 
+
+
+
+bbb
+
+
+1 
+	1 1 
+	
 	1 
 		1 
-1 
-1 	
+	1 1 1 
+
 
 
 
 aaa
 
 
+	
 		9 
 1 
-	1 
-1 
-	1 
-
-
-
-aaa
-
-
-	9 
-	1 1 
-
 		1 
-	1 
 1 	
 1 
-	1 
-1 
-	1 
-			1 
-
-
-
-aaa
-
-
-	9 
+		1 
 	1 
 	
 
@@ -96,22 +68,17 @@ bbb
 
 1 
 	1 
-	1 
-
-
-
-bbb
-
-
 1 
-	1 
-	1 
-		1 
+
+
+aaa
+
+
+
 	1 
 1 
-1 	
-1 
-	1 	
+	9 
+	1 
 1 
 	1 
 
@@ -120,25 +87,51 @@ bbb
 aaa
 
 
-	9 
-
-
-
-bbb
-
-
-	1 
-	1 
-		9 
-1 
-		
-
-
-bbb
-
-
+		1 
 9 
+	1 
+	1 
+	1 
+
+
+
+aaa
+
+
+	9 
+	1 
+	1 
+	1 1 
+
 		1 
+1 
+		1 
+	1 
+	1 
+	1 
+	1 
+
+
+
+bbb
+
+
+
+
+
+aaa
+
+
+	9 
+1 
+
+
+
+aaa
+
+
+	9 
+	9 
 
 
 
@@ -146,41 +139,14 @@ bbb
 
 
 1 
-
-
-
-aaa
-
-
-	9 
-1 
 	1 
-
-
-
-aaa
-
-
-	9 
-1 
-	1 
-	1 
-	1 
-	1 
-	9 
-	1 
-		1 
-	1 
-1 	1 
-
-		1 
-	9 
 	
 
 
 bbb
 
 
+	9 
 
 
 
@@ -195,8 +161,11 @@ bbb
 bbb
 
 
-1 
-1 
+	9 
+	9 
+	1 
+	1 
+	1 
 
 
 
@@ -207,10 +176,43 @@ aaa
 
 
 
+bbb
+
+
+		9 
+9 
+	9 
+	9 
+	1 
+	1 
+	1 
+1 	
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+
+
+
 aaa
 
 
-		9 9 
+	9 
+1 
+	1 
+	1 
+	1 
+
+
+
+aaa
+
 
 	9 
 
@@ -220,8 +222,6 @@ bbb
 
 
 	9 
-	9 
-	9 
 
 
 
@@ -229,1113 +229,235 @@ bbb
 
 
 	9 
-	0.053238869 
-	0.023797035 
-	0.040416002 
-		0.059885025 
-0.06122613 
-	0.048458099 
-		0.03320384 
-0.076576948 
-	0.043843985 
-	0.0567801 
-	0.035534143 
-0th process, aite=50
-0th process, aite=40
-0th process, aite=90
-0th process, aite=90
-0th process, aite=20
-0th process, aite=60
-0th process, aite=40
-0th process, aite=90
-0th process, aite=50
-0th process, aite=10
-0th process, aite=20
-0th process, aite=0
-0th process, aite=60
-0th process, aite=90
-0th process, aite=30
-0th process, aite=90
-0th process, aite=30
-0th process, aite=20
-0th process, aite=10
-0th process, aite=70
-0th process, aite=70
-0th process, aite=60
-0th process, aite=70
-0th process, aite=60
-0th process, aite=0
-0th process, aite=0
-0th process, aite=60
-0th process, aite=50
-0th process, aite=80
-0th process, aite=70
-0th process, aite=50
-0th process, aite=0
-0th process, aite=20
-0th process, aite=70
-0th process, aite=70
-0th process, aite=0
-0th process, aite=70
-0th process, aite=0
-0th process, aite=90
-0th process, aite=70
-0th process, aite=40
-0th process, aite=50
-0th process, aite=30
-0th process, aite=10
-0th process, aite=70
-0th process, aite=10
-0th process, aite=70
-0th process, aite=10
-0th process, aite=30
-0th process, aite=0
-0th process, aite=70
-0th process, aite=0
-0th process, aite=80
-0th process, aite=80
-0th process, aite=30
-0th process, aite=60
-0th process, aite=50
-0th process, aite=80
-0th process, aite=0
-	0th process, aite=20
-0.044530153 0th process, aite=40
-
-4th process, aite=34
-0th process, aite=20
-0th process, aite=70
-4th process, aite=24
-0th process, aite=70
-0th process, aite=90
-		0.033015966 
-	8th process, aite=98
-0.023090124 
-4th process, aite=24
-7th process, aite=37
-0th process, aite=10
-0th process, aite=70
-4th process, aite=74
-4th process, aite=74
-7th process, aite=77
-0th process, aite=30
-7th process, aite=97
-0th process, aite=50
-7th process, aite=47
-4th process, aite=44
-7th process, aite=7
-7th process, aite=97
-7th process, aite=97
-7th process, aite=57
-7th process, aite=57
-7th process, aite=57
-7th process, aite=7
-7th process, aite=67
-7th process, aite=87
-	0.032330036 
-5th process, aite=35
-4th process, aite=44
-4th process, aite=84
-7th process, aite=77
-7th process, aite=7
-8th process, aite=8
-7th process, aite=37
-7th process, aite=57
-0th process, aite=40
-0th process, aite=80
-0th process, aite=60
-8th process, aite=78
-7th process, aite=57
-4th process, aite=94
-4th process, aite=94
-4th process, aite=54
-0th process, aite=20
-7th process, aite=37
-7th process, aite=77
-7th process, aite=77
-5th process, aite=35
-5th process, aite=95
-8th process, aite=8
-8th process, aite=48
-5th process, aite=55
-7th process, aite=77
-0th process, aite=90
-0th process, aite=0
-5th process, aite=85
-7th process, aite=37
-4th process, aite=14
-4th process, aite=44
-4th process, aite=44
-4th process, aite=34
-7th process, aite=7
-8th process, aite=48
-0th process, aite=20
-5th process, aite=25
-	5th process, aite=25
-7th process, aite=97
-8th process, aite=48
-8th process, aite=18
-5th process, aite=65
-7th process, aite=77
-	0.045959949 
-5th process, aite=75
-2th process, aite=52
-	7th process, aite=47
-0th process, aite=50
-0th process, aite=60
-0.032382965 0.036691904 
-5th process, aite=75
-
-7th process, aite=77
-1th process, aite=61
-9th process, aite=29
-8th process, aite=28
-4th process, aite=44
-0th process, aite=0
-8th process, aite=68
-4th process, aite=34
-0th process, aite=10
-7th process, aite=77
-8th process, aite=28
-1th process, aite=61
-0th process, aite=10
-5th process, aite=35
-5th process, aite=65
-2th process, aite=22
-2th process, aite=52
-4th process, aite=84
-7th process, aite=77
-8th process, aite=98
-9th process, aite=59
-8th process, aite=48
-5th process, aite=75
-0th process, aite=40
-0th process, aite=10
-7th process, aite=87
-4th process, aite=94
-4th process, aite=44
-4th process, aite=84
-7th process, aite=37
-9th process, aite=59
-1th process, aite=61
-1th process, aite=71
-5th process, aite=85
-2th process, aite=52
-2th process, aite=72
-9th process, aite=59
-0th process, aite=0
-0th process, aite=80
-5th process, aite=75
-4th process, aite=14
-4th process, aite=44
-8th process, aite=38
-9th process, aite=29
-7th process, aite=37
-1th process, aite=41
-1th process, aite=61
-8th process, aite=68
-7th process, aite=57
-9th process, aite=29
-4th process, aite=44
-5th process, aite=85
-8th process, aite=98
-8th process, aite=18
-5th process, aite=85
-2th process, aite=32
-4th process, aite=34
-7th process, aite=97
-9th process, aite=89
-0th process, aite=70
-0th process, aite=10
-1th process, aite=71
-9th process, aite=39
-5th process, aite=25
-8th process, aite=88
-8th process, aite=68
-7th process, aite=27
-2th process, aite=72
-2th process, aite=82
-5th process, aite=95
-4th process, aite=34
-7th process, aite=87
-1th process, aite=21
-9th process, aite=49
-4th process, aite=34
-9th process, aite=89
-1th process, aite=41
-5th process, aite=85
-5th process, aite=5
-8th process, aite=18
-7th process, aite=7
-4th process, aite=34
-9th process, aite=99
-0th process, aite=20
-7th process, aite=67
-2th process, aite=92
-9th process, aite=79
-4th process, aite=64
-5th process, aite=25
-8th process, aite=38
-7th process, aite=27
-0th process, aite=70
-5th process, aite=15
-1th process, aite=21
-9th process, aite=19
-2th process, aite=52
-7th process, aite=87
-5th process, aite=65
-9th process, aite=39
-4th process, aite=84
-5th process, aite=15
-0th process, aite=0
-9th process, aite=49
-7th process, aite=17
-8th process, aite=78
-8th process, aite=88
-5th process, aite=75
-2th process, aite=42
-2th process, aite=2
-2th process, aite=32
-4th process, aite=14
-9th process, aite=29
-9th process, aite=39
-7th process, aite=87
-1th process, aite=11
-1th process, aite=31
-0th process, aite=0
-5th process, aite=55
-5th process, aite=95
-4th process, aite=64
-7th process, aite=47
-4th process, aite=24
-9th process, aite=79
-1th process, aite=71
-7th process, aite=97
-8th process, aite=38
-9th process, aite=9
-1th process, aite=21
-5th process, aite=55
-0th process, aite=60
-7th process, aite=27
-8th process, aite=38
-9th process, aite=29
-2th process, aite=52
-5th process, aite=15
-4th process, aite=14
-9th process, aite=29
-1th process, aite=91
-7th process, aite=27
-0th process, aite=30
-0th process, aite=30
-2th process, aite=22
-5th process, aite=85
-5th process, aite=35
-8th process, aite=68
-9th process, aite=49
-9th process, aite=69
-9th process, aite=69
-4th process, aite=74
-7th process, aite=67
-7th process, aite=77
-1th process, aite=61
-5th process, aite=25
-0th process, aite=10
-9th process, aite=89
-4th process, aite=4
-5th process, aite=5
-5th process, aite=85
-8th process, aite=78
-9th process, aite=89
-9th process, aite=89
-7th process, aite=47
-2th process, aite=22
-2th process, aite=52
-7th process, aite=27
-1th process, aite=91
-5th process, aite=65
-0th process, aite=20
-5th process, aite=75
-8th process, aite=78
-7th process, aite=7
-0th process, aite=40
-9th process, aite=79
-4th process, aite=84
-5th process, aite=85
-2th process, aite=32
-9th process, aite=9
-8th process, aite=48
-7th process, aite=7
-1th process, aite=51
-5th process, aite=75
-4th process, aite=4
-9th process, aite=99
-9th process, aite=99
-9th process, aite=39
-0th process, aite=40
-7th process, aite=37
-2th process, aite=22
-5th process, aite=35
-8th process, aite=48
-5th process, aite=25
-1th process, aite=71
-1th process, aite=91
-0th process, aite=60
-7th process, aite=97
-4th process, aite=14
-5th process, aite=45
-8th process, aite=48
-9th process, aite=59
-2th process, aite=92
-7th process, aite=77
-0th process, aite=50
-5th process, aite=55
-1th process, aite=91
-1th process, aite=91
-2th process, aite=42
-9th process, aite=49
-9th process, aite=9
-7th process, aite=87
-8th process, aite=78
-4th process, aite=24
-5th process, aite=95
-0th process, aite=70
-7th process, aite=17
-7th process, aite=77
-2th process, aite=92
-9th process, aite=89
-8th process, aite=18
-5th process, aite=5
-4th process, aite=74
-9th process, aite=9
-1th process, aite=51
-5th process, aite=95
-7th process, aite=7
-9th process, aite=39
-5th process, aite=95
-7th process, aite=47
-9th process, aite=19
-7th process, aite=47
-5th process, aite=75
-9th process, aite=99
-9th process, aite=69
-7th process, aite=77
-5th process, aite=75
-9th process, aite=9
-5th process, aite=85
-7th process, aite=37
-5th process, aite=25
-9th process, aite=49
-5th process, aite=35
-7th process, aite=57
-5th process, aite=55
-9th process, aite=59
-9th process, aite=59
-5th process, aite=15
-7th process, aite=57
-5th process, aite=75
-9th process, aite=49
-7th process, aite=47
-5th process, aite=75
-7th process, aite=17
-9th process, aite=59
-5th process, aite=25
-9th process, aite=59
-7th process, aite=57
-5th process, aite=25
-9th process, aite=69
-7th process, aite=17
-5th process, aite=5
-9th process, aite=9
-5th process, aite=45
-7th process, aite=7
-9th process, aite=9
-7th process, aite=17
-5th process, aite=85
-9th process, aite=9
-7th process, aite=27
-7th process, aite=7
-5th process, aite=65
-7th process, aite=17
-9th process, aite=69
-7th process, aite=67
-5th process, aite=95
-9th process, aite=39
-7th process, aite=77
-5th process, aite=85
-7th process, aite=67
-9th process, aite=49
-8th process, aite=78
-7th process, aite=67
-1th process, aite=1
-5th process, aite=35
-2th process, aite=62
-9th process, aite=9
-4th process, aite=74
-7th process, aite=57
-1th process, aite=21
-5th process, aite=75
-2th process, aite=42
-7th process, aite=77
-8th process, aite=48
-9th process, aite=89
-4th process, aite=64
-5th process, aite=95
-4th process, aite=14
-4th process, aite=94
-7th process, aite=37
-1th process, aite=51
-1th process, aite=71
-2th process, aite=72
-9th process, aite=59
-9th process, aite=79
-5th process, aite=75
-8th process, aite=18
-7th process, aite=17
-2th process, aite=62
-2th process, aite=42
-9th process, aite=29
-8th process, aite=78
-5th process, aite=15
-1th process, aite=51
-7th process, aite=67
-4th process, aite=94
-9th process, aite=19
-8th process, aite=38
-5th process, aite=5
-4th process, aite=84
-0.02699995 
-1th process, aite=1
-6th process, aite=66
-6th process, aite=36
-8th process, aite=48
-7th process, aite=37
-2th process, aite=22
-5th process, aite=75
-1th process, aite=91
-7th process, aite=57
-2th process, aite=12
-9th process, aite=29
-4th process, aite=34
-5th process, aite=85
-5th process, aite=95
-8th process, aite=78
-7th process, aite=27
-7th process, aite=67
-7th process, aite=17
-9th process, aite=59
-1th process, aite=41
-1th process, aite=81
-5th process, aite=25
-9th process, aite=29
-5th process, aite=95
-2th process, aite=32
-7th process, aite=47
-2th process, aite=82
-9th process, aite=39
-4th process, aite=94
-5th process, aite=65
-8th process, aite=58
-6th process, aite=86
-1th process, aite=81
-9th process, aite=19
-4th process, aite=14
-7th process, aite=77
-2th process, aite=12
-5th process, aite=35
-1th process, aite=21
-6th process, aite=36
-8th process, aite=68
-9th process, aite=29
-4th process, aite=84
-7th process, aite=57
-7th process, aite=37
-5th process, aite=95
-2th process, aite=32
-9th process, aite=49
-1th process, aite=91
-1th process, aite=51
-6th process, aite=86
-8th process, aite=38
-8th process, aite=68
-2th process, aite=52
-7th process, aite=7
-4th process, aite=74
-5th process, aite=15
-2th process, aite=2
-9th process, aite=79
-8th process, aite=98
-6th process, aite=16
-6th process, aite=16
-4th process, aite=64
-5th process, aite=45
-5th process, aite=5
-1th process, aite=81
-7th process, aite=37
-2th process, aite=42
-9th process, aite=9
-8th process, aite=18
-7th process, aite=57
-4th process, aite=34
-2th process, aite=82
-1th process, aite=91
-4th process, aite=34
-8th process, aite=58
-2th process, aite=52
-1th process, aite=71
-4th process, aite=34
-8th process, aite=68
-2th process, aite=32
-4th process, aite=34
-1th process, aite=71
-8th process, aite=48
-2th process, aite=12
-1th process, aite=71
-8th process, aite=78
-6th process, aite=96
-9th process, aite=59
-5th process, aite=95
-6th process, aite=56
-9th process, aite=69
-5th process, aite=45
-9th process, aite=69
-9th process, aite=29
-5th process, aite=95
-6th process, aite=56
-9th process, aite=59
-5th process, aite=75
-6th process, aite=86
-9th process, aite=9
-5th process, aite=55
-6th process, aite=96
-5th process, aite=5
-5th process, aite=35
-9th process, aite=9
-6th process, aite=36
-5th process, aite=75
-6th process, aite=36
-5th process, aite=15
-6th process, aite=76
-9th process, aite=59
-5th process, aite=55
-9th process, aite=39
-6th process, aite=56
-5th process, aite=55
-6th process, aite=6
-5th process, aite=35
-9th process, aite=69
-6th process, aite=16
-9th process, aite=59
-5th process, aite=45
-9th process, aite=59
-6th process, aite=16
-5th process, aite=5
-9th process, aite=9
-5th process, aite=45
-6th process, aite=96
-9th process, aite=19
-5th process, aite=35
-6th process, aite=36
-9th process, aite=49
-6th process, aite=96
-5th process, aite=15
-9th process, aite=49
-6th process, aite=76
-5th process, aite=25
-4th process, aite=4
-6th process, aite=46
-2th process, aite=62
-5th process, aite=25
-1th process, aite=61
-1th process, aite=1
-9th process, aite=69
-4th process, aite=64
-6th process, aite=66
-8th process, aite=18
-5th process, aite=45
-2th process, aite=32
-2th process, aite=32
-9th process, aite=9
-4th process, aite=94
-6th process, aite=36
-8th process, aite=88
-5th process, aite=15
-5th process, aite=35
-5th process, aite=55
-5th process, aite=15
-9th process, aite=39
-1th process, aite=31
-6th process, aite=66
-8th process, aite=38
-9th process, aite=29
-4th process, aite=74
-6th process, aite=76
-8th process, aite=78
-9th process, aite=39
-4th process, aite=94
-4th process, aite=44
-6th process, aite=26
-1th process, aite=11
-9th process, aite=49
-2th process, aite=42
-6th process, aite=46
-1th process, aite=1
-1th process, aite=31
-8th process, aite=18
-9th process, aite=9
-9th process, aite=59
-5th process, aite=15
-2th process, aite=52
-6th process, aite=86
-8th process, aite=38
-8th process, aite=68
-5th process, aite=45
-2th process, aite=72
-6th process, aite=66
-4th process, aite=4
-9th process, aite=39
-1th process, aite=81
-1th process, aite=31
-5th process, aite=15
-2th process, aite=42
-6th process, aite=26
-4th process, aite=24
-9th process, aite=49
-8th process, aite=28
-5th process, aite=55
-2th process, aite=42
-6th process, aite=6
-4th process, aite=54
-9th process, aite=9
-8th process, aite=38
-1th process, aite=51
-2th process, aite=22
-4th process, aite=54
-2th process, aite=82
-1th process, aite=41
-4th process, aite=14
-8th process, aite=98
-4th process, aite=54
-1th process, aite=11
-2th process, aite=52
-4th process, aite=54
-8th process, aite=38
-2th process, aite=52
-4th process, aite=74
-1th process, aite=61
-8th process, aite=18
-2th process, aite=32
-1th process, aite=71
-4th process, aite=14
-8th process, aite=28
-1th process, aite=11
-2th process, aite=82
-4th process, aite=44
-8th process, aite=38
-1th process, aite=31
-2th process, aite=92
-8th process, aite=8
-1th process, aite=91
-4th process, aite=64
-2th process, aite=12
-4th process, aite=44
-8th process, aite=98
-2th process, aite=92
-1th process, aite=41
-4th process, aite=84
-8th process, aite=38
-2th process, aite=42
-4th process, aite=74
-1th process, aite=91
-8th process, aite=78
-2th process, aite=52
-4th process, aite=94
-1th process, aite=31
-2th process, aite=82
-1th process, aite=21
-8th process, aite=68
-4th process, aite=64
-2th process, aite=2
-1th process, aite=31
-4th process, aite=34
-8th process, aite=18
-2th process, aite=82
-4th process, aite=64
-1th process, aite=41
-8th process, aite=58
-2th process, aite=42
-1th process, aite=31
-6th process, aite=46
-4th process, aite=14
-8th process, aite=38
-2th process, aite=82
-4th process, aite=84
-1th process, aite=51
-8th process, aite=98
-4th process, aite=44
-2th process, aite=62
-1th process, aite=31
-8th process, aite=68
-4th process, aite=14
-4th process, aite=34
-2th process, aite=82
-1th process, aite=91
-1th process, aite=71
-1th process, aite=1
-1th process, aite=91
-1th process, aite=61
-1th process, aite=31
-1th process, aite=71
-1th process, aite=91
-1th process, aite=81
-1th process, aite=71
-1th process, aite=1
-1th process, aite=1
-1th process, aite=11
-1th process, aite=61
-1th process, aite=21
-1th process, aite=41
-1th process, aite=41
-1th process, aite=1
-1th process, aite=41
-1th process, aite=41
-1th process, aite=61
-1th process, aite=41
-1th process, aite=11
-	0.062157869 
-3th process, aite=73
-3th process, aite=83
-3th process, aite=23
-3th process, aite=93
-3th process, aite=33
-3th process, aite=63
-3th process, aite=93
-6th process, aite=16
-6th process, aite=56
-6th process, aite=26
-6th process, aite=26
-6th process, aite=46
-6th process, aite=76
-6th process, aite=56
-6th process, aite=6
-6th process, aite=86
-6th process, aite=16
-6th process, aite=86
-6th process, aite=86
-6th process, aite=86
-6th process, aite=96
-6th process, aite=66
-6th process, aite=76
-6th process, aite=26
-6th process, aite=6
-6th process, aite=76
-6th process, aite=96
-6th process, aite=46
-6th process, aite=86
-6th process, aite=46
-6th process, aite=86
-6th process, aite=46
-6th process, aite=46
-6th process, aite=56
-6th process, aite=56
-6th process, aite=96
-6th process, aite=36
-6th process, aite=6
-6th process, aite=16
-6th process, aite=96
-6th process, aite=26
-6th process, aite=66
-6th process, aite=36
-6th process, aite=36
-6th process, aite=6
-6th process, aite=16
-6th process, aite=66
-6th process, aite=16
-6th process, aite=66
-6th process, aite=46
-6th process, aite=26
-6th process, aite=56
-6th process, aite=36
-6th process, aite=76
-6th process, aite=56
-6th process, aite=46
-6th process, aite=16
-6th process, aite=6
-6th process, aite=16
-6th process, aite=16
-6th process, aite=26
-6th process, aite=26
-6th process, aite=56
-6th process, aite=16
-6th process, aite=16
-6th process, aite=56
-6th process, aite=6
-8th process, aite=38
-8th process, aite=58
-8th process, aite=98
-8th process, aite=18
-8th process, aite=28
-8th process, aite=68
-8th process, aite=68
-8th process, aite=68
-8th process, aite=98
-8th process, aite=58
-8th process, aite=18
-8th process, aite=68
-8th process, aite=58
-8th process, aite=18
-8th process, aite=68
-8th process, aite=78
-8th process, aite=18
-8th process, aite=78
-8th process, aite=68
-8th process, aite=28
-8th process, aite=68
-8th process, aite=58
-8th process, aite=8
-8th process, aite=58
-8th process, aite=8
-8th process, aite=68
-3th process, aite=73
-3th process, aite=43
-3th process, aite=63
-3th process, aite=23
-3th process, aite=93
-4th process, aite=24
-4th process, aite=94
-4th process, aite=64
-3th process, aite=33
-2th process, aite=62
-3th process, aite=43
-2th process, aite=82
-3th process, aite=33
-4th process, aite=54
-3th process, aite=13
-2th process, aite=52
-2th process, aite=2
-4th process, aite=34
-3th process, aite=43
-3th process, aite=73
-3th process, aite=23
-4th process, aite=94
-3th process, aite=63
-2th process, aite=42
-3th process, aite=3
-4th process, aite=24
-4th process, aite=24
-2th process, aite=52
-3th process, aite=23
-4th process, aite=4
-4th process, aite=54
-2th process, aite=12
-2th process, aite=92
-4th process, aite=4
-2th process, aite=32
-4th process, aite=44
-2th process, aite=22
-4th process, aite=24
-2th process, aite=22
-4th process, aite=14
-2th process, aite=82
-4th process, aite=34
-2th process, aite=72
-2th process, aite=62
-4th process, aite=24
-2th process, aite=92
-4th process, aite=14
-2th process, aite=42
-4th process, aite=44
-1th process, aite=51
-4th process, aite=54
-2th process, aite=72
-2th process, aite=12
-2th process, aite=72
-2th process, aite=12
-2th process, aite=32
-2th process, aite=62
-2th process, aite=32
-2th process, aite=12
-2th process, aite=72
-2th process, aite=62
-2th process, aite=2
-2th process, aite=12
-2th process, aite=12
-2th process, aite=42
-2th process, aite=72
-2th process, aite=42
-2th process, aite=52
-3th process, aite=83
-3th process, aite=63
-3th process, aite=23
-3th process, aite=13
-3th process, aite=23
-3th process, aite=53
-3th process, aite=73
-3th process, aite=3
-3th process, aite=83
-3th process, aite=93
-3th process, aite=63
-3th process, aite=93
-3th process, aite=63
-3th process, aite=73
-3th process, aite=43
-3th process, aite=33
-3th process, aite=93
-3th process, aite=93
-3th process, aite=13
-3th process, aite=13
-3th process, aite=33
-3th process, aite=13
-3th process, aite=3
-3th process, aite=13
-3th process, aite=33
-3th process, aite=53
-3th process, aite=43
-3th process, aite=23
-3th process, aite=23
-3th process, aite=53
-3th process, aite=73
-3th process, aite=33
-3th process, aite=3
-3th process, aite=53
-3th process, aite=13
-3th process, aite=83
-3th process, aite=3
-3th process, aite=83
-3th process, aite=43
-3th process, aite=93
-3th process, aite=23
-3th process, aite=63
-3th process, aite=53
-3th process, aite=23
-3th process, aite=33
-3th process, aite=73
-3th process, aite=33
-3th process, aite=23
-3th process, aite=53
-3th process, aite=13
-3th process, aite=53
-3th process, aite=63
-3th process, aite=73
-3th process, aite=73
-3th process, aite=23
-3th process, aite=23
-3th process, aite=33
-3th process, aite=3
-3th process, aite=13
-3th process, aite=43
-3th process, aite=63
-3th process, aite=53
-3th process, aite=33
-3th process, aite=33
-3th process, aite=33
-3th process, aite=43
-3th process, aite=73
-3th process, aite=23
-3th process, aite=23
-3th process, aite=13
-3th process, aite=13
-3th process, aite=13
-1th process, aite=31
-1th process, aite=41
-1th process, aite=21
-1th process, aite=41
-1th process, aite=61
-4th process, aite=74
-4th process, aite=4
-4th process, aite=44
-4th process, aite=24
-4th process, aite=34
-4th process, aite=4
-4th process, aite=64
-4th process, aite=44
-4th process, aite=14
-	0.065067053 
+	0.12689805 
+cell 0 exists!!
+cell 10 exists!!
+cell 20 exists!!
+cell 30 exists!!
+cell 40 exists!!
+cell 50 exists!!
+cell 60 exists!!
+cell 70 exists!!
+cell 80 exists!!
+cell 90 exists!!
+	0.1078341 
+cell 2 exists!!
+cell 12 exists!!
+cell 22 exists!!
+cell 32 exists!!
+cell 42 exists!!
+cell 52 exists!!
+cell 62 exists!!
+cell 72 exists!!
+cell 82 exists!!
+cell 92 exists!!
+	0.049748898 
+cell 3 exists!!
+cell 13 exists!!
+cell 23 exists!!
+cell 33 exists!!
+cell 43 exists!!
+cell 53 exists!!
+cell 63 exists!!
+cell 73 exists!!
+cell 83 exists!!
+cell 93 exists!!
+	0.12693691 
+cell 1 exists!!
+cell 11 exists!!
+cell 21 exists!!
+cell 31 exists!!
+cell 41 exists!!
+cell 51 exists!!
+cell 61 exists!!
+cell 71 exists!!
+cell 81 exists!!
+cell 91 exists!!
+	0.12508011 
+cell 8 exists!!
+cell 18 exists!!
+cell 28 exists!!
+cell 38 exists!!
+cell 48 exists!!
+cell 58 exists!!
+cell 68 exists!!
+cell 78 exists!!
+cell 88 exists!!
+cell 98 exists!!
+	0.12877989 
+cell 4 exists!!
+cell 14 exists!!
+cell 24 exists!!
+cell 34 exists!!
+cell 44 exists!!
+cell 54 exists!!
+cell 64 exists!!
+cell 74 exists!!
+cell 84 exists!!
+cell 94 exists!!
+	0.12255979 
+cell 9 exists!!
+cell 19 exists!!
+cell 29 exists!!
+cell 39 exists!!
+cell 49 exists!!
+cell 59 exists!!
+cell 69 exists!!
+cell 79 exists!!
+cell 89 exists!!
+cell 99 exists!!
+	0.1493721 
+cell 6 exists!!
+cell 16 exists!!
+cell 26 exists!!
+cell 36 exists!!
+cell 46 exists!!
+cell 56 exists!!
+cell 66 exists!!
+cell 76 exists!!
+cell 86 exists!!
+cell 96 exists!!
+	0.17055297 
+cell 7 exists!!
+cell 17 exists!!
+cell 27 exists!!
+cell 37 exists!!
+cell 47 exists!!
+cell 57 exists!!
+cell 67 exists!!
+cell 77 exists!!
+cell 87 exists!!
+cell 97 exists!!
+	0.10762787 
+cell 5 exists!!
+cell 15 exists!!
+cell 25 exists!!
+cell 35 exists!!
+cell 45 exists!!
+cell 55 exists!!
+cell 65 exists!!
+cell 75 exists!!
+cell 85 exists!!
+cell 95 exists!!
+	0.095129967 
+	0.085475206 
+		0.096745968 
+0.10159612 
+	0.097177029 
+	0.071681976 
+	0.086436033 
+		0.073498011 
+0.079881907 
+	0.071355104 
+	0.092394114 
 finish connect section
 	23 
-		0.032337904 
+		0.091007948 
 finish connect section
-	23 
-	1 
-	1 
-		0.047384977 
-0.044384003 	0 
-	1 
-	1 
-	1 
-
+	1 23 
+	
+	0.081671 
 finish connect section
-	23 
-	1 
-	0 
-	1 
-	1 
-	1 
 0 
 	1 
-	1 
-	1 
-finish connect section
 	23 
 	1 
 	0 
 	1 
-		0.0546 
-finish connect section
-	23 
 	1 
 	0 
-	0.054464102 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+		0.092621088 
+finish connect section
+0.092417002 
+	0.09432292 
 finish connect section
 	23 
-	0.048297882 	
 finish connect section
+	1 
+		23 0 
+
+	1 	1 
+
+	1 
+	1 
+	0 
+		23 
+1 	1 
+
+	0 
+	1 
+		0.092965841 	
+1 finish connect section
+	23 
+	
+		0.076415062 1 
+finish connect section
+1 	
+23 	
+
+	1 
 1 
 	1 
-	23 	
+	0 
+	0 
+		0.089434147 
+finish connect section
+	23 
+	1 
+	0 
+	1 
+	1 
 	1 1 
 
-1 	0 
+		1 1 
 
+1 	0.099894047 
+finish connect section
+	23 
+
+	1 	1 
+	
 	0 
-	1 
-	1 
-			1 
-	1 1 
-
-	1 
 1 
 	1 
-	0.082084179 
-finish connect section
-	23 
 	1 
+	1 
+	10 
+	10 
+	10 
+		10 
+	10 
+10 
+	10 
+	10 
+		10 
+10 
 	0 
-	0.074641943 
-finish connect section
-	23 
-	1 
 	0 
-	1 
-	1 
-		1 
-	1 
-	1 
-1 
-	0.10129404 
-finish connect section
-	23 
-	1 
 	0 
-	1 
-	1 
-	1 
-	0.1 
-	0.1 
-	0.1 
-		0.1 
-0.1 
-	0.1 
-	0.1 
-	0.1 
-	0.1 
-	0.1 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0.022748947 
+	0.027544022 
+	0.021506071 
+	0.045418024 
+	0.043045044 
+	0.050756931 
+	0.061331034 
+	0.071870804 
+	0.078352928 
+	0.08503294 
+	0 
+	0 

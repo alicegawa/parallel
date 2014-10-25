@@ -66,12 +66,13 @@ objref cells
 objref recordSpike
 //objref nil
 //objref tvec, idvec
-
+objref gidvec
 
 proc makeCells(){local i, num_cell, num_ecell, ratio, e_num localobj cell, nc, nil
     num_cell = $1
     num_ecell = $2
     cells = new List()
+    gidvec = new Vector()
     //recordSpike = new List()
     //tvec = new Vector()
     //idvec = new Vector()

@@ -16,7 +16,10 @@ proc initCount() { local i
 proc checkgid() {local i, exist
     for i=0, NCELL-1 {
 	exist = pc.gid_exists(i)
-	printf("%dth result is %d\n",i,exist)
+	if(exist){
+	    printf("cell %d exists!!\n",i)
+	}
+	//printf("%dth result is %d\n",i,exist)
     }
 }
 
@@ -83,6 +86,7 @@ proc connectCells() { local i, targid, num_ecell, num_syn, num_vta, nsyn_max loc
 	    nclist.append(nc)
 	    nc.delay = 0.1
 	    if(i<num_ecell){
+		//nc.weight = 1//itiou setuzoku ha dekiteiru moyou
 		nc.weight = 0.0002
 		//cells.object(i).soma nclist.append(new NetCon(&v(0.5),syn,0,0,0.0002))
 	    }else{

@@ -14,8 +14,8 @@ tabun saishoni gid_exists() de sonzai wo kakunin sitekara yattahouga bunan!!
 load_file("nrngui.hoc")
 
 objref nclist_us, nclist_spon, nclist_cs
-objectvar us[NCELL_VTA], sponFire[NCELL], cs[NCELL_CS]
-
+objectvar us[NCELL_VTA], cs[NCELL_CS]
+objref  sponFire
 //ins setStim section, it is remained to describe that what cells is potentiated by DA. So, let's add in next case.
 proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc
     stim_num = $1
@@ -23,7 +23,7 @@ proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc
     dur = $3
     num_cs = $4
     stim_int = $5
-    
+    /*
     nclist_us = new List()
     for i=0, num_vta-1 {
 	if(pc.gid_exists(i)){
@@ -51,17 +51,20 @@ proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc
 		nclist_cs.append(new NetCon(cs[i],pc.gid2cell(num_cs+i).synlist.object(0),0,0.1,0.02))//sasiatari No. NCELL_CS~ no 10 ko wo sitei
 	    }
 	}
-    }
+    }*/
     nclist_spon = new List()
     for i=0, cells.count-1 {
-	if(pc.gid_exists(i)){
-	    pc.gid2cell(i).soma {
-		sponFire[i] = new GammaNoise(0.85)
-		sponFire[i].amp = 0.065
-		sponFire[i].dur = dur
-		sponFire[i].del = 20
-		nc = new NetCon(sponFire[i],pc.gid2cell(i).synlist.object(1),0,0.1,0.02)
-		nclist_spon.append(nc)
+	//if(pc.gid_exists(i)){
+	  //  printf("host id = %d , my gid = %d\n",pc.id,i)
+	  cells.object(i).soma {
+	      sponFire = new IClamp(0.85)//GammaNoise(0.85)
+	      //print sponFire
+	      sponFire.amp = 1//0.065
+	      sponFire.dur = dur
+	      sponFire.del = 20
+	      //nc = new NetCon(sponFire,pc.gid2cell(i).synlist.object(1),0,0.1,0.02)
+	      nclist_spon.append(new NetCon(sponFire,cells.object(i).synlist.object(1),0,0.1,0.02))
+	      //nclist_spon.append(nc)
 		//nclist_spon.append(new NetCon(sponFire[i],cells.object(i).synlist.object(1),0,0,0.02))//0.02 ha imanotokoro koteide
 	    }
 	}

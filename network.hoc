@@ -33,10 +33,10 @@ printf("\n\n\naaa\n\n\n")
 makeCells(NCELL,NCELL_E)
 printf("\n\n\nbbb\n\n\n")
 pc.barrier()
-//checkgid()
+checkgid()
 pc.barrier()
 initCount()
-connectCells(NCELL_E, NSYN, NCELL_VTA, NSYN_MAX)
+//connectCells(NCELL_E, NSYN, NCELL_VTA, NSYN_MAX)
 pc.barrier()
 printf("finish connect section\n")
 
@@ -80,9 +80,9 @@ rect = new Vector()
 recv = new Vector()
 
 rect.record(&t)
-if(pc.gid_exists(0)){
-    recv.record(&pc.gid2cell(0).soma.v(0.5))
-}
+//if(pc.gid_exists(0)){
+recv.record(&cells.object(1).soma.v(0.5))
+//}
 
 ////////////////continue to save section///////////////////////////////
 finitialize(v_init)
@@ -97,7 +97,7 @@ run()
 
 
 //////////////save section/////////////////////////////////////
-/*
+
 objref savv
 savv = new File()
 savv.wopen("volt.dat")
@@ -105,7 +105,7 @@ for i=0,rect.size()-1{
     savv.printf("%g %g\n",rect.x(i),recv.x(i))
 }
 savv.close()
-*/
+
 /*
 objref sav_connect
 sav_connect = new File()
@@ -123,6 +123,14 @@ stdinit()
 pc.psolve(tstop)
 
 pc.barrier()
+
+objref mt
+{mt = new Matrix()}
+{printf("#  t (msec)\tIClamp\n")}
+mt.resize(tvec.size(), 2)
+mt.setcol(0, tvec)
+mt.setcol(1, idvec)
+{mt.printf("%0.5f ")}
 
 objref savSpike
 
