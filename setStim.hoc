@@ -54,10 +54,10 @@ proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc, sp
 	}*/
 	nclist_spon = new List()
 	sponFire = new List()
-	for i=0, cells.count-1 {
+	for i=0, NCELL-1 {
 		if(pc.gid_exists(i)){
 			//  printf("host id = %d , my gid = %d\n",pc.id,i)
-			cells.object(i).soma { // pc.gid2cell(i).soma
+			pc.gid2cell(i).soma {
 				spon_tmp = new IClamp(0.85)//GammaNoise(0.85)
 				//print sponFire
 				spon_tmp.amp = 1//0.065
@@ -65,8 +65,7 @@ proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc, sp
 				spon_tmp.del = 20
 				sponFire.append(spon_tmp)
 				//nc = new NetCon(sponFire,pc.gid2cell(i).synlist.object(1),0,0.1,0.02)
-				nclist_spon.append(new NetCon(sponFire.object(i), cells.object(i).synlist.object(1),0,0.1,0.02))
-				// nclist_spon.append(new NetCon(sponFire[i], pc.gid2cell(i).synlist.object(1),0,0.1,0.02))
+				nclist_spon.append(new NetCon(spon_tmp, pc.gid2cell(i).synlist.object(1),0,0.1,0.02))
 				//nclist_spon.append(nc)
 				//nclist_spon.append(new NetCon(sponFire[i],cells.object(i).synlist.object(1),0,0,0.02))//0.02 ha imanotokoro koteide
 			}
