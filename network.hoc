@@ -127,9 +127,9 @@ pc.barrier()
 objref mt
 {mt = new Matrix()}
 {printf("#  t (msec)\tIClamp\n")}
-mt.resize(tvec.size(), 2)
-mt.setcol(0, tvec)
-mt.setcol(1, idvec)
+{mt.resize(tvec.size(), 2)}
+{mt.setcol(0, tvec)}
+{mt.setcol(1, idvec)}
 {mt.printf("%0.5f ")}
 
 objref savSpike
@@ -176,7 +176,7 @@ for rank=0, pc.nhost-1{
 }
 
 //savSpike.close()
-pc.runworker()
-pc.done()
+{pc.runworker()}
+{pc.done()}
 
 /////////////end of save section///////////////////////////////
