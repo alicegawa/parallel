@@ -1,4 +1,5 @@
 load_file("nrngui.hoc")
+load_file("read.hoc")
 
 objref nclist, r
 double count[NCELL]
@@ -23,7 +24,7 @@ proc checkgid() {local i, exist
     }
 }
 
-proc connectCells() { local i, targid, num_ecell, num_syn, num_vta, nsyn_max localobj src, target, syn, nc, nil
+proc connectCells() { local i, j, k, targid, num_ecell, num_syn, num_vta, nsyn_max localobj src, target, syn, nc, nil
     num_ecell = $1
     num_syn = $2
     num_vta = $3
@@ -31,7 +32,29 @@ proc connectCells() { local i, targid, num_ecell, num_syn, num_vta, nsyn_max loc
     nclist = new List()
     r = new Random(25525)
     mem = -1
-    /*
+    read_mat()
+    for i=0, NCELL-1{
+	if(pc.gid_exists(i)){
+	    for j=0, NCELL-1{
+		for(k=0;k<con.x[i][j];k=k+1){
+		    syn = pc.gid2cell(i).makeSyn(i,NCELL_E,NCELL_VTA)
+		    nc = pc.gid_connect(j,syn)
+		    printf("my host id = %d, parent(pre) cell id = %d\n",pc.id,j)
+		    nclist.append(nc)
+		    nc.delay = 0.1
+		    if(i<num_ecell){
+			nc.weight = 0.002
+		    }else{
+			nc.weight = 0.1
+		    }
+		}
+	    }
+	}
+    }
+}
+
+
+	    /*
     for i=0, NCELL-1{
 	if(pc.gid_exists(i)){
 	    for j=0, num_syn-1{
@@ -51,6 +74,9 @@ proc connectCells() { local i, targid, num_ecell, num_syn, num_vta, nsyn_max loc
     }
     pc.barrier()
     */
+    
+    
+    /*
     //for i=0, cells.count-1 {
     for i=0, NCELL-1{
 	//src = cells.object(i)
@@ -73,7 +99,7 @@ proc connectCells() { local i, targid, num_ecell, num_syn, num_vta, nsyn_max loc
 	    //yappari process nai desika tunagatte nai mitai?????
 	    target = pc.gid2cell(targid)
 	    /****************************TODO***************************************/
-	    syn = target.makeSyn(targid,NCELL_E,NCELL_VTA)//tabun kokode tukuttahouga raku!!
+	   // syn = target.makeSyn(targid,NCELL_E,NCELL_VTA)//tabun kokode tukuttahouga raku!!
 	    /***********************************************************************/
 	    /****************kokokara shitamademo TODO ni ireyou*******************/
 	    //if(i>=num_ecell){
@@ -81,6 +107,7 @@ proc connectCells() { local i, targid, num_ecell, num_syn, num_vta, nsyn_max loc
 	    //printf("inhibit mem = %d, count[mem]=%d\n",mem,int(count[mem]))
 	    //  }
 	    /*********************************************************************/
+/*
 	    //nc = pc.gid_connect(1000000+i*num_syn+j,syn)
 	    nc = pc.gid_connect(i,syn)
 	    nclist.append(nc)
@@ -95,4 +122,4 @@ proc connectCells() { local i, targid, num_ecell, num_syn, num_vta, nsyn_max loc
 	    }
 	}
     }
-}
+}*/

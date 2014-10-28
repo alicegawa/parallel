@@ -24,6 +24,7 @@ else_flag = 2
 objref pc
 pc = new ParallelContext()
 NPROC = 10
+load_file("read.hoc")
 load_file("cells.hoc")
 load_file("connectCells.hoc")
 load_file("setStim.hoc")
@@ -36,7 +37,7 @@ pc.barrier()
 checkgid()
 pc.barrier()
 initCount()
-//connectCells(NCELL_E, NSYN, NCELL_VTA, NSYN_MAX)
+connectCells(NCELL_E, NSYN, NCELL_VTA, NSYN_MAX)
 pc.barrier()
 printf("finish connect section\n")
 

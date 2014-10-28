@@ -14,53 +14,55 @@ tabun saishoni gid_exists() de sonzai wo kakunin sitekara yattahouga bunan!!
 load_file("nrngui.hoc")
 
 objref nclist_us, nclist_spon, nclist_cs
-objectvar us[NCELL_VTA], cs[NCELL_CS]
-objref  sponFire
+objref  us, cs, sponFire
 //ins setStim section, it is remained to describe that what cells is potentiated by DA. So, let's add in next case.
-proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc, spon_tmp
+proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc, us_tmp, cs_tmp, spon_tmp
     stim_num = $1
     num_vta = $2
     dur = $3
     num_cs = $4
     stim_int = $5
-    /*
+    
     nclist_us = new List()
+    us = new List()
     for i=0, num_vta-1 {
 		if(pc.gid_exists(i)){
 			pc.gid2cell(i){
-				us[i] = new NetStim()
-				us[i].number = stim_num
-				us[i].start = 25
-				us[i].interval = stim_int
-				us[i].noise = 0.1
-				
-				nclist_us.append(new NetCon(us[i], pc.gid2cell(i).synlist.object(0),0,0.1,0.02))//weight should be modified
+				us_tmp = new NetStim()
+				us_tmp.number = stim_num
+				us_tmp.start = 25
+				us_tmp.interval = stim_int
+				us_tmp.noise = 0.1
+				us.append(us_tmp)
+				nclist_us.append(new NetCon(us_tmp, pc.gid2cell(i).synlist.object(0),0,0.1,0.02))//weight should be modified
 			}
 		}
     }
     nclist_cs = new List()
+    cs = new List()
     for i=0, num_cs-1{
 		if(pc.gid_exists(i)){
 			pc.gid2cell(i){
-				cs[i] = new NetStim()
-				cs[i].number = stim_num
-				cs[i].start = 45
-				cs[i].interval = stim_int
-				cs[i].noise = 0.1
+				cs_tmp = new NetStim()
+				cs_tmp.number = stim_num
+				cs_tmp.start = 45
+				cs_tmp.interval = stim_int
+				cs_tmp.noise = 0.1
 				//	printf("%d\n",num_cs)
-				nclist_cs.append(new NetCon(cs[i],pc.gid2cell(num_cs+i).synlist.object(0),0,0.1,0.02))//sasiatari No. NCELL_CS~ no 10 ko wo sitei
+				cs.append(cs_tmp)
+				nclist_cs.append(new NetCon(cs_tmp,pc.gid2cell(num_cs+i).synlist.object(0),0,0.1,0.02))//sasiatari No. NCELL_CS~ no 10 ko wo sitei
 			}
 		}
-	}*/
+	}
 	nclist_spon = new List()
 	sponFire = new List()
 	for i=0, NCELL-1 {
 		if(pc.gid_exists(i)){
 			//  printf("host id = %d , my gid = %d\n",pc.id,i)
 			pc.gid2cell(i).soma {
-				spon_tmp = new IClamp(0.85)//GammaNoise(0.85)
+				spon_tmp = new GammaNoise(0.85)
 				//print sponFire
-				spon_tmp.amp = 1//0.065
+				spon_tmp.amp = 0.065//1//0.065
 				spon_tmp.dur = dur
 				spon_tmp.del = 20
 				sponFire.append(spon_tmp)

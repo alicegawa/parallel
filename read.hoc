@@ -2,6 +2,25 @@ load_file("nrngui.hoc")
 
 /*************************************************************************************************/
 //NCELL * NCELL no matrix ni kakunou site, 
-objref file
-file = new File()
-file.ropen("con.dat")
+objref con
+objref f
+proc read_mat() {local i,j,k
+    con = new Matrix()
+    f = new File()
+    f.ropen("con_var.dat")
+    con.scanf(f,100,100)
+    f.close()
+    /*
+    for i=0, con.ncol-1 {
+	for j=0, con.nrow-1 {
+	    for(k=0;k<con.x[i][j];k=k+1){
+		printf("%d\t",j)
+	    }
+	}
+	printf("\n")
+    }
+    */
+    
+}
+
+//read_mat()
