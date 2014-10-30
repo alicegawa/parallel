@@ -29,7 +29,7 @@ load_file("cells.hoc")
 load_file("connectCells.hoc")
 load_file("setStim.hoc")
 load_file("signalDA.hoc")
-
+load_file("myrun.hoc")
 makeCells(NCELL,NCELL_E)
 pc.barrier()
 checkgid()
@@ -89,7 +89,8 @@ fcurrent()
 //signalDA(NCELL_VTA, NCELL_E, NSYN_MAX)
 
 ///////////////execute section///////////////////////////////////////
-run()
+//run()
+myrun()
 /////////////end execute section//////////////////////////////////////
 
 

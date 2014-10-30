@@ -37,10 +37,11 @@ obfunc connect2target() { localobj nc
 
 objref syn_
 
-obfunc makeSyn() {local targetno, num_ecell, num_vta
+obfunc makeSyn() {local targetno, hostno, num_ecell, num_vta
     targetno = $1
-    num_ecell = $2
-    num_vta = $3
+    hostno = $2
+    num_ecell = $3
+    num_vta = $4
     if(targetno<num_ecell){
 	soma {
 	    syn_ = new ExpSynSTDP(0.5)
@@ -49,11 +50,16 @@ obfunc makeSyn() {local targetno, num_ecell, num_vta
 	if(targetno<num_vta){
 	    syn_.forSpike = 2
 	}
+	if(hostno>=num_ecell){
+	    syn_.e = -100
+	}
     }else{
 	soma {
 	    syn_ = new Exp2Syn(0.5)
 	    synlist.append(syn_)
-	    syn_.e = -100
+	    if(hostno>=num_ecell){
+		syn_.e = -100
+	    }
 	}
     }
     return syn_

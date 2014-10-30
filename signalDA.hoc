@@ -1,25 +1,48 @@
 load_file("nrngui.hoc")
 
+objref resv
+dacounter = 0
 
-proc signalDA() {local i, counter, tmpDA, num_vta, num_ecell, nsyn_max
+proc signalDA() {local i, counter, tmpDA, num_vta, num_ecell, nsyn_max, buf
     num_vta = $1
     num_ecell = $2
     nsyn_max = $3
     counter = 0
-    tmpDA = cells.object(0).synlist.object(2).forDA
-    tmpDA = tmpDA * 0.9999995
+    resv = new Vector()
+    buf=0
+    dacounter=0
     for i=0, num_vta-1 {
-	counter = counter + 1
-	if(cells.object(i).synlist.object(2).forSpike==1){
-	    cells.object(i).synlist.object(2).forSpike = 0
-	    tmpDA = tmpDA + 0.04
-	    printf("%d th cell in VTAp is firing\n",counter)
+	if(pc.gid_exists(i)){
+	    tmpDA = pc.gid2cell(i).synlist.object(2).forDA
+	    break
 	}
     }
+    tmpDA = tmpDA * 0.995
+    for i=0, num_vta-1 {
+	if(pc.gid_exists(i)){
+	    //counter = counter + 1
+	    if(pc.gid2cell(i).synlist.object(2).forSpike==1){
+		pc.gid2cell(i).synlist.object(2).forSpike = 2
+		//tmpDA = tmpDA + 0.04
+		dacounter = dacounter + 1
+		//printf("%d th cell in VTAp is firing\n",counter)
+	    }
+	    
+	}
+    }
+    pc.allgather(dacounter,resv)
+    for(i=0;i<resv.size;i=i+1){
+	buf = buf + resv.x[i]
+    }
+    tmpDA = tmpDA + 0.04*buf
 //    tmpDA = tmpDA * 0.995 //if following Izhikevich, here should be this discription
     for i=0, num_ecell-1 {
-	for j=0, nsyn_max-1 {
-	    cells.object(i).synlist.object(j+2).forDA = tmpDA
+	if(pc.gid_exists(i)){
+	    for j=0, pc.gid2cell(i).synlist.count-3 {
+		pc.gid2cell(i).synlist.object(j+2).forDA = tmpDA
+	    }
 	}
     }
+    //dacounter=0
+    //buf = 0//for avoiding error
 }

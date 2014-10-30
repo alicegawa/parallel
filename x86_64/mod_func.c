@@ -10,8 +10,8 @@ void modl_reg(){
   if (!nrn_nobanner_) if (nrnmpi_myid < 1) {
     fprintf(stderr, "Additional mechanisms from files\n");
 
-    fprintf(stderr," mod/gamma.mod");
-    fprintf(stderr," mod/stdp.mod");
+    fprintf(stderr," mod//gamma.mod");
+    fprintf(stderr," mod//stdp.mod");
     fprintf(stderr, "\n");
   }
   _gamma_reg();

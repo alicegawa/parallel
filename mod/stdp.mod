@@ -24,7 +24,7 @@ PARAMETER {
 	minWeight = 0
 	numbre = 0
 	debug = 1
-	forSpike = 2 : use to judge whether it fires or not.
+	forSpike = 0 : use to judge whether it fires or not.
 	tmp = 0
 	forDA = 0.02
 }
@@ -90,7 +90,7 @@ NET_RECEIVE(w (uS), tpre (ms)) {
     }else if (flag == 2) { : postsynaptic spike
 	:printf("now is here(post to pre) %g \n",flag)
 	tmp=forSpike
-	if ( forSpike == 2){
+	if ( forSpike == 0){
 	    :skip to change forSpike
 	}else{
 	    forSpike=1

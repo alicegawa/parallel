@@ -217,7 +217,7 @@ static void nrn_alloc(Prop* _prop) {
  	minWeight = 0;
  	numbre = 0;
  	debug = 1;
- 	forSpike = 2;
+ 	forSpike = 0;
  	tmp = 0;
  	forDA = 0.02;
   }
@@ -329,7 +329,7 @@ static void _net_receive (_pnt, _args, _lflag) Point_process* _pnt; double* _arg
      }
    else if ( _lflag  == 2.0 ) {
      tmp = forSpike ;
-     if ( forSpike  == 2.0 ) {
+     if ( forSpike  == 0.0 ) {
        }
      else {
        forSpike = 1.0 ;

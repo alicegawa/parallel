@@ -37,13 +37,13 @@ proc connectCells() { local i, j, k, targid, num_ecell, num_syn, num_vta, nsyn_m
 	if(pc.gid_exists(i)){
 	    for j=0, NCELL-1{
 		for(k=0;k<con.x[i][j];k=k+1){
-		    syn = pc.gid2cell(i).makeSyn(i,NCELL_E,NCELL_VTA)
+		    syn = pc.gid2cell(i).makeSyn(i,j,NCELL_E,NCELL_VTA)
 		    nc = pc.gid_connect(j,syn)
 		    printf("my host id = %d, parent(pre) cell id = %d\n",pc.id,j)
 		    nclist.append(nc)
 		    nc.delay = 0.1
 		    if(i<num_ecell){
-			nc.weight = 0.002
+			nc.weight = 0.5//fortest 0.002
 		    }else{
 			nc.weight = 0.1
 		    }
