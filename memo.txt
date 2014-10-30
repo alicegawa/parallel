@@ -1,0 +1,6 @@
+~/neuron_mpi/nrn/share/nrn/lib/hoc
+
+if you add some line in the hoc in this directory, and if you execute load_file("nrngui.hoc")(<-example), you can reflect the change that you want to realize.
+
+and you can touch the new hoc file in this directory, and execute load_file("~~~.hoc").
+new files can add to this directory without compiling!!

@@ -30,9 +30,7 @@ load_file("connectCells.hoc")
 load_file("setStim.hoc")
 load_file("signalDA.hoc")
 
-printf("\n\n\naaa\n\n\n")
 makeCells(NCELL,NCELL_E)
-printf("\n\n\nbbb\n\n\n")
 pc.barrier()
 checkgid()
 pc.barrier()
@@ -134,11 +132,28 @@ objref mt
 {mt.printf("%0.5f ")}
 
 objref savSpike
+strdef filename
 
 for rank=0, pc.nhost-1{
     if(rank==pc.id){
 	savSpike = new File()
-	if(pc.id==0){
+	sprint(filename,"./result/spike%d.txt",pc.id)
+	savSpike.wopen(filename)
+	for i=0, tvec.size()-1 {
+	    savSpike.printf("%g\t%g\n",tvec.x(i),idvec.x(i))
+	}
+	savSpike.close()
+    }
+    pc.barrier()
+}
+
+//savSpike.close()
+{pc.runworker()}
+{pc.done()}
+
+/////////////end of save section///////////////////////////////
+/*
+if(pc.id==0){
 	    savSpike.wopen("spike0.txt")
 	}
 	if(pc.id==1){
@@ -167,17 +182,4 @@ for rank=0, pc.nhost-1{
 	}
 	if(pc.id==9){
 	    savSpike.wopen("spike9.txt")
-	}
-	for i=0, tvec.size()-1 {
-	    savSpike.printf("%g\t%g\n",tvec.x(i),idvec.x(i))
-	}
-	savSpike.close()
-    }
-    pc.barrier()
-}
-
-//savSpike.close()
-{pc.runworker()}
-{pc.done()}
-
-/////////////end of save section///////////////////////////////
+	}*/

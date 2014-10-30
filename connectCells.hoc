@@ -1,5 +1,5 @@
 load_file("nrngui.hoc")
-load_file("read.hoc")
+//load_file("read.hoc")
 
 objref nclist, r
 double count[NCELL]
@@ -32,7 +32,7 @@ proc connectCells() { local i, j, k, targid, num_ecell, num_syn, num_vta, nsyn_m
     nclist = new List()
     r = new Random(25525)
     mem = -1
-    read_mat()
+    //read_mat()
     for i=0, NCELL-1{
 	if(pc.gid_exists(i)){
 	    for j=0, NCELL-1{

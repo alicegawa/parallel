@@ -12,6 +12,6 @@ printf("col = %d, row = %d\n",con.ncol,con.nrow)
 strdef s
 a=0
 
-sprint(s,"spike%d.txt",a)
+print(s,"spike%d.txt",a)
 
 {print s}

@@ -23,4 +23,4 @@ proc read_mat() {local i,j,k
     
 }
 
-//read_mat()
+read_mat()
