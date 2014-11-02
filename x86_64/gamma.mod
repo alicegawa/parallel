@@ -1,1 +1,1 @@
-../mod//gamma.mod
+../mod/gamma.mod

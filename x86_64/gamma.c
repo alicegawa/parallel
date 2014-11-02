@@ -259,7 +259,8 @@ static void initmodel() {
    i = 0.0 ;
    
 /*VERBATIM*/
-    srand((unsigned)time(NULL));
+    srand(25525);
+    /*srand((unsigned)time(NULL));*/
     /*srand(25525);*/
  }
 

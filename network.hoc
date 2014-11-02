@@ -12,12 +12,13 @@ NCELL_CS = 10
 NSYN = 10
 NSYN_MAX = (NCELL-1)*NSYN
 
-tstop = 200//500//100000
+
 dt = 0.025//<-for test0.1//0.025
+tstop_max = 1000//200//tstop = dt*10//10//200//500//100000
 t = 0
 stimInt = 20//1000
-stimNum = 7//int(tstop/stimInt)
-dur = tstop
+stimNum = 50//7//int(tstop/stimInt)
+dur = tstop_max
 //identify the VTA parameter
 vta_flag = 0
 else_flag = 2
@@ -29,29 +30,16 @@ load_file("cells.hoc")
 load_file("connectCells.hoc")
 load_file("setStim.hoc")
 load_file("signalDA.hoc")
-load_file("myrun.hoc")
+//load_file("myrun.hoc")
 makeCells(NCELL,NCELL_E)
 pc.barrier()
-checkgid()
-pc.barrier()
+//checkgid()
+//pc.barrier()
 initCount()
 connectCells(NCELL_E, NSYN, NCELL_VTA, NSYN_MAX)
+//confirm.printf("%0.5f ")
 pc.barrier()
 printf("finish connect section\n")
-
-objref sav_connect
-sav_connect = new File()
-sav_connect.wopen("connect.dat")
-for i=0, cells.count-1 {
-    for j=0, NSYN-1 {
-//	sav_connect.printf("%g\t%g\n",int(rec_connect[i][j]),nclist.object(i*NSYN+j).weight)
-//	sav_connect.printf("%g\n",int(rec_connect[i][j]))
-    }
-    sav_connect.printf("\n")
-}
-sav_connect.close()
-
-
 
 
 setStim(stimNum, NCELL_VTA, dur, NCELL_CS,stimInt)
@@ -67,8 +55,15 @@ proc setSpikeRecord() {local i localobj nc, nil
 	nc.record(tvec,idvec,nc.srcgid)
     }
 }
+proc spikerecord2(){
+    tvec = new Vector()
+    idvec = new Vector()
+    
+    pc.spike_record(-1,tvec,idvec)
+}
 
-setSpikeRecord()
+spikerecord2()
+//setSpikeRecord()
 
 /////////////////for record and watching section///////////////////////
 
@@ -80,31 +75,60 @@ recv = new Vector()
 
 rect.record(&t)
 //if(pc.gid_exists(0)){
-recv.record(&cells.object(1).soma.v(0.5))
+recv.record(&cells.object(82).soma.v(0.5))
 //}
 
 ////////////////continue to save section///////////////////////////////
 finitialize(v_init)
 fcurrent()
 //signalDA(NCELL_VTA, NCELL_E, NSYN_MAX)
-
+printf("the first DA = %lf\n",cells.object(0).synlist.object(2).forDA)
 ///////////////execute section///////////////////////////////////////
 //run()
-myrun()
+//myrun()
 /////////////end execute section//////////////////////////////////////
 
 
 
 
+
+pc.set_maxstep(10)
+stdinit()
+steptime = dt
+tstop = steptime
+
+
+for(time=0;time<tstop;time+=steptime){
+    //printf("\n\n\nt = %lf \n\n\n",t)
+    pc.psolve(tstop)
+    pc.barrier()
+    tstop += steptime
+    signalDA(NCELL_VTA,NCELL_E,NSYN_MAX)
+    //pc.barrier()
+    if(tstop>=tstop_max){
+	break
+    }
+}
+
+pc.barrier()
+
+
 //////////////save section/////////////////////////////////////
 
 objref savv
-savv = new File()
-savv.wopen("volt.dat")
-for i=0,rect.size()-1{
-    savv.printf("%g %g\n",rect.x(i),recv.x(i))
+strdef vname
+for rank=0, pc.nhost-1{
+    if(rank==pc.id){
+	savv = new File()
+	sprint(vname,"./result/volt%d.dat",pc.id)
+	savv.wopen(vname)
+	for i=0, rect.size()-1 {
+	    savv.printf("%g\t%g\n",rect.x(i),recv.x(i))
+	}
+	savv.close()
+    }
+    pc.barrier()
 }
-savv.close()
 
 /*
 objref sav_connect
@@ -118,11 +142,6 @@ for i=0, cells.count-1 {
 }
 sav_connect.close()
 */
-pc.set_maxstep(10)
-stdinit()
-pc.psolve(tstop)
-
-pc.barrier()
 
 objref mt
 {mt = new Matrix()}
@@ -131,6 +150,8 @@ objref mt
 {mt.setcol(0, tvec)}
 {mt.setcol(1, idvec)}
 {mt.printf("%0.5f ")}
+
+printf("the last da = %lf\n",cells.object(0).synlist.object(2).forDA)
 
 objref savSpike
 strdef filename

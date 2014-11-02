@@ -24,6 +24,9 @@ proc checkgid() {local i, exist
     }
 }
 
+//objref confirm
+
+
 proc connectCells() { local i, j, k, targid, num_ecell, num_syn, num_vta, nsyn_max localobj src, target, syn, nc, nil
     num_ecell = $1
     num_syn = $2
@@ -31,51 +34,43 @@ proc connectCells() { local i, j, k, targid, num_ecell, num_syn, num_vta, nsyn_m
     nsyn_max = $4
     nclist = new List()
     r = new Random(25525)
+/*    
+    confirm = new Matrix()
+    confirm.resize(NCELL,NCELL)
+    for i=0,NCELL-1{
+	for j=0,NCELL-1{
+	    confirm.x[i][j]=0
+	}
+    }
+    
+    */
     mem = -1
     //read_mat()
     for i=0, NCELL-1{
 	if(pc.gid_exists(i)){
 	    for j=0, NCELL-1{
+		//printf("con.x[%d][%d] = %d ",i,j,con.x[i][j])
 		for(k=0;k<con.x[i][j];k=k+1){
+		    //confirm.x[i][j] = confirm.x[i][j] + 1
 		    syn = pc.gid2cell(i).makeSyn(i,j,NCELL_E,NCELL_VTA)
 		    nc = pc.gid_connect(j,syn)
 		    printf("my host id = %d, parent(pre) cell id = %d\n",pc.id,j)
 		    nclist.append(nc)
+		    nc.threshold = 0
 		    nc.delay = 0.1
-		    if(i<num_ecell){
-			nc.weight = 0.5//fortest 0.002
+		    if(j<num_ecell){
+			nc.weight = 0.0002//0.01
 		    }else{
-			nc.weight = 0.1
+			nc.weight = 0.03//0.1
 		    }
 		}
 	    }
+	    //printf("\n")
 	}
     }
 }
 
 
-	    /*
-    for i=0, NCELL-1{
-	if(pc.gid_exists(i)){
-	    for j=0, num_syn-1{
-		src = pc.gid2obj(i)
-		pc.set_gid2node(1000000+i*num_syn+j, pc.id)
-		src.soma nc = new NetCon(&v(0.5),nil,0,0,0.1)
-		pc.cell(1000000+i*num_syn+j,nc)
-		nclist.append(nc)
-		nc.delay = 0.1
-		if(i<num_ecell){
-		    nc.weight = 0.0002
-		}else{
-		    nc.weight = 0.1
-		}
-	    }
-	}
-    }
-    pc.barrier()
-    */
-    
-    
     /*
     //for i=0, cells.count-1 {
     for i=0, NCELL-1{

@@ -1,1 +1,1 @@
-../mod//stdp.mod
+../mod/stdp.mod

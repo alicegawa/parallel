@@ -42,24 +42,25 @@ obfunc makeSyn() {local targetno, hostno, num_ecell, num_vta
     hostno = $2
     num_ecell = $3
     num_vta = $4
-    if(targetno<num_ecell){
+    //if(targetno<num_ecell){
+    if(hostno<num_ecell){
 	soma {
 	    syn_ = new ExpSynSTDP(0.5)
 	    synlist.append(syn_)
 	}
 	if(targetno<num_vta){
 	    syn_.forSpike = 2
-	}
+	}/*
 	if(hostno>=num_ecell){
-	    syn_.e = -100
-	}
+	    syn_.e=-100
+	}*/
     }else{
 	soma {
 	    syn_ = new Exp2Syn(0.5)
 	    synlist.append(syn_)
-	    if(hostno>=num_ecell){
-		syn_.e = -100
-	    }
+	    // if(hostno>=num_ecell){
+	    syn_.e = -100
+	    // }
 	}
     }
     return syn_
@@ -72,13 +73,13 @@ objref cells
 objref recordSpike
 //objref nil
 //objref tvec, idvec
-objref gidvec
+//objref gidvec
 
 proc makeCells(){local i, num_cell, num_ecell, ratio, e_num localobj cell, nc, nil
     num_cell = $1
     num_ecell = $2
     cells = new List()
-    gidvec = new Vector()
+    //gidvec = new Vector()
     //recordSpike = new List()
     //tvec = new Vector()
     //idvec = new Vector()

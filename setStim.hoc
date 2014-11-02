@@ -22,55 +22,63 @@ proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc, us
     dur = $3
     num_cs = $4
     stim_int = $5
-    
+   
     nclist_us = new List()
     us = new List()
     for i=0, num_vta-1 {
-		if(pc.gid_exists(i)){
-			pc.gid2cell(i){
-				us_tmp = new NetStim()
-				us_tmp.number = stim_num
-				us_tmp.start = 25
-				us_tmp.interval = stim_int
-				us_tmp.noise = 0.1
-				us.append(us_tmp)
-				nclist_us.append(new NetCon(us_tmp, pc.gid2cell(i).synlist.object(0),0,0.1,0.02))//weight should be modified
-			}
-		}
+	if(pc.gid_exists(i)){
+	    pc.gid2cell(i).soma{
+		us_tmp = new NetStim()
+		us_tmp.seed(25525)
+		us_tmp.number = stim_num
+		us_tmp.start = 25
+		us_tmp.interval = stim_int
+		us_tmp.noise = 0.1
+		us.append(us_tmp)
+		nc = new NetCon(us_tmp, pc.gid2cell(i).synlist.object(0),0,0.1,0.02)
+		nclist_us.append(nc)
+		//nclist_us.append(new NetCon(us_tmp, pc.gid2cell(i).synlist.object(0),0,0.0,0.02))//weight should be modified
+	    }
+	}
     }
+
     nclist_cs = new List()
     cs = new List()
     for i=0, num_cs-1{
-		if(pc.gid_exists(i)){
-			pc.gid2cell(i){
-				cs_tmp = new NetStim()
-				cs_tmp.number = stim_num
-				cs_tmp.start = 45
-				cs_tmp.interval = stim_int
-				cs_tmp.noise = 0.1
-				//	printf("%d\n",num_cs)
-				cs.append(cs_tmp)
-				nclist_cs.append(new NetCon(cs_tmp,pc.gid2cell(num_cs+i).synlist.object(0),0,0.1,0.02))//sasiatari No. NCELL_CS~ no 10 ko wo sitei
-			}
-		}
+	if(pc.gid_exists(num_cs+i)){
+	    pc.gid2cell(num_cs+i).soma{
+		cs_tmp = new NetStim2()
+		cs_tmp.seed(25525)
+		cs_tmp.number = stim_num
+		cs_tmp.start = 45
+		cs_tmp.interval = stim_int
+		cs_tmp.noise = 0.1
+		//	printf("%d\n",num_cs)
+		cs.append(cs_tmp)
+		nc = new NetCon(cs_tmp,pc.gid2cell(num_cs+i).synlist.object(0),0,0.1,0.02)
+		nclist_cs.append(nc)
+		//nclist_cs.append(new NetCon(cs_tmp,pc.gid2cell(num_cs+i).synlist.object(0),0,0.0,0.02))//sasiatari No. NCELL_CS~ no 10 ko wo sitei
+	    }
 	}
-	nclist_spon = new List()
-	sponFire = new List()
-	for i=0, NCELL-1 {
-		if(pc.gid_exists(i)){
-			//  printf("host id = %d , my gid = %d\n",pc.id,i)
-			pc.gid2cell(i).soma {
-				spon_tmp = new GammaNoise(0.85)
-				//print sponFire
-				spon_tmp.amp = 0.065//1//0.065
-				spon_tmp.dur = dur
-				spon_tmp.del = 20
-				sponFire.append(spon_tmp)
-				//nc = new NetCon(sponFire,pc.gid2cell(i).synlist.object(1),0,0.1,0.02)
-				nclist_spon.append(new NetCon(spon_tmp, pc.gid2cell(i).synlist.object(1),0,0.1,0.02))
-				//nclist_spon.append(nc)
-				//nclist_spon.append(new NetCon(sponFire[i],cells.object(i).synlist.object(1),0,0,0.02))//0.02 ha imanotokoro koteide
-			}
-		}
+    }
+    
+    nclist_spon = new List()
+    sponFire = new List()
+    for i=0, NCELL-1 {
+	if(pc.gid_exists(i)){
+	    //  printf("host id = %d , my gid = %d\n",pc.id,i)
+	    pc.gid2cell(i).soma {
+		spon_tmp = new GammaNoise(0.85)
+		//print sponFire
+		spon_tmp.amp = 0.065
+		spon_tmp.dur = dur
+		spon_tmp.del = 20
+		sponFire.append(spon_tmp)
+		nc = new NetCon(spon_tmp,pc.gid2cell(i).synlist.object(1),0,0.1,0.02)
+		//nclist_spon.append(new NetCon(spon_tmp, pc.gid2cell(i).synlist.object(1),0,0.0,0.02))
+		nclist_spon.append(nc)
+		//nclist_spon.append(new NetCon(sponFire[i],cells.object(i).synlist.object(1),0,0,0.02))//0.02 ha imanotokoro koteide
+	    }
+	}
     }
 }
