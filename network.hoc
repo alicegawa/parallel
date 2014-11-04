@@ -14,10 +14,10 @@ NSYN_MAX = (NCELL-1)*NSYN
 
 
 dt = 0.025//<-for test0.1//0.025
-tstop_max = 1000//200//tstop = dt*10//10//200//500//100000
+tstop_max = 1000//200//1000//200//tstop = dt*10//10//200//500//100000
 t = 0
 stimInt = 20//1000
-stimNum = 50//7//int(tstop/stimInt)
+stimNum = 50//7//50//7//int(tstop/stimInt)
 dur = tstop_max
 //identify the VTA parameter
 vta_flag = 0
@@ -55,6 +55,7 @@ proc setSpikeRecord() {local i localobj nc, nil
 	nc.record(tvec,idvec,nc.srcgid)
     }
 }
+
 proc spikerecord2(){
     tvec = new Vector()
     idvec = new Vector()
@@ -63,6 +64,7 @@ proc spikerecord2(){
 }
 
 spikerecord2()
+
 //setSpikeRecord()
 
 /////////////////for record and watching section///////////////////////
@@ -75,8 +77,9 @@ recv = new Vector()
 
 rect.record(&t)
 //if(pc.gid_exists(0)){
-recv.record(&cells.object(82).soma.v(0.5))
+recv.record(&cells.object(8).soma.v(0.5))//previously monitor 82
 //}
+
 
 ////////////////continue to save section///////////////////////////////
 finitialize(v_init)
@@ -98,16 +101,18 @@ steptime = dt
 tstop = steptime
 
 
-for(time=0;time<tstop;time+=steptime){
-    //printf("\n\n\nt = %lf \n\n\n",t)
+for(time=0;time<tstop_max;time+=steptime){
+    printf("\n\n\nt = %lf \n\n\n",t)
     pc.psolve(tstop)
     pc.barrier()
     tstop += steptime
     signalDA(NCELL_VTA,NCELL_E,NSYN_MAX)
     //pc.barrier()
+    /*
     if(tstop>=tstop_max){
 	break
     }
+    */
 }
 
 pc.barrier()

@@ -41,8 +41,9 @@ proc signalDA() {local i, counter, tmpDA, num_vta, num_ecell, nsyn_max, buf
     }
     tmpDA = tmpDA + 0.04*buf
     //    tmpDA = tmpDA * 0.995 //if following Izhikevich, here should be this discription
-    for i=0, cells.count-1 {
-//	if(pc.gid_exists(i)){
+    //printf("\n\n\n before change\n\n\n")
+    for i=0, NCELL-1 {//cells.count-1 {
+	if(pc.gid_exists(i)){
 	    //for j=0, pc.gid2cell(i).synlist.count-3 {
 	    for j=0, num_ecell-1{
 		for(k=0;k<con.x[i][j];k=k+1){
@@ -50,7 +51,7 @@ proc signalDA() {local i, counter, tmpDA, num_vta, num_ecell, nsyn_max, buf
 		    counter = counter + 1
 		}
 	    }
-//	}
+	}
 	counter = 0
     }
     //dacounter=0
