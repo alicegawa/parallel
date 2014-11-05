@@ -1,7 +1,9 @@
 load_file("nrngui.hoc")
 
 objref resv
-dacounter = 0
+//dacounter = 0
+objref dacounter, bcaster
+id_root = 0
 
 proc signalDA() {local i, counter, tmpDA, num_vta, num_ecell, nsyn_max, buf
     num_vta = $1
@@ -10,7 +12,9 @@ proc signalDA() {local i, counter, tmpDA, num_vta, num_ecell, nsyn_max, buf
     counter = 0
     resv = new Vector()
     buf=0
-    dacounter=0
+    //dacounter=0
+    dacounter = new Vector(1)
+    bcaster = new Vector(1)
     /*
     for i=0, num_vta-1 {
 	if(pc.gid_exists(i)){
@@ -18,28 +22,42 @@ proc signalDA() {local i, counter, tmpDA, num_vta, num_ecell, nsyn_max, buf
 	    break
 	}
     }*/
-    tmpDA = cells.object(0).synlist.object(2).forDA
+    //tmpDA = cells.object(0).synlist.object(2).forDA
     //printf("\n\n\nmy tmpDA = %lf, my pc.id = %d\n\n\n",tmpDA,pc.id)
-    tmpDA = tmpDA * 0.995
+    //tmpDA = tmpDA * 0.995
     for i=0, num_vta-1 {
 	if(pc.gid_exists(i)){
 	    if(pc.gid2cell(i).synlist.object(2).forSpike==1){
 		pc.gid2cell(i).synlist.object(2).forSpike = 2
 		//tmpDA = tmpDA + 0.04
-		dacounter = dacounter + 1
+		dacounter.x(0) = dacounter.x(0) + 1
 	    }
 	}
     }
     //pc.barrier()
-    pc.allgather(dacounter,resv)
-    
+    //pc.allgather(dacounter,resv)
+    /*******************TODO********************************/
+    {pc.gather_d(dacounter,resv,1,id_root)}
+    if(pc.id==id_root){
+	tmpDA = cells.object(0).synlist.object(2).forDA
+	tmpDA = tmpDA * 0.995
+	for(i=0;i<resv.size;i+=1){
+	    bcaster.x(0) += resv.x(i)
+	}
+	tmpDA = tmpDA + 0.04*bcaster.x(0)
+	bcaster.x(0) = tmpDA
+    }
+    pc.broadcast(bcaster,id_root)
+    /*******************************************************/
+    /*
     for(i=0;i<resv.size;i=i+1){
 	if(resv.x[i]!=0){
 	    //printf("\n\ntime = %lf\n resv[%d]=%d\n\n",t,i,resv.x[i])
 	}
 	buf = buf + resv.x[i]
     }
-    tmpDA = tmpDA + 0.04*buf
+    tmpDA = tmpDA + 0.04*buf*/
+    
     //    tmpDA = tmpDA * 0.995 //if following Izhikevich, here should be this discription
     //printf("\n\n\n before change\n\n\n")
     for i=0, NCELL-1 {//cells.count-1 {
@@ -47,7 +65,8 @@ proc signalDA() {local i, counter, tmpDA, num_vta, num_ecell, nsyn_max, buf
 	    //for j=0, pc.gid2cell(i).synlist.count-3 {
 	    for j=0, num_ecell-1{
 		for(k=0;k<con.x[i][j];k=k+1){
-		    pc.gid2cell(i).synlist.object(counter+2).forDA = tmpDA
+		    //pc.gid2cell(i).synlist.object(counter+2).forDA = tmpDA
+		    pc.gid2cell(i).synlist.object(counter+2).forDA = bcaster.x(0)
 		    counter = counter + 1
 		}
 	    }
