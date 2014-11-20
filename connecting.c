@@ -3,19 +3,21 @@
 #include <time.h>
 #include "MT.h"
 
-#define NCELL 100
-#define NCON 10
-#define NCELL_E 80
-#define NSYN_MAX (NCELL-1)*NCON
+#define NCELL 1000
+#define NCON 100
+#define NCELL_E 800
+#define NSYN_MAX 500 //(NCELL-1)*NCON
 
 int main(int argc, char **argv){
   FILE *fp;
   int i,j;
   int r;
+  printf("where is core dump?\n");
   int table[NCELL][NCON];
   int output[NCELL][NSYN_MAX], counter[NCELL];
   int output2[NCELL][NCELL],col=0,row=0;
   srand((unsigned)time(NULL));
+
   if((fp=fopen("con.dat","w"))==NULL){
     printf("file open error\n");
     exit(EXIT_FAILURE);
@@ -75,7 +77,7 @@ int main(int argc, char **argv){
     printf("file open error\n");
     exit(EXIT_FAILURE);
   }
-  
+  printf("where is core dump?\n");
   for(i=0;i<NCELL;i++){
     for(j=0;j<NCELL;j++){
       fprintf(fp,"%d\t",output2[i][j]);

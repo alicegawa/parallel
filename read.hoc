@@ -8,7 +8,8 @@ proc read_mat() {local i,j,k
     con = new Matrix()
     f = new File()
     f.ropen("con_var.dat")
-    con.scanf(f,100,100)
+    //con.scanf(f,100,100)
+    con.scanf(f,NCELL,NCELL)
     f.close()
     /*
     for i=0, con.ncol-1 {
