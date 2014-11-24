@@ -9,7 +9,7 @@ proc read_mat() {local i,j,k
     f = new File()
     f.ropen("con_var.dat")
     //con.scanf(f,100,100)
-    con.scanf(f,NCELL,NCELL)
+    con.scanf(f,NCELL_E,NCELL_E)
     f.close()
     /*
     for i=0, con.ncol-1 {
