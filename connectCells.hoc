@@ -46,75 +46,55 @@ proc connectCells() { local i, j, k, targid, num_ecell, num_syn, num_vta, nsyn_m
     */
     mem = -1
     //read_mat()
-    for i=0, NCELL-1{
+    for i=0, NCELL_E-1{
+	//connect to excitatory cells
 	if(pc.gid_exists(i)){
-	    for j=0, NCELL-1{
+	    for j=0, NCELL_E-1{
 		//printf("con.x[%d][%d] = %d ",i,j,con.x[i][j])
-		for(k=0;k<con.x[i][j];k=k+1){
-		    //confirm.x[i][j] = confirm.x[i][j] + 1
-		    syn = pc.gid2cell(i).makeSyn(i,j,NCELL_E,NCELL_VTA)
-		    nc = pc.gid_connect(j,syn)
-		    printf("my host id = %d, parent(pre) cell id = %d\n",pc.id,j)
-		    nclist.append(nc)
-		    nc.threshold = 0
-		    nc.delay = 0.1
-		    if(j<num_ecell){
+		//for(k=0;k<con.x[i][j];k=k+1){
+		//confirm.x[i][j] = confirm.x[i][j] + 1
+		if(con.x[i][j]){
+		    //from excitatory cells
+		    for k=0, 3 {
+			syn = pc.gid2cell(i).makeSyn(i,j,NCELL_E,NCELL_VTA)
+			nc = pc.gid_connect((con.x[i][j]-1)+j*2+NCELL_E,syn)
+			printf("my host id = %d, parent(pre) cell id = %d(e->e)\n",pc.id,j)
+			nclist.append(nc)
+			nc.threshold = 0
+			nc.delay = 0.1
 			nc.weight = 0.0002//0.01
-		    }else{
-			nc.weight = 0.03//0.1
+		    }
+		    //from inhibitory cells
+		    syn = pc.gid2cell(i).makeSyn(i,j+NCELL_E,NCELL_E,NCELL_VTA)
+		    nc = pc.gid_connect((con.x[i][j]-1)+(j+NCELL_E)*2,syn)
+		    printf("my parent cell id = %d(i->e)\n",j+NCELL_E)
+		    nclist.append(nc)
+		    nc.threshold=0
+		    nc.delay = 0.1
+		    nc.weight = 0.03
+		    
+		    //}
+		    
+		}
+		//printf("\n")
+	    }
+	}
+	//connect to inhibitory cells
+	if(pc.gid_exists(i+NCELL_E)){
+	    for j=0, NCELL_E-1 {
+		if(con.x[i][j]){
+		    //from excitatory cells
+		    for k=0, 3 {
+			syn = pc.gid2cell(i+NCELL_E).makeSyn(i+NCELL_E,j,NCELL_E,NCELL_VTA)
+			nc = pc.gid_connect((con.x[i][j]-1)+j*2+NCELL_E,syn)
+			printf("my parent cell id = %d(e->i)\n",j)
+			nclist.append(nc)
+			nc.threshold = 0
+			nc.delay = 0.1
+			nc.weight = 0.0002
 		    }
 		}
 	    }
-	    //printf("\n")
 	}
     }
 }
-
-
-    /*
-    //for i=0, cells.count-1 {
-    for i=0, NCELL-1{
-	//src = cells.object(i)
-	for j=0, num_syn-1 {
-	    if(i<num_ecell){
-		mem=int((i+r.uniform(1,NCELL-1)))%NCELL
-	    }else{
-		mem = int((r.uniform(0,num_ecell-1)))
-	    }
-	    targid = mem
-	    if(!pc.gid_exists(targid)){
-		continue
-	    }
-	    //kokode targid wo kakunin
-	    for k=0, pc.nhost-1{
-		if(k==pc.id){
-		    printf("%dth process, aite=%d\n",k,targid)
-		}
-	    }
-	    //yappari process nai desika tunagatte nai mitai?????
-	    target = pc.gid2cell(targid)
-	    /****************************TODO***************************************/
-	   // syn = target.makeSyn(targid,NCELL_E,NCELL_VTA)//tabun kokode tukuttahouga raku!!
-	    /***********************************************************************/
-	    /****************kokokara shitamademo TODO ni ireyou*******************/
-	    //if(i>=num_ecell){
-	    //	syn.e = -100 //???
-	    //printf("inhibit mem = %d, count[mem]=%d\n",mem,int(count[mem]))
-	    //  }
-	    /*********************************************************************/
-/*
-	    //nc = pc.gid_connect(1000000+i*num_syn+j,syn)
-	    nc = pc.gid_connect(i,syn)
-	    nclist.append(nc)
-	    nc.delay = 0.1
-	    if(i<num_ecell){
-		//nc.weight = 1//itiou setuzoku ha dekiteiru moyou
-		nc.weight = 0.0002
-		//cells.object(i).soma nclist.append(new NetCon(&v(0.5),syn,0,0,0.0002))
-	    }else{
-		nc.weight = 0.1
-		//cells.object(i).soma nclist.append(new NetCon(&v(0.5),syn,0,0,0.1))
-	    }
-	}
-    }
-}*/

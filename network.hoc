@@ -5,8 +5,8 @@ load_file("nrngui.hoc")
 //load cell template
 //setting
 v_init = -65
-NCELL = 100
-NCELL_E = 80 //must be (<NCELL)
+NCELL = 200
+NCELL_E = 100 //must be (<NCELL)
 NCELL_VTA = 10
 NCELL_CS = 10
 NSYN = 10
@@ -32,6 +32,7 @@ load_file("setStim.hoc")
 load_file("signalDA.hoc")
 //load_file("myrun.hoc")
 makeCells(NCELL,NCELL_E)
+makeConvert(NCELL)
 pc.barrier()
 //checkgid()
 //pc.barrier()
@@ -63,9 +64,9 @@ proc spikerecord2(){
     pc.spike_record(-1,tvec,idvec)
 }
 
-//spikerecord2()
+spikerecord2()
 
-setSpikeRecord()
+//setSpikeRecord()
 
 /////////////////for record and watching section///////////////////////
 
@@ -167,7 +168,9 @@ for rank=0, pc.nhost-1{
 	sprint(filename,"./result/spike%d.txt",pc.id)
 	savSpike.wopen(filename)
 	for i=0, tvec.size()-1 {
-	    savSpike.printf("%g\t%g\n",tvec.x(i),idvec.x(i))
+	    if(idvec.x(i)<NCELL){
+		savSpike.printf("%g\t%g\n",tvec.x(i),idvec.x(i))
+	    }
 	}
 	savSpike.close()
     }
