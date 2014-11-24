@@ -1,14 +1,13 @@
 load_file("nrngui.hoc")
 begintemplate HHneuron
 
-public soma, axon, synlist, connect2target, connectNearCells, connectFarCells, makeSyn
-create soma, axon
+public soma, synlist, connect2target, makeSyn
+create soma
 objref esyn, esyn_for_spon, esynSTDP
 objref synlist
 
 proc init(){local x, y, z, nsyn, i
     x=$1 y=$2 z=$3 nsyn=$4
-    connect axon(0), soma(1)
     soma {
 	pt3dclear() pt3dadd(0+x,0+y,0+z,12) pt3dadd(15+x,0+y,0+z,12)
     }
@@ -16,19 +15,9 @@ proc init(){local x, y, z, nsyn, i
     soma { 
 	L = 30
 	diam = 30
-	nseg = 10
+	nseg = 1
 	cm = 1
 	insert hh
-    }
-    axon {
-	L = 270
-	diam = 3
-	nseg = 10
-	insert hh
-	gnabar_hh = 0.12
-	gkbar_hh = 0.036
-	gl_hh = 0.0003
-	el_hh = -54.3
     }
     synlist = new List()
     soma {
@@ -41,19 +30,6 @@ proc init(){local x, y, z, nsyn, i
 
 obfunc connect2target() { localobj nc
     soma nc = new NetCon(&v(0.5), $o1)
-    nc.threshold = 10
-    if(numarg()==2){ $o2 = nc}
-    return nc
-}
-
-obfunc connectNearCells() { localobj nc
-    axon nc = new NetCon(&v(0.5), $o1)
-    nc.threshold = 10
-    if(numarg()==2){ $o2 = nc}
-    return nc
-}
-obfunc connectFarCells() { localobj nc
-    axon nc = new NetCon(&v(1), $o1)
     nc.threshold = 10
     if(numarg()==2){ $o2 = nc}
     return nc
@@ -136,20 +112,3 @@ proc makeCells(){local i, num_cell, num_ecell, ratio, e_num localobj cell, nc, n
 	}*/
     }
 }
-
-proc makeConvert(){local i, ncell localobj nc, nil
-    ncell = $1
-    for(i=0;i<ncell;i+=1){
-	if(pc.gid_exists(i)){
-	    nc = pc.gid2cell(i).connectNearCells(nil)
-	    nc.weight = 1
-	    pc.set_gid2node(NCELL+i*2,pc.id)	    
-	    pc.cell(NCELL+i*2,nc)
-	    nc = pc.gid2cell(i).connectFarCells(nil)
-	    nc.weight = 1
-	    pc.set_gid2node(NCELL+i*2+1,pc.id)
-	    pc.cell(NCELL+i*2+1,nc)
-	}
-    }
-}
-	    
