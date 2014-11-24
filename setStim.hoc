@@ -33,7 +33,7 @@ proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc, us
 		us_tmp.number = stim_num
 		us_tmp.start = 25
 		us_tmp.interval = stim_int
-		us_tmp.noise = 0 //0.1
+		us_tmp.noise = 0.1
 		us.append(us_tmp)
 		nc = new NetCon(us_tmp, pc.gid2cell(i).synlist.object(0),0,0.1,0.02)
 		nclist_us.append(nc)
@@ -52,7 +52,7 @@ proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc, us
 		cs_tmp.number = stim_num
 		cs_tmp.start = 45
 		cs_tmp.interval = stim_int
-		cs_tmp.noise = 0 //0.1
+		cs_tmp.noise = 0.1
 		//	printf("%d\n",num_cs)
 		cs.append(cs_tmp)
 		nc = new NetCon(cs_tmp,pc.gid2cell(num_cs+i).synlist.object(0),0,0.1,0.02)
@@ -82,8 +82,6 @@ proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc, us
 	    }
 	}
     }*/
-    
-    
     for i=0, cells.count-1 {
 	cells.object(i).soma {
 	    spon_tmp = new GammaNoise(0.85)
