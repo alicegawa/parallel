@@ -41,7 +41,8 @@ proc signalDA() {local i, counter, tmpDA, num_vta, num_ecell, nsyn_max, buf
     //{pc.gather_i(dacounter,resv,1,id_root)}//slower than d
     if(pc.id==id_root){
 	tmpDA = cells.object(0).synlist.object(2).forDA
-	tmpDA = tmpDA * 0.99987469431//0.995
+	//tmpDA = tmpDA * 0.99987469431//0.995
+	tmpDA = tmpDA*0.995
 	for(i=0;i<resv.size;i+=1){
 	    bcaster.x(0) += resv.x(i)
 	}

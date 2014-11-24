@@ -5,8 +5,8 @@ load_file("nrngui.hoc")
 //load cell template
 //setting
 v_init = -65
-NCELL = 1000//100
-NCELL_E = 800//80 //must be (<NCELL)
+NCELL = 100
+NCELL_E = 80 //must be (<NCELL)
 NCELL_VTA = 10
 NCELL_CS = 10
 NSYN = 10
@@ -14,10 +14,10 @@ NSYN_MAX = (NCELL-1)*NSYN
 
 
 dt = 0.025//<-for test0.1//0.025
-tstop_max = 1800000//1000//200//1000//200//tstop = dt*10//10//200//500//100000
+tstop_max = 1000//200//1000//200//tstop = dt*10//10//200//500//100000
 t = 0
-stimInt = 10000//20//1000
-stimNum = 180//int(tstop_max/stim_Int)//50//7//50//7//int(tstop/stimInt)
+stimInt = 20//1000
+stimNum = 50//7//50//7//int(tstop/stimInt)
 dur = tstop_max
 //identify the VTA parameter
 vta_flag = 0
@@ -63,9 +63,9 @@ proc spikerecord2(){
     pc.spike_record(-1,tvec,idvec)
 }
 
-spikerecord2()
+//spikerecord2()
 
-//setSpikeRecord()
+setSpikeRecord()
 
 /////////////////for record and watching section///////////////////////
 
