@@ -57,7 +57,7 @@ proc connectCells() { local i, j, k, targid, num_ecell, num_syn, num_vta, nsyn_m
 		    //from excitatory cells
 		    for k=0, 3 {
 			syn = pc.gid2cell(i).makeSyn(i,j,NCELL_E,NCELL_VTA)
-			nc = pc.gid_connect((con.x[i][j]-1)+j*2+NCELL_E,syn)
+			nc = pc.gid_connect((con.x[i][j]-1)+j*2+NCELL,syn)
 			printf("my host id = %d, parent(pre) cell id = %d(e->e)\n",pc.id,j)
 			nclist.append(nc)
 			nc.threshold = 0
@@ -66,7 +66,7 @@ proc connectCells() { local i, j, k, targid, num_ecell, num_syn, num_vta, nsyn_m
 		    }
 		    //from inhibitory cells
 		    syn = pc.gid2cell(i).makeSyn(i,j+NCELL_E,NCELL_E,NCELL_VTA)
-		    nc = pc.gid_connect((con.x[i][j]-1)+(j+NCELL_E)*2,syn)
+		    nc = pc.gid_connect((con.x[i][j]-1)+(j+NCELL_E)*2+NCELL,syn)
 		    printf("my parent cell id = %d(i->e)\n",j+NCELL_E)
 		    nclist.append(nc)
 		    nc.threshold=0
@@ -86,7 +86,7 @@ proc connectCells() { local i, j, k, targid, num_ecell, num_syn, num_vta, nsyn_m
 		    //from excitatory cells
 		    for k=0, 3 {
 			syn = pc.gid2cell(i+NCELL_E).makeSyn(i+NCELL_E,j,NCELL_E,NCELL_VTA)
-			nc = pc.gid_connect((con.x[i][j]-1)+j*2+NCELL_E,syn)
+			nc = pc.gid_connect((con.x[i][j]-1)+j*2+NCELL,syn)
 			printf("my parent cell id = %d(e->i)\n",j)
 			nclist.append(nc)
 			nc.threshold = 0

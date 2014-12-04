@@ -38,9 +38,9 @@ proc init(){local x, y, z, nsyn, i
     }
     synlist = new List()
     soma {
-	esyn = new Exp2Syn(0.9)//Exp2Syn(0.8)
+	esyn = new Exp2Syn(0.5)//Exp2Syn(0.8)
 	synlist.append(esyn)
-	esyn_for_spon = new Exp2Syn(0.8)//Exp2Syn(0.85)
+	esyn_for_spon = new Exp2Syn(0.5)//Exp2Syn(0.85)
 	synlist.append(esyn_for_spon)
     }
     /*
