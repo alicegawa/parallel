@@ -5,8 +5,8 @@ load_file("nrngui.hoc")
 //load cell template
 //setting
 v_init = -65
-NCELL = 200
-NCELL_E = 100 //must be (<NCELL)
+NCELL = 512//200
+NCELL_E = 256//100 //must be (<NCELL)
 NCELL_VTA = 10
 NCELL_CS = 10
 NSYN = 10
@@ -14,7 +14,7 @@ NSYN_MAX = (NCELL-1)*NSYN
 
 
 dt = 0.025//<-for test0.1//0.025
-tstop_max = 1000//200//1000//200//tstop = dt*10//10//200//500//100000
+tstop_max = 3000//1000//200//1000//200//tstop = dt*10//10//200//500//100000
 t = 0
 stimInt = 20//1000
 stimNum = 50//7//50//7//int(tstop/stimInt)

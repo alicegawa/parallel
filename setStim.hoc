@@ -22,7 +22,7 @@ proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc, us
     dur = $3
     num_cs = $4
     stim_int = $5
-   
+   /*
     nclist_us = new List()
     us = new List()
     for i=0, num_vta-1 {
@@ -61,7 +61,7 @@ proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc, us
 	    }
 	}
     }
-    
+    */
     nclist_spon = new List()
     sponFire = new List()
     /*

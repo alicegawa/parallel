@@ -4,7 +4,7 @@
 #include <math.h>
 #include "MT.h"
 
-#define NCELL 100
+#define NCELL 256
 #define NCON 10
 #define NCELL_E 80
 #define NSYN_MAX (NCELL-1)*NCON
@@ -54,7 +54,7 @@ int main(int argc, char **argv){
   for(i=0;i<NCELL;i++){
     for(j=0;j<NCELL;j++){
       //if(i==0 || i==45 || i==50 || i==90 || i==99){
-	if(j%10==0){
+	if(j%MDIM==0){
 	  printf("\n");
 	}
 	printf("%d ",output[i][j]);
@@ -73,7 +73,7 @@ int main(int argc, char **argv){
       //printf("%d\t",output[i][j]);
     }
     fprintf(fp,"\n");
-    printf("\n");
+    //printf("\n");
   }
   fclose(fp);
 
