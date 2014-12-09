@@ -6,8 +6,8 @@ create soma, axon
 objref esyn, esyn_for_spon, esynSTDP
 objref synlist
 
-proc init(){local x, y, z, nsyn, i
-    x=$1 y=$2 z=$3 nsyn=$4
+proc init(){local x, y, z, i
+    x=$1 y=$2 z=$3
     connect axon(0), soma(1)
     soma {
 	pt3dclear() pt3dadd(0+x,0+y,0+z,12) pt3dadd(15+x,0+y,0+z,12)
@@ -75,19 +75,25 @@ obfunc connectFarCells() { localobj nc
 
 objref syn_
 
-obfunc makeSyn() {local targetno, hostno, num_ecell, num_vta
+obfunc makeSyn() {local targetno, hostno, num_ecell, num_vta, rw_flag, start_i, end_i
     targetno = $1
     hostno = $2
     num_ecell = $3
     num_vta = $4
+    rw_flag = $5
+    start_i = $6
+    end_i = $7
     //if(targetno<num_ecell){
     if(hostno<num_ecell){
 	soma {
 	    syn_ = new ExpSynSTDP(0.5)
 	    synlist.append(syn_)
 	}
-	if(targetno<num_vta){
-	    syn_.forSpike = 2
+	//num_vta means the initial vtap points...
+	if(rw_flag){
+	    if(targetno<num_vta || (targetno>=start_i && targetno<end_i)){
+		syn_.forSpike = 2
+	    }
 	}/*
 	if(hostno>=num_ecell){
 	    syn_.e=-100
@@ -109,45 +115,20 @@ endtemplate HHneuron
 
 objref cells
 objref recordSpike
-//objref nil
-//objref tvec, idvec
-//objref gidvec
 
-proc makeCells(){local i, num_cell, num_ecell, ratio, e_num localobj cell, nc, nil
+proc makeCells(){local i, num_cell localobj cell, nc, nil
     num_cell = $1
-    num_ecell = $2
     cells = new List()
-    //gidvec = new Vector()
-    //recordSpike = new List()
-    //tvec = new Vector()
-    //idvec = new Vector()
-    //counter = 0
-    //counter2 = 0
+   
     for (i=pc.id; i<num_cell; i = i + pc.nhost) {
-	//printf("\n\n\nhere %d times\n\n\n",i)
-	//if(i<num_ecell){
-	//if(counter<e_num){
-	cell = new HHneuron(160*int(i/10),20*(i%10),0, NSYN_MAX)
-	  //  printf("\n\n\n in if \n\n\n")
-	//}else{
-	//    cell = new HHneuronI(160*int(i/10),20*(i%10), 0, NSYN_MAX)
-	//    printf("\n\n\n must not be in this \n\n\n")
-	//}
+
+	cell = new HHneuron(160*int(i/10),20*(i%10),0)
+	
 	cells.append(cell)
 	pc.set_gid2node(i,pc.id)
 	nc = cell.connect2target(nil)
 	nc.weight = 1
 	pc.cell(i,nc)
-	
-	//cells.object(i).soma recordSpike.append(new NetCon(&v(0.5),nil,0.0,0,1.0))
-	//recordSpike.object(i).record(tvec, idvec)
-	
-	//counter = counter + 1
-	/*
-	if(counter==10){
-	    counter = 0
-	    counter2 = counter2 + 1
-	}*/
     }
 }
 
@@ -157,13 +138,12 @@ proc makeConvert(){local i, ncell localobj nc, nil
 	if(pc.gid_exists(i)){
 	    nc = pc.gid2cell(i).connectNearCells(nil)
 	    nc.weight = 1
-	    pc.set_gid2node(NCELL+i*2,pc.id)	    
-	    pc.cell(NCELL+i*2,nc)
+	    pc.set_gid2node(ncell+i*2,pc.id)	    
+	    pc.cell(ncell+i*2,nc)
 	    nc = pc.gid2cell(i).connectFarCells(nil)
 	    nc.weight = 1
-	    pc.set_gid2node(NCELL+i*2+1,pc.id)
-	    pc.cell(NCELL+i*2+1,nc)
+	    pc.set_gid2node(ncell+i*2+1,pc.id)
+	    pc.cell(ncell+i*2+1,nc)
 	}
     }
 }
-	    

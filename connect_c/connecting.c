@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 #include "MT.h"
 
-#define NCELL 1000
-#define NCON 100
-#define NCELL_E 800
-#define NSYN_MAX 500 //(NCELL-1)*NCON
+#define NCELL 100//400//100//256
+#define NCON 10//40//10//25
+#define NCELL_E 80//320//80//256
+#define NSYN_MAX 1000//1000//500 //(NCELL-1)*NCON
+#define MDIM sqrt(NCELL)
 
 int main(int argc, char **argv){
   FILE *fp;
@@ -18,7 +20,7 @@ int main(int argc, char **argv){
   int output2[NCELL][NCELL],col=0,row=0;
   srand((unsigned)time(NULL));
 
-  if((fp=fopen("con.dat","w"))==NULL){
+  if((fp=fopen("con_out2.dat","w"))==NULL){
     printf("file open error\n");
     exit(EXIT_FAILURE);
   }
@@ -73,7 +75,7 @@ int main(int argc, char **argv){
     fprintf(fp,"\n");
   }
   fclose(fp);
-  if((fp=fopen("con_var.dat","w"))==NULL){
+  if((fp=fopen("con_var_out2.dat","w"))==NULL){
     printf("file open error\n");
     exit(EXIT_FAILURE);
   }

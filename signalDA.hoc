@@ -93,3 +93,68 @@ proc signalDA() {local i, j, k, counter, tmpDA, num_vta, num_ecell, nsyn_max, bu
     //dacounter=0
     //buf = 0//for avoiding error
 }
+
+proc changeFlags1(){local i, j, k, start_e, end_e, start_i, end_i, num_out1, num_out2, num_input, num_i_o1,num_out1_e, um_out2_e, counter
+    start_e = $1
+    end_e = $2
+    start_i = $3
+    end_i = $4
+    num_out1 = $5
+    num_out2 = $6
+    num_input = $7
+    num_out1_e = $8
+    num_out2_e = $9
+    
+    
+    num_i_o1 = num_input + num_out1
+    
+    counter = 0
+    
+    for i=0, num_out1-1{
+	if(pc.gid_exists(i+num_input)){
+	    for j=0, num_out1_e-1{
+		if(con_out1.x[i][j]){
+		    if((i>=start_e && i<end_e) || (i>=start_i && i<end_i)){
+			pc.gid2cell(i+num_input).synlist.object(counter+2).forSpike = 2
+		    }else{
+			pc.gid2cell(i+num_input).synlist.object(counter+2).forSpike = 0
+		    }
+		    counter = counter + 1
+		}
+	    }
+	    counter = 0
+	}
+    }
+}
+
+proc changeFlags2(){local i, j, k, start_e, end_e, start_i, end_i, num_out1, num_out2, num_input, num_i_o1,num_out1_e, um_out2_e, counter
+    start_e = $1
+    end_e = $2
+    start_i = $3
+    end_i = $4
+    num_out1 = $5
+    num_out2 = $6
+    num_input = $7
+    num_out1_e = $8
+    num_out2_e = $9
+    
+    num_i_o1 = num_input + num_out1
+    
+    counter = 0
+    
+    for i=0, num_out2-1{
+	if(pc.gid_exists(i+num_i_o1)){
+	    for j=0, num_out2_e-1{
+		if(con_out2.x[i][j]){
+		    if((i>=start_e && i<end_e) || (i>=start_i && i<end_i)){
+			pc.gid2cell(i+num_i_o1).synlist.object(counter+2).forSpike = 2
+		    }else{
+			pc.gid2cell(i+num_i_o1).synlist.object(counter+2).forSpike = 0
+		    }
+		    counter = counter + 1
+		}
+	    }
+	    counter = 0
+	}
+    }
+}

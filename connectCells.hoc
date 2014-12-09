@@ -1,7 +1,7 @@
 load_file("nrngui.hoc")
 //load_file("read.hoc")
 
-objref nclist, r
+objref nclist, nclist_out1, nclist_out2,nclist_i2o, r
 double count[NCELL]
 double rec_connect[NCELL][NSYN]
 
@@ -27,11 +27,11 @@ proc checkgid() {local i, exist
 //objref confirm
 
 
-proc connectCells() { local i, j, k, targid, num_ecell, num_syn, num_vta, nsyn_max localobj src, target, syn, nc, nil
+proc connectInputCells() { local i, j, k, targid, num_ecell,num_vta, num_cell, num_cell_full localobj src, target, syn, nc, nil
     num_ecell = $1
-    num_syn = $2
-    num_vta = $3
-    nsyn_max = $4
+    num_vta = $2
+    num_cell = $3
+    num_cell_full = $4
     nclist = new List()
     r = new Random(25525)
 /*    
@@ -46,18 +46,18 @@ proc connectCells() { local i, j, k, targid, num_ecell, num_syn, num_vta, nsyn_m
     */
     mem = -1
     //read_mat()
-    for i=0, NCELL_E-1{
+    for i=0, num_ecell-1{
 	//connect to excitatory cells
 	if(pc.gid_exists(i)){
-	    for j=0, NCELL_E-1{
+	    for j=0, num_ecell-1{
 		//printf("con.x[%d][%d] = %d ",i,j,con.x[i][j])
 		//for(k=0;k<con.x[i][j];k=k+1){
 		//confirm.x[i][j] = confirm.x[i][j] + 1
 		if(con.x[i][j]){
 		    //from excitatory cells
 		    for k=0, 3 {
-			syn = pc.gid2cell(i).makeSyn(i,j,NCELL_E,NCELL_VTA)
-			nc = pc.gid_connect((con.x[i][j]-1)+j*2+NCELL,syn)
+			syn = pc.gid2cell(i).makeSyn(i,j,num_ecell,num_vta,0,0,0)
+			nc = pc.gid_connect((con.x[i][j]-1)+j*2+num_cell_full,syn)//num_cell -> num_cell_full
 			printf("my host id = %d, parent(pre) cell id = %d(e->e)\n",pc.id,j)
 			nclist.append(nc)
 			nc.threshold = 0
@@ -65,9 +65,9 @@ proc connectCells() { local i, j, k, targid, num_ecell, num_syn, num_vta, nsyn_m
 			nc.weight = 0.0002//0.01
 		    }
 		    //from inhibitory cells
-		    syn = pc.gid2cell(i).makeSyn(i,j+NCELL_E,NCELL_E,NCELL_VTA)
-		    nc = pc.gid_connect((con.x[i][j]-1)+(j+NCELL_E)*2+NCELL,syn)
-		    printf("my parent cell id = %d(i->e)\n",j+NCELL_E)
+		    syn = pc.gid2cell(i).makeSyn(i,j+num_ecell,num_ecell,num_vta,0,0,0)
+		    nc = pc.gid_connect((con.x[i][j]-1)+(j+num_ecell)*2+num_cell_full,syn)
+//		    printf("my parent cell id = %d(i->e)\n",j+num_ecell_full)
 		    nclist.append(nc)
 		    nc.threshold=0
 		    nc.delay = 0.1
@@ -80,13 +80,13 @@ proc connectCells() { local i, j, k, targid, num_ecell, num_syn, num_vta, nsyn_m
 	    }
 	}
 	//connect to inhibitory cells
-	if(pc.gid_exists(i+NCELL_E)){
-	    for j=0, NCELL_E-1 {
+	if(pc.gid_exists(i+num_ecell)){
+	    for j=0, num_ecell-1 {
 		if(con.x[i][j]){
 		    //from excitatory cells
 		    for k=0, 3 {
-			syn = pc.gid2cell(i+NCELL_E).makeSyn(i+NCELL_E,j,NCELL_E,NCELL_VTA)
-			nc = pc.gid_connect((con.x[i][j]-1)+j*2+NCELL,syn)
+			syn = pc.gid2cell(i+num_ecell).makeSyn(i+num_ecell,j,num_ecell,num_vta,0,0,0)
+			nc = pc.gid_connect((con.x[i][j]-1)+j*2+num_cell_full,syn)
 			//printf("my parent cell id = %d(e->i)\n",j)
 			nclist.append(nc)
 			nc.threshold = 0
@@ -96,7 +96,7 @@ proc connectCells() { local i, j, k, targid, num_ecell, num_syn, num_vta, nsyn_m
 		}
 	    }
 	    //if excitatory cell above me (inhibiroty cell) is fired, i wanna also fire
-	    syn = pc.gid2cell(i+NCELL_E).makeSyn(i+NCELL_E,i+NCELL_E,NCELL_E,NCELL_VTA)
+	    syn = pc.gid2cell(i+num_ecell).makeSyn(i+num_ecell,i+num_ecell,num_ecell,num_vta,0,0,0)
 	    nc = pc.gid_connect(i,syn)
 	    nclist.append(nc)
 	    nc.threshold = 0
@@ -105,3 +105,164 @@ proc connectCells() { local i, j, k, targid, num_ecell, num_syn, num_vta, nsyn_m
 	}
     }
 }
+
+/////////////////////////////////////////////////////////TODO////////////////////////////////////////////////////////////////
+//shold be modified to the manner from the single compartment to the double compartmentmodel////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+proc connectOutput1Cells() { local i, j, k,l, pargid, num_ecell_out1, num_syn, num_vta, num_cell_out1, num_cell_input, num_cell_full, cellid localobj src, target, syn, nc, nil
+    num_ecell_out1 = $1
+    num_vta = $2
+    num_cell_out1 = $3
+    num_cell_input = $4
+    num_cell_full = $5
+    nclist_out1 = new List()
+    r = new Random(25525)
+/*    
+    confirm = new Matrix()
+    confirm.resize(NCELL,NCELL)
+    for i=0,NCELL-1{
+	for j=0,NCELL-1{
+	    confirm.x[i][j]=0
+	}
+    }
+    
+    */
+    mem = -1
+    //read_mat()
+    
+    //the association with con is preserved, but the fact connect index is shifted by num_cell_input
+    //when syn is made, the num in the out2 pool is used 
+    //when connecting other cells, the num in the full pool is used
+     for i=0, num_cell_out1-1{
+	if(pc.gid_exists(i+num_cell_input)){
+	    for j=0, num_cell_out1-1{
+		//printf("con.x[%d][%d] = %d ",i,j,con.x[i][j])
+		for(k=0;k<con_out1.x[i][j];k=k+1){
+		    //confirm.x[i][j] = confirm.x[i][j] + 1
+		    syn = pc.gid2cell(i+num_cell_input).makeSyn(i,j,num_ecell_out1,64,1,num_ecell_out1,num_ecell_out1+int((num_cell_out1-num_ecell_out1)/5))//num_vta,1)
+		    nc = pc.gid_connect((j+num_cell_input)*2+1+num_cell_full,syn)
+		    //printf("my host id = %d, parent(pre) cell id = %d\n",pc.id,j)
+		    nclist_out1.append(nc)
+		    nc.threshold = 0
+		    nc.delay = 0.1
+		    if(j<num_ecell_out1){
+			nc.weight = 0.0002//0.01
+		    }else{
+			nc.weight = 0.03//0.1
+		    }
+		}
+	    }
+	    //printf("\n")
+	}
+    }
+}
+
+proc connectOutput2Cells() { local i, j, k,l, pargid, num_ecell_out2, num_syn, num_vta, num_cell_out2, num_cell_i_o1, num_cell_full, cellid localobj src, target, syn, nc, nil
+    num_ecell_out2 = $1
+    num_vta = $2
+    num_cell_out2 = $3
+    num_cell_i_o1 = $4
+    num_cell_full = $5
+    nclist_out2 = new List()
+    r = new Random(25525)
+/*    
+    confirm = new Matrix()
+    confirm.resize(NCELL,NCELL)
+    for i=0,NCELL-1{
+	for j=0,NCELL-1{
+	    confirm.x[i][j]=0
+	}
+    }
+    
+    */
+    mem = -1
+    //read_mat()
+    
+    //the association with con is preserved, but the fact connect index is shifted by num_cell_input
+    //when syn is made, the num in the out2 pool is used 
+    //when connecting other cells, the num in the full pool is used
+    for i=0, num_cell_out2-1{
+	if(pc.gid_exists(i+num_cell_i_o1)){
+	    for j=0, num_cell_out2-1{
+		//printf("con.x[%d][%d] = %d ",i,j,con.x[i][j])
+		for(k=0;k<con_out2.x[i][j];k=k+1){
+		    //confirm.x[i][j] = confirm.x[i][j] + 1
+		    syn = pc.gid2cell(i+num_cell_i_o1).makeSyn(i,j,num_ecell_out2,40,1,num_ecell_out2,num_ecell_out2+int((num_cell_out2-num_ecell_out2)/5))//num_vta,1)
+		    nc = pc.gid_connect((j+num_cell_i_o1)*2+1+num_cell_full,syn)
+//		    printf("my host id = %d, parent(pre) cell id = %d\n",pc.id,j)
+		    nclist_out2.append(nc)
+		    nc.threshold = 0
+		    nc.delay = 0.1
+		    if(j<num_ecell_out2){
+			nc.weight = 0.0002//0.01
+		    }else{
+			nc.weight = 0.03//0.1
+		    }
+		}
+	    }
+	    //printf("\n")
+	}
+    }
+}
+
+proc connectI2O(){local i, j, k, num_ecell, num_cell_out1, num_ecell_out1, num_cell_out2, num_ecell_out2, num_vta, num_cell_input, num_cell_full, num_cell_i_o1 localobj nc, syn
+    num_ecell = $1
+    num_cell_out1 = $2
+    num_ecell_out1 = $3
+    num_cell_out2 = $4
+    num_ecell_out2 =$5
+    num_vta = $6
+    num_cell_input = $7
+    
+    num_cell_i_o1 = num_cell_input + num_cell_out1
+    num_cell_full = num_cell_i_o1  + num_cell_out2
+    
+    nclist_i2o = new List()
+    
+    for i=0, num_cell_out1-1 {
+	if(pc.gid_exists(num_cell_input+i)){
+	    for j=0, num_ecell-1 {
+		for(k=0;k<con_i2o1.x[i][j];k=k+1){
+		    syn = pc.gid2cell(i+num_cell_input).makeSyn(i+num_cell_input,j,num_ecell,num_vta,0,0,0)
+		    nc = pc.gid_connect(j*2+1+num_cell_full,syn)
+		    nclist_i2o.append(nc)
+		    nc.threshold = 0
+		    nc.delay = 0.1
+		    nc.weight = 0.0002
+		    
+		    syn = pc.gid2cell(i+num_cell_input).makeSyn(i+num_cell_input,j+num_ecell,num_ecell,num_vta,0,0,0)
+		    nc = pc.gid_connect((j+num_ecell)*2+1+num_cell_full,syn)
+		    nclist_i2o.append(nc)
+		    nc.threshold = 0
+		    nc.delay = 0.1
+		    nc.weight = 0.03
+		}
+	    }
+	}
+    }
+    
+    for i=0, num_cell_out2-1 {
+	if(pc.gid_exists(i+num_cell_i_o1)){
+	    for j=0, num_ecell-1{
+		for(k=0;k<con_i2o2.x[i][j];k=k+1){
+		    syn = pc.gid2cell(i+num_cell_i_o1).makeSyn(i+num_cell_i_o1,j,num_ecell,num_vta,0,0,0)
+		    nc = pc.gid_connect(j*2+1+num_cell_full,syn)
+		    nclist_i2o.append(nc)
+		    nc.threshold = 0
+		    nc.delay = 0.1
+		    nc.weight = 0.0002
+		    
+		    syn = pc.gid2cell(i+num_cell_i_o1).makeSyn(i+num_cell_i_o1,j,num_ecell,num_vta,0,0,0)
+		    nc = pc.gid_connect((j+num_ecell)*2+1+num_cell_full,syn)
+		    nclist_i2o.append(nc)
+		    nc.threshold = 0
+		    nc.delay = 0.1
+		    nc.weight = 0.03
+		}
+	    }
+	}
+    }
+}
+
+

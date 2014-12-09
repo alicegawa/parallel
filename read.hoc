@@ -3,13 +3,50 @@ load_file("nrngui.hoc")
 /*************************************************************************************************/
 //NCELL * NCELL no matrix ni kakunou site, 
 objref con
+objref con_out1
+objref con_out2
+objref con_i2o1
+objref con_i2o2
 objref f
-proc read_mat() {local i,j,k
+proc read_mat() {local i,j,k,num_ecell, num_out1
+    num_ecell = $1
+    num_out1 = $2
+    num_out2 = $3
+    
+    //read the connection file of input layer
     con = new Matrix()
     f = new File()
     f.ropen("con_var.dat")
     //con.scanf(f,100,100)
-    con.scanf(f,NCELL_E,NCELL_E)
+    con.scanf(f,num_ecell,num_ecell)
+    f.close()
+    
+    //read the connection file of output1 layer
+    con_out1 = new Matrix()
+    f = new File()
+    f.ropen("con_var_out1.dat")
+    con_out1.scanf(f,num_out1,num_out1)
+    f.close()
+    
+    //read the connection file of output2 layer    
+    con_out2 = new Matrix()
+    f = new File()
+    f.ropen("con_var_out2.dat")
+    con_out2.scanf(f,num_out2,num_out2)
+    f.close()
+    
+    //read the connection file from input layer to output1 layer
+    con_i2o1 = new Matrix()
+    f = new File()
+    f.ropen("con_var_i2o1.dat")
+    con_i2o1.scanf(f,num_out1,num_ecell)
+    f.close()
+    
+    //read the connection file from input layer to output2 layer
+    con_i2o2 = new Matrix()
+    f = new File()
+    f.ropen("con_var_i2o2.dat")
+    con_i2o2.scanf(f,num_out2,num_ecell)
     f.close()
     /*
     for i=0, con.ncol-1 {
@@ -24,4 +61,4 @@ proc read_mat() {local i,j,k
     
 }
 
-read_mat()
+//read_mat()

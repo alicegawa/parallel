@@ -7,11 +7,16 @@ load_file("nrngui.hoc")
 v_init = -65
 NCELL = 512//200
 NCELL_E = 256//100 //must be (<NCELL)
+NCELL_OUT1 = 400
+NCELL_OUT1_E = 320
+NCELL_OUT2 = 100 //this number should be considered more
+NCELL_OUT2_E = 80
 NCELL_VTA = 10
 NCELL_CS = 10
 NSYN = 10
 NSYN_MAX = (NCELL-1)*NSYN
 
+NCELL_FULL = NCELL + NCELL_OUT1 + NCELL_OUT2
 
 dt = 0.025//<-for test0.1//0.025
 tstop_max = 3000//1000//200//1000//200//tstop = dt*10//10//200//500//100000
@@ -31,13 +36,18 @@ load_file("connectCells.hoc")
 load_file("setStim.hoc")
 load_file("signalDA.hoc")
 //load_file("myrun.hoc")
-makeCells(NCELL,NCELL_E)
-makeConvert(NCELL)
+read_mat(NCELL_E,NCELL_OUT1, NCELL_OUT2)
+makeCells(NCELL_FULL)
+makeConvert(NCELL_FULL)
 pc.barrier()
 //checkgid()
 //pc.barrier()
 initCount()
-connectCells(NCELL_E, NSYN, NCELL_VTA, NSYN_MAX)
+connectInputCells(NCELL_E, NCELL_VTA, NCELL, NCELL_FULL)
+connectOutput1Cells(NCELL_OUT1_E,NCELL_VTA,NCELL_OUT1,NCELL,NCELL_FULL)
+connectOutput2Cells(NCELL_OUT2_E,NCELL_VTA,NCELL_OUT2,NCELL+NCELL_OUT1,NCELL_FULL)
+connectI2O(NCELL_E,NCELL_OUT1,NCELL_OUT1_E,NCELL_OUT2,NCELL_OUT2_E,NCELL_VTA,NCELL)
+
 //confirm.printf("%0.5f ")
 pc.barrier()
 printf("finish connect section\n")
@@ -181,35 +191,4 @@ for rank=0, pc.nhost-1{
 {pc.runworker()}
 {pc.done()}
 
-/////////////end of save section///////////////////////////////
-/*
-if(pc.id==0){
-	    savSpike.wopen("spike0.txt")
-	}
-	if(pc.id==1){
-	    savSpike.wopen("spike1.txt")
-	}
-	if(pc.id==2){
-	    savSpike.wopen("spike2.txt")
-	}
-	if(pc.id==3){
-	    savSpike.wopen("spike3.txt")
-	}
-	if(pc.id==4){
-	    savSpike.wopen("spike4.txt")
-	}
-	if(pc.id==5){
-	    savSpike.wopen("spike5.txt")
-	}
-	if(pc.id==6){
-	    savSpike.wopen("spike6.txt")
-	}
-	if(pc.id==7){
-	    savSpike.wopen("spike7.txt")
-	}
-	if(pc.id==8){
-	    savSpike.wopen("spike8.txt")
-	}
-	if(pc.id==9){
-	    savSpike.wopen("spike9.txt")
-	}*/
+/////////////end of save section///////////////////////////////////
