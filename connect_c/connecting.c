@@ -4,9 +4,9 @@
 #include <math.h>
 #include "MT.h"
 
-#define NCELL 100//400//100//256
-#define NCON 10//40//10//25
-#define NCELL_E 80//320//80//256
+#define NCELL 400//100//256
+#define NCON 40//10//25
+#define NCELL_E 320//80//256
 #define NSYN_MAX 1000//1000//500 //(NCELL-1)*NCON
 #define MDIM sqrt(NCELL)
 
@@ -18,9 +18,10 @@ int main(int argc, char **argv){
   int table[NCELL][NCON];
   int output[NCELL][NSYN_MAX], counter[NCELL];
   int output2[NCELL][NCELL],col=0,row=0;
+  int child[NCELL][NCON];
   srand((unsigned)time(NULL));
 
-  if((fp=fopen("con_out2.dat","w"))==NULL){
+  if((fp=fopen("con_out1.dat","w"))==NULL){
     printf("file open error\n");
     exit(EXIT_FAILURE);
   }
@@ -41,6 +42,7 @@ int main(int argc, char **argv){
       }
       output[r][counter[r]] = i;
       counter[r]++;
+      child[i][j]=r;
     }
   }
   for(i=0;i<NCELL;i++){
@@ -75,7 +77,7 @@ int main(int argc, char **argv){
     fprintf(fp,"\n");
   }
   fclose(fp);
-  if((fp=fopen("con_var_out2.dat","w"))==NULL){
+  if((fp=fopen("con_var_out1.dat","w"))==NULL){
     printf("file open error\n");
     exit(EXIT_FAILURE);
   }
@@ -90,5 +92,17 @@ int main(int argc, char **argv){
   }
   fclose(fp);
 
+  if((fp=fopen("out1_child.dat","w"))==NULL){
+    printf("file open error\n");
+    return -1;
+  }
+
+  for(i=0;i<NCELL;i++){
+    for(j=0;j<NCON;j++){
+      fprintf(fp,"%d\t",child[i][j]);
+    }
+    fprintf(fp,"\n");
+  }
+  fclose(fp);
   return 0;
 }

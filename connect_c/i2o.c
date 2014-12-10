@@ -3,10 +3,10 @@
 #include <time.h>
 #include <math.h>
 
-#define NCELL 400//100
+#define NCELL 100
 #define PARENT 256
-#define NCON 40//10
-#define NSYN_MAX 4000//1000
+#define NCON 10
+#define NSYN_MAX 1000
 #define MDIM sqrt(NCELL)
 
 int main(int argc, char** argv){
@@ -16,8 +16,9 @@ int main(int argc, char** argv){
   srand((unsigned)time(NULL));
   int output[NCELL][NSYN_MAX], counter[NCELL];
   int output2[NCELL][PARENT], col=0, row=0;
+  int child[PARENT][NCON];
 
-  if((fp=fopen("con_i2o1.dat","w"))==NULL){
+  if((fp=fopen("con_i2o2.dat","w"))==NULL){
     printf("file open error\n");
     return -1;
   }
@@ -34,6 +35,7 @@ int main(int argc, char** argv){
       r = (i+(1+rand()%(NCELL-1)))%NCELL;
       output[r][counter[r]] = i;
       counter[r]++;
+      child[i][j]=r;
     }
   }
   for(i=0;i<NCELL;i++){
@@ -68,7 +70,7 @@ int main(int argc, char** argv){
     fprintf(fp,"\n");
   }
   fclose(fp);
-  if((fp=fopen("con_var_i2o1.dat","w"))==NULL){
+  if((fp=fopen("con_var_i2o2.dat","w"))==NULL){
     printf("file open error\n");
     exit(EXIT_FAILURE);
   }
@@ -80,6 +82,18 @@ int main(int argc, char** argv){
     }
     fprintf(fp,"\n");
     printf("\n");
+  }
+  fclose(fp);
+  
+  if((fp=fopen("i2o2_child.dat","w"))==NULL){
+    printf("file open error\n");
+    return -1;
+  }
+  for(i=0;i<PARENT;i++){
+    for(j=0;j<NCON;j++){
+      fprintf(fp,"%d\t",child[i][j]);
+    }
+    fprintf(fp,"\n");
   }
   fclose(fp);
 

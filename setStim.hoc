@@ -22,7 +22,23 @@ proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc, us
     dur = $3
     num_cs = $4
     stim_int = $5
-   /*
+    
+    nclist_us = new List()
+    us = new List()
+    if(pc.gid_exists(512)){
+	pc.gid2cell(512).soma {
+	    us_tmp = new NetStim()
+	    us_tmp.start = 30
+	    us_tmp.interval = 0
+	    us_tmp.number = 1
+	    us_tmp.noise = 0
+	    us.append(us_tmp)
+	    nc = new NetCon(us_tmp,pc.gid2cell(512).synlist.object(0),0,0.1,0.02)
+	    nclist_us.append(nc)
+	}
+    }
+    
+    /*
     nclist_us = new List()
     us = new List()
     for i=0, num_vta-1 {
@@ -62,9 +78,23 @@ proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc, us
 	}
     }
     */
+    /*
     nclist_spon = new List()
     sponFire = new List()
-    /*
+   
+    for i=0, cells.count-1 {
+	cells.object(i).soma {
+	    spon_tmp = new GammaNoise(0.85)
+	    spon_tmp.amp = 0.065
+	    spon_tmp.dur = dur
+	    spon_tmp.del = 20
+	    nc = new NetCon(spon_tmp,cells.object(i).synlist.object(1),0,0.1,0.02)
+	    sponFire.append(spon_tmp)
+	    nclist_spon.append(nc)
+	}
+    }
+    */
+     /*
     for i=0, NCELL-1 {
 	if(pc.gid_exists(i)){
 	    //  printf("host id = %d , my gid = %d\n",pc.id,i)
@@ -82,15 +112,4 @@ proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc, us
 	    }
 	}
     }*/
-    for i=0, cells.count-1 {
-	cells.object(i).soma {
-	    spon_tmp = new GammaNoise(0.85)
-	    spon_tmp.amp = 0.065
-	    spon_tmp.dur = dur
-	    spon_tmp.del = 20
-	    nc = new NetCon(spon_tmp,cells.object(i).synlist.object(1),0,0.1,0.02)
-	    sponFire.append(spon_tmp)
-	    nclist_spon.append(nc)
-	}
-    }
 }

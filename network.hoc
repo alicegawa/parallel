@@ -19,7 +19,7 @@ NSYN_MAX = (NCELL-1)*NSYN
 NCELL_FULL = NCELL + NCELL_OUT1 + NCELL_OUT2
 
 dt = 0.025//<-for test0.1//0.025
-tstop_max = 3000//1000//200//1000//200//tstop = dt*10//10//200//500//100000
+tstop_max = 50//3000//1000//200//1000//200//tstop = dt*10//10//200//500//100000
 t = 0
 stimInt = 20//1000
 stimNum = 50//7//50//7//int(tstop/stimInt)
@@ -117,7 +117,7 @@ for(time=0;time<tstop_max;time+=steptime){
     pc.psolve(tstop)
     pc.barrier()
     tstop += steptime
-    signalDA(NCELL_VTA,NCELL_E,NSYN_MAX)
+    //signalDA(NCELL_VTA,NCELL_E,NSYN_MAX)
     //pc.barrier()
     /*
     if(tstop>=tstop_max){
@@ -158,7 +158,7 @@ for i=0, cells.count-1 {
 }
 sav_connect.close()
 */
-
+/*
 objref mt
 {mt = new Matrix()}
 {printf("#  t (msec)\tIClamp\n")}
@@ -166,7 +166,7 @@ objref mt
 {mt.setcol(0, tvec)}
 {mt.setcol(1, idvec)}
 {mt.printf("%0.5f ")}
-
+*/
 printf("the last da = %lf\n",cells.object(0).synlist.object(2).forDA)
 
 objref savSpike
@@ -178,7 +178,7 @@ for rank=0, pc.nhost-1{
 	sprint(filename,"./result/spike%d.txt",pc.id)
 	savSpike.wopen(filename)
 	for i=0, tvec.size()-1 {
-	    if(idvec.x(i)<NCELL){
+	    if(idvec.x(i)<NCELL_FULL){
 		savSpike.printf("%g\t%g\n",tvec.x(i),idvec.x(i))
 	    }
 	}
