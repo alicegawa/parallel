@@ -18,8 +18,12 @@ NSYN_MAX = (NCELL-1)*NSYN
 
 NCELL_FULL = NCELL + NCELL_OUT1 + NCELL_OUT2
 
+LEARNING_TIMES = 2//30
+STIM_DUR = 5//30
+STIM_DUR_MOVE = 1
+
 dt = 0.025//<-for test0.1//0.025
-tstop_max = 50//3000//1000//200//1000//200//tstop = dt*10//10//200//500//100000
+tstop_max = 15000//30//20//3000//1000//200//1000//200//tstop = dt*10//10//200//500//100000
 t = 0
 stimInt = 20//1000
 stimNum = 50//7//50//7//int(tstop/stimInt)
@@ -42,7 +46,7 @@ makeConvert(NCELL_FULL)
 pc.barrier()
 //checkgid()
 //pc.barrier()
-initCount()
+//initCount()
 connectInputCells(NCELL_E, NCELL_VTA, NCELL, NCELL_FULL)
 connectOutput1Cells(NCELL_OUT1_E,NCELL_VTA,NCELL_OUT1,NCELL,NCELL_FULL)
 connectOutput2Cells(NCELL_OUT2_E,NCELL_VTA,NCELL_OUT2,NCELL+NCELL_OUT1,NCELL_FULL)
@@ -53,7 +57,7 @@ pc.barrier()
 printf("finish connect section\n")
 
 
-setStim(stimNum, NCELL_VTA, dur, NCELL_CS,stimInt)
+setStim(STIM_DUR, NCELL_VTA, dur, NCELL_CS,stimInt,NCELL_E,LEARNING_TIMES)
 
 objref tvec, idvec
 
@@ -96,7 +100,7 @@ recv.record(&cells.object(8).soma.v(0.5))//previously monitor 82
 finitialize(v_init)
 fcurrent()
 //signalDA(NCELL_VTA, NCELL_E, NSYN_MAX)
-printf("the first DA = %lf\n",cells.object(0).synlist.object(2).forDA)
+//printf("the first DA = %lf\n",cells.object(0).synlist_e.object(0).forDA)
 ///////////////execute section///////////////////////////////////////
 //run()
 //myrun()
@@ -110,14 +114,49 @@ pc.set_maxstep(10)
 stdinit()
 steptime = dt
 tstop = steptime
-
+stim_timer = STIM_DUR
+stim_timer_move = STIM_DUR_MOVE
+stim_flag = 0
+stim_flag_move = 0
+SECTION_OUT1_E = int(NCELL_OUT1_E/5)
+SECTION_OUT1_I = int((NCELL_OUT1-NCELL_OUT1_E)/5)
+SECTION_OUT2_E = int(NCELL_OUT2_E/4)
+SECTION_OUT2_I = int((NCELL_OUT2-NCELL_OUT2_E)/4)
 
 for(time=0;time<tstop_max;time+=steptime){
     printf("\n\n\nt = %lf \n\n\n",t)
     pc.psolve(tstop)
     pc.barrier()
     tstop += steptime
-    //signalDA(NCELL_VTA,NCELL_E,NSYN_MAX)
+    //signalDA(NCELL_VTA,NCELL_E,NSYN_MAX,NCELL_FULL,NCELL,NCELL_OUT1,NCELL_OUT2,NCELL_OUT1_E,NCELL_OUT2_E)
+    
+    if(time>=stim_timer){
+	stim_timer += STIM_DUR
+	if(stim_flag==4){
+	    stim_flag = 0
+	}else{
+	    stim_flag = stim_flag + 1
+	}
+	changeFlags1(0+stim_flag*SECTION_OUT1_E,64+SECTION_OUT1_E,320+SECTION_OUT1_I,336+SECTION_OUT1_I,400,100,512,320,80)
+    }
+    if(time>=stim_timer_move){
+	stim_timer_move += STIM_DUR_MOVE
+	if(stim_flag_move==3){
+	    stim_flag_move = 0
+	}else{
+	    stim_flag_move = stim_flag_move + 1
+	}
+	changeFlags2(0+SECTION_OUT2_E*stim_flag_move,20+SECTION_OUT2_E*stim_flag_move,80+SECTION_OUT2_I*stim_flag_move,85+SECTION_OUT2_I*stim_flag_move,400,100,512,320,80)
+    }
+    //test for change flags in stdp.mod
+    //and test for broadcast the DA value
+    /*
+    if(time==10){
+	changeFlags1(64,128,336,352,400,100,512,320,80)
+	changeFlags2(20,40,85,90,400,100,512,320,80)
+	changeDATest()
+    }
+    */
     //pc.barrier()
     /*
     if(tstop>=tstop_max){
@@ -167,7 +206,7 @@ objref mt
 {mt.setcol(1, idvec)}
 {mt.printf("%0.5f ")}
 */
-printf("the last da = %lf\n",cells.object(0).synlist.object(2).forDA)
+//printf("the last da = %lf\n",cells.object(0).synlist_e.object(0).forDA)
 
 objref savSpike
 strdef filename
@@ -187,8 +226,51 @@ for rank=0, pc.nhost-1{
     pc.barrier()
 }
 
+/*
+objref savWeight
+strdef file
+for rank=0, pc.nhost-1{
+    if(rank==pc.id){
+	savWeight = new File()
+	sprint(file,"./result/nclist%d.dat",pc.id)
+	savWeight.wopen(file)
+	for i=0, nclist.count-1 {
+	    savWeight.printf("%g\t",nclist.object(i).weight)
+	}
+	savWeight.close()
+	
+	savWeight = new File()
+	sprint(file,"./result/nclist_out1_%d.dat",pc.id)
+	savWeight.wopen(file)
+	for i=0, nclist_out1.count-1 {
+	    savWeight.printf("%g\t",nclist_out1.object(i).weight)
+	}
+	savWeight.close()
+	
+	savWeight = new File()
+	sprint(file,"./result/nclist_out2_%d.dat",pc.id)
+	savWeight.wopen(file)
+	for i=0, nclist_out2.count-1 {
+	    savWeight.printf("%g\t",nclist_out2.object(i).weight)
+	}
+	savWeight.close()
+	
+	savWeight = new File()
+	sprint(file,"./result/nclist_i2o_%d.dat",pc.id)
+	savWeight.wopen(file)
+	for i=0, nclist_i2o.count-1 {
+	    savWeight.printf("%g\t",nclist_i2o.object(i).weight)
+	}
+	savWeight.close()
+    }
+    pc.barrier()
+}
+*/	
+
 //savSpike.close()
 {pc.runworker()}
 {pc.done()}
 
 /////////////end of save section///////////////////////////////////
+
+//comment out signalDA and savWeight section

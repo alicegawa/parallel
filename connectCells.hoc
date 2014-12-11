@@ -62,7 +62,7 @@ proc connectInputCells() { local i, j, k, targid, num_ecell,num_vta, num_cell, n
 			nclist.append(nc)
 			nc.threshold = 0
 			nc.delay = 0.1
-			nc.weight = 0//0.0002//0.01
+			nc.weight = 0.0002//0.01
 		    }
 		    //from inhibitory cells
 		    syn = pc.gid2cell(i).makeSyn(i,j+num_ecell,num_ecell,num_vta,0,0,0)
@@ -71,7 +71,7 @@ proc connectInputCells() { local i, j, k, targid, num_ecell,num_vta, num_cell, n
 		    nclist.append(nc)
 		    nc.threshold=0
 		    nc.delay = 0.1
-		    nc.weight = 0//0.03
+		    nc.weight = 0.03
 		    
 		    //}
 		    
@@ -91,7 +91,7 @@ proc connectInputCells() { local i, j, k, targid, num_ecell,num_vta, num_cell, n
 			nclist.append(nc)
 			nc.threshold = 0
 			nc.delay = 0.1
-			nc.weight = 0//0.0002
+			nc.weight = 0.0002
 		    }
 		}
 	    }
@@ -101,7 +101,7 @@ proc connectInputCells() { local i, j, k, targid, num_ecell,num_vta, num_cell, n
 	    nclist.append(nc)
 	    nc.threshold = 0
 	    nc.delay = 0
-	    nc.weight = 0//1
+	    nc.weight = 0.05
 	}
     }
 }
@@ -147,9 +147,9 @@ proc connectOutput1Cells() { local i, j, k,l, pargid, num_ecell_out1, num_syn, n
 		    nc.threshold = 0
 		    nc.delay = 0.1
 		    if(j<num_ecell_out1){
-			nc.weight = 0//0.0002//0.01
+			nc.weight = 0.0002//0.01
 		    }else{
-			nc.weight = 0//0.03//0.1
+			nc.weight = 0.03//0.1
 		    }
 		    /*
 		    if(j==0){
@@ -199,16 +199,16 @@ proc connectOutput2Cells() { local i, j, k,l, pargid, num_ecell_out2, num_syn, n
 		//printf("con.x[%d][%d] = %d ",i,j,con.x[i][j])
 		for(k=0;k<con_out2.x[i][j];k=k+1){
 		    //confirm.x[i][j] = confirm.x[i][j] + 1
-		    syn = pc.gid2cell(i+num_cell_i_o1).makeSyn(i,j,num_ecell_out2,40,1,num_ecell_out2,num_ecell_out2+int((num_cell_out2-num_ecell_out2)/5))//num_vta,1)
+		    syn = pc.gid2cell(i+num_cell_i_o1).makeSyn(i,j,num_ecell_out2,int(num_ecell_out2/4),1,num_ecell_out2,num_ecell_out2+int((num_cell_out2-num_ecell_out2)/4))//num_vta,1)
 		    nc = pc.gid_connect((j+num_cell_i_o1)*2+1+num_cell_full,syn)
 //		    printf("my host id = %d, parent(pre) cell id = %d\n",pc.id,j)
 		    nclist_out2.append(nc)
 		    nc.threshold = 0
 		    nc.delay = 0.1
 		    if(j<num_ecell_out2){
-			nc.weight = 0//0.0002//0.01
+			nc.weight = 0.0002//0.01
 		    }else{
-			nc.weight = 0//0.03//0.1
+			nc.weight = 0.03//0.1
 		    }
 		    /*
 		    if(j==0){
@@ -219,7 +219,8 @@ proc connectOutput2Cells() { local i, j, k,l, pargid, num_ecell_out2, num_syn, n
 			nc.threshold = 0
 			nc.delay = 0.1
 			nc.weight = 0.02
-		    }*/
+		    }
+		    */
 		}
 	    }
 	    //printf("\n")
@@ -250,7 +251,7 @@ proc connectI2O(){local i, j, k, num_ecell, num_cell_out1, num_ecell_out1, num_c
 		    nclist_i2o.append(nc)
 		    nc.threshold = 0
 		    nc.delay = 0.1
-		    nc.weight = 0//0.0002
+		    nc.weight = 0.0002
 		    /*
 		    if(j==0){
 			syn = pc.gid2cell(i+num_cell_input).makeSyn(i+num_cell_input,j+num_ecell,num_ecell,num_vta,0,0,0)
@@ -268,7 +269,7 @@ proc connectI2O(){local i, j, k, num_ecell, num_cell_out1, num_ecell_out1, num_c
 		    nclist_i2o.append(nc)
 		    nc.threshold = 0
 		    nc.delay = 0.1
-		    nc.weight = 0//0.03
+		    nc.weight = 0.03
 		}
 	    }
 	}
@@ -283,7 +284,7 @@ proc connectI2O(){local i, j, k, num_ecell, num_cell_out1, num_ecell_out1, num_c
 		    nclist_i2o.append(nc)
 		    nc.threshold = 0
 		    nc.delay = 0.1
-		    nc.weight = 0//0.0002
+		    nc.weight = 0.0002
 		    /*
 		    if(j==0){
 			syn = pc.gid2cell(i+num_cell_i_o1).makeSyn(i+num_cell_i_o1,j+num_ecell,num_ecell,num_vta,0,0,0)
@@ -295,16 +296,14 @@ proc connectI2O(){local i, j, k, num_ecell, num_cell_out1, num_ecell_out1, num_c
 			nc.weight = 0.02
 		    }
 		    */
-		    syn = pc.gid2cell(i+num_cell_i_o1).makeSyn(i+num_cell_i_o1,j,num_ecell,num_vta,0,0,0)
+		    syn = pc.gid2cell(i+num_cell_i_o1).makeSyn(i+num_cell_i_o1,j+num_ecell,num_ecell,num_vta,0,0,0)
 		    nc = pc.gid_connect((j+num_ecell)*2+1+num_cell_full,syn)
 		    nclist_i2o.append(nc)
 		    nc.threshold = 0
 		    nc.delay = 0.1
-		    nc.weight = 0//0.03
+		    nc.weight = 0.03
 		}
 	    }
 	}
     }
 }
-
-

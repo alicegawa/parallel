@@ -16,27 +16,179 @@ load_file("nrngui.hoc")
 objref nclist_us, nclist_spon, nclist_cs
 objref  us, cs, sponFire
 //ins setStim section, it is remained to describe that what cells is potentiated by DA. So, let's add in next case.
-proc setStim(){local i, stim_num, num_vta, dur, num_cs, stim_int localobj nc, us_tmp, cs_tmp, spon_tmp
-    stim_num = $1
+proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_input, l_times, stim_dur localobj nc, us_tmp, cs_tmp, spon_tmp
+    stim_dur = $1//stim_num = $1
     num_vta = $2
     dur = $3
     num_cs = $4
     stim_int = $5
+    num_ecell_input = $6
+    l_times = $7
     
+    nclist_cs = new List()
+    cs = new List()
+    for i=0, num_ecell_input-1 {
+	//the definition for "sa"
+	if(stim_data1.x[i]){
+	    if(pc.gid_exists(i)){
+		pc.gid2cell(i).soma {
+		    for j=0, l_times-1 {
+			
+			cs_tmp = new IClamp(0.5)
+			cs_tmp.del = 20+25*j//150*j
+			cs_tmp.dur = 5//30
+			cs_tmp.amp = 0.5
+			cs.append(cs_tmp)
+			nc = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.02)
+			nclist_cs.append(nc)
+		    }
+		}
+	    }
+	    if(pc.gid_exists(i+num_ecell_input)){
+		for j=0, l_times-1 {
+		    pc.gid2cell(i+num_ecell_input).soma {
+			cs_tmp = new IClamp(0.5)
+			cs_tmp.del = 20+25*j//150*j
+			cs_tmp.dur = 5//30
+			cs_tmp.amp = 0.5
+			cs.append(cs_tmp)
+			nc = new NetCon(cs_tmp,pc.gid2cell(i+num_ecell_input).synlist.object(0),0,0.1,0.02)
+			nclist_cs.append(nc)
+		    }
+		}
+	    }
+	}
+	/*
+	if(stim_data2.x[i]){
+	    if(pc.gid_exists(i)){
+		for j=0, l_times-1 {
+		    pc.gid2cell(i).soma{
+			cs_tmp = new IClamp(0.5)
+			cs_tmp.del = 50+150*j
+			cs_tmp.dur = 30
+			cs_tmp.amp = 0.5
+			cs.append(cs_tmp)
+			nc = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.02)
+			nclist_cs.append(nc)
+		    }
+		}
+	    }
+	    if(pc.gid_exists(i+num_ecell_input)){
+		for j=0, l_times-1 {
+		    pc.gid2cell(i+num_ecell_input).soma {
+			cs_tmp = new IClamp(0.5)
+			cs_tmp.del = 50+150*j
+			cs_tmp.dur = 30
+			cs_tmp.amp = 0.5
+			cs.append(cs_tmp)
+			nc = new NetCon(cs_tmp,pc.gid2cell(i+num_ecell_input).synlist.object(0),0,0.1,0.02)
+			nclist_cs.append(nc)
+		    }
+		}
+	    }
+	}
+	if(stim_data3.x[i]){
+	    if(pc.gid_exists(i)){
+		for j=0, l_times-1 {
+		    pc.gid2cell(i).soma{
+			cs_tmp = new IClamp(0.5)
+			cs_tmp.del = 80+150*j
+			cs_tmp.dur = 30
+			cs_tmp.amp = 0.5
+			cs.append(cs_tmp)
+			nc = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.02)
+			nclist_cs.append(nc)
+		    }
+		}
+	    }
+	    if(pc.gid_exists(i+num_ecell_input)){
+		for j=0, l_times-1 {
+		    pc.gid2cell(i+num_ecell_input).soma {
+			cs_tmp = new IClamp(0.5)
+			cs_tmp.del = 80+150*j
+			cs_tmp.dur = 30
+			cs_tmp.amp = 0.5
+			cs.append(cs_tmp)
+			nc = new NetCon(cs_tmp,pc.gid2cell(i+num_ecell_input).synlist.object(0),0,0.1,0.02)
+			nclist_cs.append(nc)
+		    }
+		}
+	    }
+	}
+	if(stim_data4.x[i]){
+	    for j=0, l_times-1 {
+		if(pc.gid_exists(i)){
+		    pc.gid2cell(i).soma{
+			cs_tmp = new IClamp(0.5)
+			cs_tmp.del = 110+150*j
+			cs_tmp.dur = 30
+			cs_tmp.amp = 0.5
+			cs.append(cs_tmp)
+			nc = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.02)
+			nclist_cs.append(nc)
+		    }
+		}
+	    }
+	    if(pc.gid_exists(i+num_ecell_input)){
+		for j=0, l_times-1 {
+		    pc.gid2cell(i+num_ecell_input).soma {
+			cs_tmp = new IClamp(0.5)
+			cs_tmp.del = 110+150*j
+			cs_tmp.dur = 30
+			cs_tmp.amp = 0.5
+			cs.append(cs_tmp)
+			nc = new NetCon(cs_tmp,pc.gid2cell(i+num_ecell_input).synlist.object(0),0,0.1,0.02)
+			nclist_cs.append(nc)
+		    }
+		}
+	    }
+	}
+	
+	if(stim_data5.x[i]){
+	    if(pc.gid_exists(i)){
+		for j=0, l_times-1 {
+		    pc.gid2cell(i).soma{
+			cs_tmp = new IClamp(0.5)
+			cs_tmp.del = 140+150*j
+			cs_tmp.dur = 30
+			cs_tmp.amp = 0.5
+			cs.append(cs_tmp)
+			nc = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.02)
+			nclist_cs.append(nc)
+		    }
+		}
+	    }
+	    if(pc.gid_exists(i+num_ecell_input)){
+		for j=0, l_times-1 {
+		    pc.gid2cell(i+num_ecell_input).soma {
+			cs_tmp = new IClamp(0.5)
+			cs_tmp.del = 140+150*j
+			cs_tmp.dur = 30
+			cs_tmp.amp = 0.5
+			cs.append(cs_tmp)
+			nc = new NetCon(cs_tmp,pc.gid2cell(i+num_ecell_input).synlist.object(0),0,0.1,0.02)
+			nclist_cs.append(nc)
+		    }
+		}
+	    }
+	}*/
+    }
+    /*
     nclist_us = new List()
     us = new List()
-    if(pc.gid_exists(512)){
-	pc.gid2cell(512).soma {
+    if(pc.gid_exists(0)){
+	pc.gid2cell(0).soma {
 	    us_tmp = new NetStim()
-	    us_tmp.start = 30
+	    us_tmp.start = 15
 	    us_tmp.interval = 0
 	    us_tmp.number = 1
 	    us_tmp.noise = 0
 	    us.append(us_tmp)
-	    nc = new NetCon(us_tmp,pc.gid2cell(512).synlist.object(0),0,0.1,0.02)
+	    nc = new NetCon(us_tmp,pc.gid2cell(0).synlist.object(0),0,0.1,0.02)
 	    nclist_us.append(nc)
 	}
     }
+    */
     
     /*
     nclist_us = new List()
