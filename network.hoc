@@ -18,15 +18,16 @@ NSYN_MAX = (NCELL-1)*NSYN
 
 NCELL_FULL = NCELL + NCELL_OUT1 + NCELL_OUT2
 
-LEARNING_TIMES = 2//30
-STIM_DUR = 5//30
+LEARNING_TIMES = 1//2//30
+STIM_DUR = 5//2000//5//30
 STIM_DUR_MOVE = 1
+START_STIM = 20
 
 dt = 0.025//<-for test0.1//0.025
-tstop_max = 15000//30//20//3000//1000//200//1000//200//tstop = dt*10//10//200//500//100000
+tstop_max = 150//15000//30//20//3000//1000//200//1000//200//tstop = dt*10//10//200//500//100000
 t = 0
 stimInt = 20//1000
-stimNum = 50//7//50//7//int(tstop/stimInt)
+stimNum = 1//100//7//50//7//int(tstop/stimInt)
 dur = tstop_max
 //identify the VTA parameter
 vta_flag = 0
@@ -57,7 +58,7 @@ pc.barrier()
 printf("finish connect section\n")
 
 
-setStim(STIM_DUR, NCELL_VTA, dur, NCELL_CS,stimInt,NCELL_E,LEARNING_TIMES)
+setStim(stimNum, NCELL_VTA, dur, NCELL_CS,stimInt,NCELL_E,LEARNING_TIMES,START_STIM)
 
 objref tvec, idvec
 
@@ -100,7 +101,7 @@ recv.record(&cells.object(8).soma.v(0.5))//previously monitor 82
 finitialize(v_init)
 fcurrent()
 //signalDA(NCELL_VTA, NCELL_E, NSYN_MAX)
-//printf("the first DA = %lf\n",cells.object(0).synlist_e.object(0).forDA)
+printf("the first DA = %lf\n",cells.object(0).synlist_e.object(0).forDA)
 ///////////////execute section///////////////////////////////////////
 //run()
 //myrun()
@@ -128,7 +129,7 @@ for(time=0;time<tstop_max;time+=steptime){
     pc.psolve(tstop)
     pc.barrier()
     tstop += steptime
-    //signalDA(NCELL_VTA,NCELL_E,NSYN_MAX,NCELL_FULL,NCELL,NCELL_OUT1,NCELL_OUT2,NCELL_OUT1_E,NCELL_OUT2_E)
+    signalDA(NCELL_VTA,NCELL_E,NSYN_MAX,NCELL_FULL,NCELL,NCELL_OUT1,NCELL_OUT2,NCELL_OUT1_E,NCELL_OUT2_E)
     
     if(time>=stim_timer){
 	stim_timer += STIM_DUR
@@ -206,7 +207,7 @@ objref mt
 {mt.setcol(1, idvec)}
 {mt.printf("%0.5f ")}
 */
-//printf("the last da = %lf\n",cells.object(0).synlist_e.object(0).forDA)
+printf("the last da = %lf\n",cells.object(0).synlist_e.object(0).forDA)
 
 objref savSpike
 strdef filename
@@ -226,7 +227,7 @@ for rank=0, pc.nhost-1{
     pc.barrier()
 }
 
-/*
+
 objref savWeight
 strdef file
 for rank=0, pc.nhost-1{
@@ -265,7 +266,7 @@ for rank=0, pc.nhost-1{
     }
     pc.barrier()
 }
-*/	
+	
 
 //savSpike.close()
 {pc.runworker()}

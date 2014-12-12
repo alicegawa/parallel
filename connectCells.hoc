@@ -71,7 +71,7 @@ proc connectInputCells() { local i, j, k, targid, num_ecell,num_vta, num_cell, n
 		    nclist.append(nc)
 		    nc.threshold=0
 		    nc.delay = 0.1
-		    nc.weight = 0.03
+		    nc.weight = 0.02
 		    
 		    //}
 		    
@@ -97,11 +97,12 @@ proc connectInputCells() { local i, j, k, targid, num_ecell,num_vta, num_cell, n
 	    }
 	    //if excitatory cell above me (inhibiroty cell) is fired, i wanna also fire
 	    syn = pc.gid2cell(i+num_ecell).makeSyn(i+num_ecell,i+num_ecell,num_ecell,num_vta,0,0,0)
+	    syn.e = 0
 	    nc = pc.gid_connect(i,syn)
 	    nclist.append(nc)
 	    nc.threshold = 0
 	    nc.delay = 0
-	    nc.weight = 0.05
+	    nc.weight = 0.02
 	}
     }
 }
