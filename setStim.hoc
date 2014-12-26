@@ -43,7 +43,7 @@ proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_i
 			cs_tmp.start = stim_start+stim_set_interval*j
 			cs_tmp.number = stim_num*5
 			cs_tmp.interval = stim_int
-			cs_tmp.noise = 0
+			cs_tmp.noise = 0.05
 			cs.append(cs_tmp)
 			nc = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
 			nclist_cs.append(nc)
@@ -204,21 +204,34 @@ proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_i
 		spon_tmp.amp = 0.065
 		spon_tmp.dur = dur
 		spon_tmp.del = 20
+		spon_tmp.forseed = i
 		//if((i>=256 && i<512) || (i>=832 && i<912) || (i>=992 && i<1012)){
                 if((i>=256 && i<512) || (i>=992 && i<1012)){
                     //spon_tmp.THETA = 0.024
                     //spon_tmp.KAPPA = 0.25
-		    spon_tmp.THETA = 0.24
-                    spon_tmp.KAPPA = 0.03
-                }else if(i>=832 && i<912){
-		    spon_tmp.KAPPA = 0.2
+		    spon_tmp.KAPPA = 0.02
 		    spon_tmp.THETA = 0.1
+		    //spon_tmp.THETA = 0.24
+                    //spon_tmp.KAPPA = 0.03
+		    //i wanna try next time
+		    //spon_tmp.THETA = 1
+		    //spon_tmp.KAPPA = 0.072
+                }else if(i>=832 && i<912){
+		    spon_tmp.KAPPA = 0.2//0.015 //0.1
+		    spon_tmp.THETA = 0.1//0.56 //0.16
+		    //i wanna try next time
+		    //spon_tmp.THETA = 2
+		    //spon_tmp.KAPPA = 0.01
 		    //spon_tmp.KAPPA = 0.024
 		    //spon_tmp.THETA = 0.15
 		}else{
 		    //spon_tmp.THETA = 0.2
 		    spon_tmp.KAPPA = 0.1
+		    //spon_tmp.THETA = 0.5
 		   // spon_tmp.THETA = 1.3
+		   //i wanna try next time
+		   //spon_tmp.THETA = 3
+		   //spon_tmp.KAPPA = 0.01
 		}
 		//nc = new NetCon(spon_tmp,cells.object(i).synlist.object(1),0,0.1,0.02)
 		nc = new NetCon(spon_tmp,pc.gid2cell(i).synlist.object(1),0,0.1,0.02)
