@@ -19,14 +19,14 @@ NSYN_MAX = (NCELL-1)*NSYN
 NCELL_FULL = NCELL + NCELL_OUT1 + NCELL_OUT2
 
 LEARNING_TIMES = 1//2//30
-STIM_DUR = 40000//2000//5//30 //until now(12/20), here is not changed, so it may cause the learning unproceeding??
+STIM_DUR = 10000//100000//25000//2000//5//30 //until now(12/20), here is not changed, so it may cause the learning unproceeding??
 STIM_DUR_MOVE = 1
 START_STIM = 20
 
 dt = 0.025//<-for test0.1//0.025
-tstop_max = 40000//15000//30//20//3000//1000//200//1000//200//tstop = dt*10//10//200//500//100000
+tstop_max = 10000//25000//15000//30//20//3000//1000//200//1000//200//tstop = dt*10//10//200//500//100000
 t = 0
-stimInt = 50//40//20//1000
+stimInt = 66//40//20//1000
 stimNum = 200//100//100//7//50//7//int(tstop/stimInt)
 dur = tstop_max
 //identify the VTA parameter
@@ -134,15 +134,22 @@ datiming = 1
 
 for(time=0;time<tstop_max;time+=steptime){
     //printf("\n\n\nt = %lf \n\n\n",t)
-    if(time>=tstop_max-dt){
+    /*if(time>=tstop_max-dt){
 	printf("\n\n\nt=%lf\n\n\n",t)
-    }
+    }*/
     pc.psolve(tstop)
     pc.barrier()
     tstop += steptime
     if(time>=datiming){
 	signalDA(NCELL_VTA,NCELL_E,NSYN_MAX,NCELL_FULL,NCELL,NCELL_OUT1,NCELL_OUT2,NCELL_OUT1_E,NCELL_OUT2_E)
 	datiming = datiming + 1
+    }
+    if(time==1 || time==5000 || time==10000 || time == 15000 || time==20000){
+	for conf=0, 4 {
+	    if(pc.gid_exists(512+conf*12)){
+		printf("flags is %d \n",pc.gid2cell(512+conf*12).synlist_e.o(0).forSpike)
+	    }
+	}
     }
     if(time>=stim_timer){
 	stim_timer += STIM_DUR

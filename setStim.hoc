@@ -34,6 +34,7 @@ proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_i
     nclist_cs = new List()
     cs = new List()
     for i=0, num_ecell_input-1 {
+	/*
 	//the definition for "sa"
 	if(stim_data1.x[i]){
 	    if(pc.gid_exists(i)){
@@ -52,7 +53,7 @@ proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_i
 		    }
 		}
 	    }
-	}
+	}*/
 	/*
 	if(stim_data2.x[i]){
 	    if(pc.gid_exists(i)){
@@ -206,20 +207,26 @@ proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_i
 		    spon_tmp.dur = dur
 		    spon_tmp.del = 20
 		    spon_tmp.forseed = i
+		    
+		    if((i>=832 && i<912) && (i>=992 && i<1012)){
+			spon_tmp.KAPPA = 0.13
+			spon_tmp.THETA = 0.28
+		    }
+		    /*
 		    //if((i>=256 && i<512) || (i>=832 && i<912) || (i>=992 && i<1012)){
                     if((i>=256 && i<512) || (i>=992 && i<1012)){
-			//spon_tmp.THETA = 0.024
-			//spon_tmp.KAPPA = 0.25
-			spon_tmp.KAPPA = 0.02
-			spon_tmp.THETA = 0.1
+			spon_tmp.THETA = 0.32
+			spon_tmp.KAPPA = 0.1
+			//spon_tmp.KAPPA = 0.02
+			//spon_tmp.THETA = 0.1
 			//spon_tmp.THETA = 0.24
 			//spon_tmp.KAPPA = 0.03
 			//i wanna try next time
 			//spon_tmp.THETA = 1
 			//spon_tmp.KAPPA = 0.072
                     }else if(i>=832 && i<912){
-			spon_tmp.KAPPA = 0.1//0.015 //0.1
-			spon_tmp.THETA = 0.34//0.56 //0.16
+			spon_tmp.KAPPA = 0.024//0.015 //0.1
+			spon_tmp.THETA = 0.25//0.56 //0.16
 			//i wanna try next time
 			//spon_tmp.THETA = 2
 			//spon_tmp.KAPPA = 0.01
@@ -234,6 +241,7 @@ proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_i
 			//spon_tmp.THETA = 3
 			//spon_tmp.KAPPA = 0.01
 		    }
+		    */
 		    //nc = new NetCon(spon_tmp,cells.object(i).synlist.object(1),0,0.1,0.02)
 		    nc = new NetCon(spon_tmp,pc.gid2cell(i).synlist.object(1),0,0.1,0.02)
 		    sponFire.append(spon_tmp)
