@@ -210,7 +210,11 @@ proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_i
 		    
 		    if((i>=832 && i<912) && (i>=992 && i<1012)){
 			spon_tmp.KAPPA = 0.13
-			spon_tmp.THETA = 0.28
+			spon_tmp.THETA = 0.28//0.25
+		    }else if((i>=512 && i<832) || (i>=912 && i<992)){
+			spon_tmp.KAPPA = 0.17
+		    }else{
+			spon_tmp.KAPPA = 0.1
 		    }
 		    /*
 		    //if((i>=256 && i<512) || (i>=832 && i<912) || (i>=992 && i<1012)){
