@@ -25,7 +25,7 @@ STIM_DUR_MOVE = 1
 START_STIM = 20
 
 dt = 0.025//<-for test0.1//0.025
-tstop_max = 0//200//30//20//3000//1000//200//1000//200//tstop = dt*10//10//200//500//100000
+tstop_max = 200//30//20//3000//1000//200//1000//200//tstop = dt*10//10//200//500//100000
 t = 0
 stimInt = 20//1000
 stimNum = 100//7//50//7//int(tstop/stimInt)
@@ -56,15 +56,6 @@ connectI2O(NCELL_E,NCELL_OUT1,NCELL_OUT1_E,NCELL_OUT2,NCELL_OUT2_E,NCELL_VTA,NCE
 
 //confirm.printf("%0.5f ")
 pc.barrier()
-
-printf("my id = %d, nclist.count is %d, out1 is %d, out2 is %d, i2o is %d\n",pc.id, nclist.count, nclist_out1.count, nclist_out2.count, nclist_i2o.count)
-
-
-read_weight(nclist.count,nclist_out1.count,nclist_out2.count,nclist_i2o.count)
-subst()
-
-pc.barrier()
-
 printf("finish connect section\n")
 
 
@@ -152,7 +143,7 @@ for(time=0;time<tstop_max;time+=steptime){
 	if(stim_flag==4){
 	    stim_flag = 0
 	}else{
-	    stim_flag = stim_flag + 1
+    stim_flag = stim_flag + 1
 	}
 	changeFlags1(0+stim_flag*SECTION_OUT1_E,64+stim_flag*SECTION_OUT1_E,320+stim_flag*SECTION_OUT1_I,336+stim_flag*SECTION_OUT1_I,400,100,512,320,80)
     }
@@ -256,7 +247,6 @@ for rank=0, pc.nhost-1{
 	for i=0, nclist.count-1 {
 	    savWeight.printf("%g\t",nclist.object(i).weight)
 	}
-	printf("nclist.count of %d is %d\n",pc.id,nclist.count)
 	savWeight.close()
 	
 	savWeight = new File()
@@ -273,7 +263,6 @@ for rank=0, pc.nhost-1{
 	for i=0, nclist_out2.count-1 {
 	    savWeight.printf("%g\t",nclist_out2.object(i).weight)
 	}
-	printf("nclist_out2.count of %d is %d\n",pc.id,nclist_out2.count)
 	savWeight.close()
 	
 	savWeight = new File()

@@ -35,6 +35,7 @@ int main(int argc, char **argv){
 
   for(i=0;i<NCELL;i++){
     for(j=0;j<NCON;j++){
+      
       if(i<NCELL_E){
 	r = (i+(1+rand()%(NCELL-1)))%NCELL;
       }else{

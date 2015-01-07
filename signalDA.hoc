@@ -39,6 +39,7 @@ proc signalDA() {local i, j, k, counter, tmpDA, num_vta, num_ecell, nsyn_max, bu
     }
     //pc.barrier()
     /*******************TODO********************************/
+    //if(pc.nhost>1){
     {pc.gather_d(dacounter,resv,1,id_root)}
     //{pc.gather_i(dacounter,resv,1,id_root)}//slower than d
     if(pc.id==id_root){
@@ -51,6 +52,11 @@ proc signalDA() {local i, j, k, counter, tmpDA, num_vta, num_ecell, nsyn_max, bu
 	bcaster.x(0) = tmpDA
     }
     pc.broadcast(bcaster,id_root)
+    /*}else{
+	tmpDA = cells.object(0).synlist_e.object(0).forDA
+	tmpDA = tmpDA * 0.99987469431
+	bcaster.x(0) = tmpDA + dacounter.x(0)*0.04
+    }*/
     /*******************************************************/
     
     //the distributing section

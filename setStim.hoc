@@ -16,7 +16,7 @@ load_file("nrngui.hoc")
 objref nclist_us, nclist_spon, nclist_cs
 objref  us, cs, sponFire
 //ins setStim section, it is remained to describe that what cells is potentiated by DA. So, let's add in next case.
-proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_input, l_times, stim_dur, stim_start, stim_set_interval, stim_interval localobj nc, us_tmp, cs_tmp, spon_tmp
+proc setStim(){local i, j, k, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_input, l_times, stim_dur, stim_start, stim_set_interval, stim_interval, stim_move_interval localobj nc, us_tmp, cs_tmp, spon_tmp
     stim_num = $1 //stim_dur = $1
     num_vta = $2
     dur = $3
@@ -26,12 +26,90 @@ proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_i
     l_times = $7
     stim_start = $8
     
-    stim_dur = 5// karigime
+    stim_dur = 2000// karigime
     stim_set_interval = (stim_dur + 1000) * 5
-    stim_interval = stim_dur + 10//1000
+    stim_interval = stim_dur + 1000
+    stim_move_interval = 500
+    stim_move_interval_full = 4500
     
     nclist_cs = new List()
     cs = new List()
+/*    
+    //when the character is moving in the field of view horizontally
+    //in this section, we tentatively treat the situation of "sa"
+    for i=0, num_ecell_input-1 {
+	if(stim_data1.x[i]){
+	    for(j = -4 ; j <= 4; j = j + 1){
+		if(pc.gid_exists(i+j)){
+		    pc.gid2cell(i+j).soma {
+			for k=0, l_times-1{
+			    cs_tmp = new NetStim()
+			    cs_tmp.start = stim_start+stim_move_interval*(j+4)+stim_move_interval_full*k
+			    cs_tmp.number = 200//stim_move_number
+			    cs_tmp.interval = 20//stim_move_int
+			    cs_tmp.noise = 0
+			    cs.append(cs_tmp)
+			    nc = new NetCon(cs_tmp,pc.gid2cell(i+j).synlist.o(0),0,0.1,0.05)
+			    nclist_cs.append(nc)
+			}
+		    }
+		}
+	    }
+	}
+    }
+  */  
+    //when moving vertically,,,
+    /*
+    for i=0, num_ecell_input-1 {
+	if(stim_data1.x[i]){
+	    for(j = -4*MDIM ; j <= 4*MDIM; j = j + MDIM){
+		if(pc.gid_exists(i+j)){
+		    pc.gid2cell(i+j).soma {
+			for k=0, l_times-1{
+			    cs_tmp = new NetStim()
+			    cs_tmp.start = stim_start+stim_move_interval*(int(j/MDIM)+4)+stim_move_interval_full*k
+			    cs_tmp.number = 200//stim_move_number
+			    cs_tmp.interval = 20//stim_move_int
+			    cs_tmp.noise = 0
+			    cs.append(cs_tmp)
+			    nc = new NetCon(cs_tmp,pc.gid2cell(i+j).synlist.o(0),0,0.1,0.05)
+			    nclist_cs.append(nc)
+			}
+		    }
+		}
+	    }
+	}
+    }
+    */
+    
+    
+    //when moving dyagonally
+    /*
+    for i=0, num_ecell_input-1 {
+	if(stim_data1.x[i]){
+	    for(j = -4 ; j <= 4; j = j + 1){
+		if(pc.gid_exists(i+j+j*MDIM)){
+		    pc.gid2cell(i+j+j*MDIM).soma {
+			for k=0, l_times-1{
+			    cs_tmp = new NetStim()
+			    cs_tmp.start = stim_start+stim_move_interval*(j+4)+stim_move_interval_full*k
+			    cs_tmp.number = 200//stim_move_number
+			    cs_tmp.interval = 20//stim_move_int
+			    cs_tmp.noise = 0
+			    cs.append(cs_tmp)
+			    nc = new NetCon(cs_tmp,pc.gid2cell(i+j+j*MDIM).synlist.o(0),0,0.1,0.05)
+			    nclist_cs.append(nc)
+			}
+		    }
+		}
+	    }
+	}
+    }
+    */
+    
+    //when the character is not moving in the field of view
+    /*
+     
     for i=0, num_ecell_input-1 {
 	//the definition for "sa"
 	if(stim_data1.x[i]){
@@ -46,15 +124,6 @@ proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_i
 			cs.append(cs_tmp)
 			nc = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
 			nclist_cs.append(nc)
-			/*
-			cs_tmp = new IClamp(0.5)
-			cs_tmp.del = stim_start+stim_set_interval*j//150*j
-			cs_tmp.dur = stim_dur//30
-			cs_tmp.amp = 0.8
-			cs.append(cs_tmp)
-			nc = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.02)
-			nclist_cs.append(nc)
-			*/
 		    }
 		}
 	    }
@@ -72,15 +141,6 @@ proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_i
 			cs.append(cs_tmp)
 			nc = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
 			nclist_cs.append(nc)
-			/*
-			cs_tmp = new IClamp(0.5)
-			cs_tmp.del = stim_start+stim_interval+stim_set_interval*j
-			cs_tmp.dur = stim_dur
-			cs_tmp.amp = 0.8
-			cs.append(cs_tmp)
-			nc = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.02)
-			nclist_cs.append(nc)
-			*/
 		    }
 		}
 	    }
@@ -97,15 +157,6 @@ proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_i
 			cs.append(cs_tmp)
 			nc = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
 			nclist_cs.append(nc)
-			/*
-			cs_tmp = new IClamp(0.5)
-			cs_tmp.del = stim_start+stim_interval*2+stim_set_interval*j
-			cs_tmp.dur = stim_dur
-			cs_tmp.amp = 0.8
-			cs.append(cs_tmp)
-			nc = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.02)
-			nclist_cs.append(nc)
-			*/
 		    }
 		}
 	    }
@@ -122,15 +173,6 @@ proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_i
 			cs.append(cs_tmp)
 			nc = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
 			nclist_cs.append(nc)
-			/*
-			cs_tmp = new IClamp(0.5)
-			cs_tmp.del = stim_start+stim_interval*3+stim_set_interval*j
-			cs_tmp.dur = stim_dur
-			cs_tmp.amp = 0.8
-			cs.append(cs_tmp)
-			nc = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.02)
-			nclist_cs.append(nc)
-			*/
 		    }
 		}
 	    }
@@ -148,20 +190,13 @@ proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_i
 			cs.append(cs_tmp)
 			nc = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
 			nclist_cs.append(nc)
-			/*
-			cs_tmp = new IClamp(0.5)
-			cs_tmp.del = stim_start+stim_interval*4+stim_set_interval*j
-			cs_tmp.dur = stim_dur
-			cs_tmp.amp = 0.8
-			cs.append(cs_tmp)
-			nc = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.02)
-			nclist_cs.append(nc)
-			*/
 		    }
 		}
 	    }
 	}
     }
+    */
+    
     /*
     nclist_us = new List()
     us = new List()
@@ -219,7 +254,7 @@ proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_i
 	}
     }
     */
-    /*
+    
     nclist_spon = new List()
     sponFire = new List()
    
@@ -234,7 +269,7 @@ proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_i
 	    nclist_spon.append(nc)
 	}
     }
-    */
+    
      /*
     for i=0, NCELL-1 {
 	if(pc.gid_exists(i)){

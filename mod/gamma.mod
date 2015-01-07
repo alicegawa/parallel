@@ -27,7 +27,7 @@ PARAMETER {
     n =10: 2.7 :parameter to adjust
     tmp_n = 1
     THETA = 0.32:0.35:step=5(if fcount>4)'s best is:0.46:2:0.025:hh's parameter0.014:0.012:0.017:1.05 :parameter(sita no to awase te 3Hz kurai)
-    KAPPA = 0.1:the same as above desicription is:0.1:1:0.24:hh's parameter0.13:0.11:0.16:0.01:parameter
+    KAPPA = 0.22:<-at test oakleaf:0.1:the same as above desicription is:0.1:1:0.24:hh's parameter0.13:0.11:0.16:0.01:parameter
     int_kappa = 1
     frac_kappa = 0
     b = 1

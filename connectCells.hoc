@@ -101,7 +101,7 @@ proc connectInputCells() { local i, j, k, targid, num_ecell,num_vta, num_cell, n
 	    nc = pc.gid_connect(i,syn)
 	    nclist.append(nc)
 	    nc.threshold = 0
-	    nc.delay = 0
+	    nc.delay = 0.1
 	    nc.weight = 0.02
 	}
     }
@@ -306,5 +306,23 @@ proc connectI2O(){local i, j, k, num_ecell, num_cell_out1, num_ecell_out1, num_c
 		}
 	    }
 	}
+    }
+}
+
+proc subst(){local i
+    for i=0, nclist.count-1 {
+	nclist.o(i).weight = weight_input.x(i)
+    }
+    
+    for i=0, nclist_out1.count-1{
+	nclist_out1.o(i).weight = weight_out1.x(i)
+    }
+    
+    for i=0, nclist_out2.count-1{
+	nclist_out2.o(i).weight = weight_out2.x(i)
+    }
+    
+    for i=0, nclist_i2o.count-1 {
+	nclist_i2o.o(i).weight = weight_i2o.x(i)
     }
 }
