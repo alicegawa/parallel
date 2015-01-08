@@ -326,3 +326,12 @@ proc subst(){local i
 	nclist_i2o.o(i).weight = weight_i2o.x(i)
     }
 }
+
+proc off_plast(){local i, j
+    for i=0, cells.count-1{
+	for j=0, cells.o(i).synlist_e.count-1{
+	    cells.o(i).synlist_e.o(j).d=0
+	    cells.o(i).synlist_e.o(j).p=0
+	}
+    }
+}
