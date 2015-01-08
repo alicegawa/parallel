@@ -31,6 +31,7 @@ proc signalDA() {local i, j, k, counter, tmpDA, num_vta, num_ecell, nsyn_max, bu
     for i=num_cell_input, num_cell_full-1 {
 	if(pc.gid_exists(i)){
 	    if(pc.gid2cell(i).synlist_e.object(0).forSpike==1){
+		//printf("my gid is %d\n",i)
 		pc.gid2cell(i).synlist_e.object(0).forSpike = 2
 		//tmpDA = tmpDA + 0.04
 		dacounter.x(0) = dacounter.x(0) + 1
@@ -43,11 +44,12 @@ proc signalDA() {local i, j, k, counter, tmpDA, num_vta, num_ecell, nsyn_max, bu
     //{pc.gather_i(dacounter,resv,1,id_root)}//slower than d
     if(pc.id==id_root){
 	tmpDA = cells.object(0).synlist_e.object(0).forDA
-	tmpDA = tmpDA * 0.995//0.99987469431//0.995
+	tmpDA = tmpDA*0.995//*0.7// * 0.995 * 0.995//0.995//0.99987469431//0.995
 	for(i=0;i<resv.size;i+=1){
 	    bcaster.x(0) += resv.x(i)
 	}
-	tmpDA = tmpDA + 0.04*bcaster.x(0)
+	tmpDA = tmpDA + 0.08*bcaster.x(0)
+	//tmpDA = tmpDA + 0.04*bcaster.x(0)
 	bcaster.x(0) = tmpDA
     }
     pc.broadcast(bcaster,id_root)
@@ -130,5 +132,21 @@ proc changeFlags2(){local i, j, k, start_e, end_e, start_i, end_i, num_out1, num
 proc changeDATest() {
      if(pc.id==id_root){
 	cells.object(0).synlist_e.object(0).forDA = 3
+    }
+}
+
+proc forTestOut1(){ local i
+    for(i=0;i<100;i+=1){
+	if(pc.gid_exists(i+912)){
+	    pc.gid2cell(i+912).synlist_e.o(0).forSpike=0
+	}
+    }
+}
+
+proc forTestOut2(){ local i
+    for(i=0;i<400;i+=1){
+	if(pc.gid_exists(i+512)){
+	    pc.gid2cell(i+512).synlist_e.o(0).forSpike=0
+	}
     }
 }

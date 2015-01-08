@@ -34,6 +34,8 @@ proc connectInputCells() { local i, j, k, targid, num_ecell,num_vta, num_cell, n
     num_cell_full = $4
     nclist = new List()
     r = new Random(25525)
+    
+    num_vta = 0
 /*    
     confirm = new Matrix()
     confirm.resize(NCELL,NCELL)
@@ -58,11 +60,11 @@ proc connectInputCells() { local i, j, k, targid, num_ecell,num_vta, num_cell, n
 		    for k=0, 3 {
 			syn = pc.gid2cell(i).makeSyn(i,j,num_ecell,num_vta,0,0,0)
 			nc = pc.gid_connect((con.x[i][j]-1)+j*2+num_cell_full,syn)//num_cell -> num_cell_full
-			printf("my host id = %d, parent(pre) cell id = %d(e->e)\n",pc.id,j)
+			//printf("my host id = %d, parent(pre) cell id = %d(e->e)\n",pc.id,j)
 			nclist.append(nc)
 			nc.threshold = 0
 			nc.delay = 0.1
-			nc.weight = 0.0002//*r.uniform(0,1)//0.01
+			nc.weight = 0.002*r.uniform(0,1)//0.0002*r.uniform(0,1)//0.01
 		    }
 		    //from inhibitory cells
 		    syn = pc.gid2cell(i).makeSyn(i,j+num_ecell,num_ecell,num_vta,0,0,0)
@@ -91,7 +93,7 @@ proc connectInputCells() { local i, j, k, targid, num_ecell,num_vta, num_cell, n
 			nclist.append(nc)
 			nc.threshold = 0
 			nc.delay = 0.1
-			nc.weight = 0.0002//*r.uniform(0,1)
+			nc.weight = 0.002*r.uniform(0,1)//0.0002*r.uniform(0,1)
 		    }
 		}
 	    }
@@ -141,14 +143,14 @@ proc connectOutput1Cells() { local i, j, k,l, pargid, num_ecell_out1, num_syn, n
 		//printf("con.x[%d][%d] = %d ",i,j,con.x[i][j])
 		for(k=0;k<con_out1.x[i][j];k=k+1){
 		    //confirm.x[i][j] = confirm.x[i][j] + 1
-		    syn = pc.gid2cell(i+num_cell_input).makeSyn(i,j,num_ecell_out1,int(num_ecell_out1/5),1,num_ecell_out1,num_ecell_out1+int((num_cell_out1-num_ecell_out1)/5))//num_vta,1)
+		    syn = pc.gid2cell(i+num_cell_input).makeSyn(i,j,num_ecell_out1,int(num_ecell_out1/5),1,num_ecell_out1,num_ecell_out1+int(num_cell_out1/5)-int(num_ecell_out1/5))//num_ecell_out1+int((num_cell_out1-num_ecell_out1)/5))//num_vta,1)
 		    nc = pc.gid_connect((j+num_cell_input)*2+1+num_cell_full,syn)
 		    //printf("my host id = %d, parent(pre) cell id = %d\n",pc.id,j)
 		    nclist_out1.append(nc)
 		    nc.threshold = 0
 		    nc.delay = 0.1
 		    if(j<num_ecell_out1){
-			nc.weight = 0.0002//*r.uniform(0,1)//0.01
+			nc.weight = 0.002*r.uniform(0,1)//0.0002*r.uniform(0,1)//0.01
 		    }else{
 			nc.weight = 0.05//7//0.05//in ganglion, test 0.1//0.05//0.03//0.1
 		    }
@@ -207,7 +209,7 @@ proc connectOutput2Cells() { local i, j, k,l, pargid, num_ecell_out2, num_syn, n
 		    nc.threshold = 0
 		    nc.delay = 0.1
 		    if(j<num_ecell_out2){
-			nc.weight = 0.0002//*r.uniform(0,1)//0.01
+			nc.weight = 0.002*r.uniform(0,1)//0.0002*r.uniform(0,1)//0.01
 		    }else{
 			nc.weight = 0.05//3//0.1
 		    }
@@ -253,7 +255,7 @@ proc connectI2O(){local i, j, k, l, num_ecell, num_cell_out1, num_ecell_out1, nu
 			nclist_i2o.append(nc)
 			nc.threshold = 0
 			nc.delay = 0.1
-			nc.weight = 0.0002//*r.uniform(0,1)
+			nc.weight = 0.001*r.uniform(0,1)//0.005*r.uniform(0,1)//0.008*r.uniform(0,1)//0.002*r.uniform(0,1)//0.0002*r.uniform(0,1)
 			/*
 			if(j==0){
 			    syn = pc.gid2cell(i+num_cell_input).makeSyn(i+num_cell_input,j+num_ecell,num_ecell,num_vta,0,0,0)
@@ -267,15 +269,21 @@ proc connectI2O(){local i, j, k, l, num_ecell, num_cell_out1, num_ecell_out1, nu
 			*/
 		    }
 		    //add here first!!
-		    if(i<num_ecell_out1){
-			
+		    //if(i<num_ecell_out1){
+		    
+		    
 			syn = pc.gid2cell(i+num_cell_input).makeSyn(i+num_cell_input,j+num_ecell,num_ecell,num_vta,0,0,0)
 			nc = pc.gid_connect((j+num_ecell)*2+1+num_cell_full,syn)
 			nclist_i2o.append(nc)
 			nc.threshold = 0
 			nc.delay = 0.1
-			nc.weight = 0.03//7//in test310.05//in gang test 0.1 now
-		    }
+			if(i<num_ecell_out1){
+			    nc.weight = 0.008//0.03//7//in test310.05//in gang test 0.1 now
+			}else{
+			    nc.weight = 0.008//0.01
+			}
+
+			    //}
 		    //end adding section
 		}
 	    }
@@ -292,7 +300,7 @@ proc connectI2O(){local i, j, k, l, num_ecell, num_cell_out1, num_ecell_out1, nu
 			nclist_i2o.append(nc)
 			nc.threshold = 0
 			nc.delay = 0.1
-			nc.weight = 0.0002//*r.uniform(0,1)//0.03
+			nc.weight = 0.002*r.uniform(0,1)//0.0002*r.uniform(0,1)//0.03
 			
 			/*
 			if(j==0){
@@ -306,16 +314,47 @@ proc connectI2O(){local i, j, k, l, num_ecell, num_cell_out1, num_ecell_out1, nu
 			}
 			*/
 		    }
-		    if(i<num_ecell_out2){
+		    //if(i<num_ecell_out2){
 			syn = pc.gid2cell(i+num_cell_i_o1).makeSyn(i+num_cell_i_o1,j+num_ecell,num_ecell,num_vta,0,0,0)
 			nc = pc.gid_connect((j+num_ecell)*2+1+num_cell_full,syn)
 			nclist_i2o.append(nc)
 			nc.threshold = 0
 			nc.delay = 0.1
-			nc.weight = 0.03//0.03
-		    }
+			if(i<num_ecell_out2){
+			    nc.weight = 0.03//0.03
+			}else{
+			    nc.weight = 0.01
+			}
+		    //}
 		}
 	    }
 	}
+    }
+}
+
+proc subst(){local i
+    for i=0, nclist.count-1 {
+	nclist.o(i).weight = weight_input.x(i)
+    }
+    
+    for i=0, nclist_out1.count-1{
+	nclist_out1.o(i).weight = weight_out1.x(i)
+    }
+    
+    for i=0, nclist_out2.count-1{
+	nclist_out2.o(i).weight = weight_out2.x(i)
+    }
+    
+    for i=0, nclist_i2o.count-1 {
+	nclist_i2o.o(i).weight = weight_i2o.x(i)
+    }
+}
+
+proc off_plast(){local i, j
+    for i=0, cells.count-1{
+	for j=0, cells.o(i).synlist_e.count-1{
+	        cells.o(i).synlist_e.o(j).d=0
+		    cells.o(i).synlist_e.o(j).p=0
+		    }
     }
 }

@@ -31,10 +31,30 @@ proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_i
     stim_set_interval = (stim_dur + 1000) * 5
     stim_interval = stim_dur + 1000
     
+    nclist_us = new List()
+    us = new List()
+    for(i=0;i<400;i+=1){
+	if((i<64) || (i>=320 && i<336)){
+	    if(pc.gid_exists(i+512)){
+		pc.gid2cell(i+512).soma {
+		    for j=0, l_times-1{
+			us_tmp = new NetStim()
+			us_tmp.start = stim_start+stim_set_interval*j + 5
+			us_tmp.number = stim_num*4
+			us_tmp.interval = stim_int
+			us_tmp.noise = 0//0.001
+			us.append(us_tmp)
+			nc = new NetCon(us_tmp,pc.gid2cell(i+512).synlist.object(1),0,0.1,0.05)
+			nclist_us.append(nc)
+		    }
+		}
+	    }
+	}
+    }
     nclist_cs = new List()
     cs = new List()
     for i=0, num_ecell_input-1 {
-	/*
+	
 	//the definition for "sa"
 	if(stim_data1.x[i]){
 	    if(pc.gid_exists(i)){
@@ -44,16 +64,17 @@ proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_i
 			cs_tmp.start = stim_start+stim_set_interval*j
 			cs_tmp.number = stim_num*5
 			cs_tmp.interval = stim_int
-			cs_tmp.noise = 0.05
+			cs_tmp.noise = 0//0.05
 			cs.append(cs_tmp)
 			nc = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
 			nclist_cs.append(nc)
-					
-	
+			
+			
 		    }
 		}
 	    }
-	}*/
+	}
+	
 	/*
 	if(stim_data2.x[i]){
 	    if(pc.gid_exists(i)){
@@ -207,14 +228,23 @@ proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_i
 		    spon_tmp.dur = dur
 		    spon_tmp.del = 20
 		    spon_tmp.forseed = i
+		    /*
+		    }else if((i>=512 && i<832) || (i>=912 && i<992)){
+			spon_tmp.KAPPA = 0.23//0.17
+		    }*/
+		    //ikkai comment out siteru noha warito umaku itta mono
 		    
 		    if((i>=832 && i<912) && (i>=992 && i<1012)){
-			spon_tmp.KAPPA = 0.13
-			spon_tmp.THETA = 0.28//0.25
-		    }else if((i>=512 && i<832) || (i>=912 && i<992)){
-			spon_tmp.KAPPA = 0.17
+			spon_tmp.KAPPA = 0.15//0.1//0.15//0.13//learn30.28//0.14//kokogatest26desu0.23//0.28//0.18//0.14//0.13
+			spon_tmp.THETA = 0.25//0.3//0.25//learn30.32//0.25//<-for learn2 for learn1->//0.3//0.32//0.31//0.3//0.3//0.28
+			
+		    }else if(i>=512 && i<832){
+			spon_tmp.KAPPA = 0.35//0.24//0.2//0.13//0.26//0.23//<-korede choujikan test//0.17//0.22//learn4detuyosugita0.45//0.29//0.6//0.45//0.34//0.29//6
+		    }else if(i>=912 && i<992){
+			spon_tmp.KAPPA = 0.15//0.18//learn4detuyosugita0.38//0.23//0.52//0.38//0.28//0.23//23
 		    }else{
-			spon_tmp.KAPPA = 0.1
+			spon_tmp.KAPPA = 0.11//learn30.29//0.14//0.29//0.29//0.19//14//0.1
+			spon_tmp.THETA = 0.3
 		    }
 		    /*
 		    //if((i>=256 && i<512) || (i>=832 && i<912) || (i>=992 && i<1012)){

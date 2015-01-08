@@ -8,6 +8,7 @@ objref con_out2
 objref con_i2o1
 objref con_i2o2
 objref stim_data1, stim_data2, stim_data3, stim_data4, stim_data5
+objref weight_input, weight_out1, weight_out2, weight_i2o
 objref f
 strdef filename
 
@@ -91,6 +92,49 @@ proc read_mat() {local i,j,k,num_ecell, num_out1
     }
     */
     
+}
+
+proc read_weight(){local i, nc_input, nc_out1, nc_out2, nc_i2o
+    nc_input = $1
+    nc_out1 = $2
+    nc_out2 = $3
+    nc_i2o = $4
+    
+    
+    
+    for(i=0;i<pc.nhost;i=i+1){
+	if(i==pc.id){
+	    weight_input = new Vector()
+	    weight_out1 = new Vector()
+	    weight_out2 = new Vector()
+	    weight_i2o = new Vector()
+	    
+	    f = new File()
+	    sprint(filename,"./weights/nclist%d.dat",i)
+	    printf("filename is  %s\n",filename)
+	    f.ropen(filename)
+	    weight_input.scanf(f,nc_input)
+	    f.close()
+	    
+	    f = new File()
+	    sprint(filename,"./weights/nclist_out1_%d.dat",i)
+	    f.ropen(filename)
+	    weight_out1.scanf(f,nc_out1)
+	    f.close()
+	    
+	    f = new File()
+	    sprint(filename,"./weights/nclist_out2_%d.dat",i)
+	    f.ropen(filename)
+	    weight_out2.scanf(f,nc_out2)
+	    f.close()
+	    
+	    f = new File()
+	    sprint(filename,"./weights/nclist_i2o_%d.dat",i)
+	    f.ropen(filename)
+	    weight_i2o.scanf(f,nc_i2o)
+	    f.close()
+	}
+    }
 }
 
 //read_mat()

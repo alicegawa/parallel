@@ -97,6 +97,10 @@ obfunc makeSyn() {local targetno, hostno, num_ecell, num_vta, rw_flag, start_i, 
 	//num_vta means the initial vtap points...
 	if(rw_flag){
 	    if(targetno<num_vta || (targetno>=start_i && targetno<end_i)){
+		
+		//if(targetno>=start_i && targetno<end_i){
+		    //printf("targetno = %d, vta = %d, start = %d, end = %d\n",targetno,num_vta,start_i,end_i)
+		//}
 		syn_.forSpike = 2
 	    }
 	}/*

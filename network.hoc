@@ -19,15 +19,15 @@ NSYN_MAX = (NCELL-1)*NSYN
 NCELL_FULL = NCELL + NCELL_OUT1 + NCELL_OUT2
 
 LEARNING_TIMES = 1//2//30
-STIM_DUR = 10000//100000//25000//2000//5//30 //until now(12/20), here is not changed, so it may cause the learning unproceeding??
-STIM_DUR_MOVE = 1
+STIM_DUR = 10000//75000//5000//390000//230000//200000//75000//140000//75000<-55m//100000//25000//2000//5//30 //until now(12/20), here is not changed, so it may cause the learning unproceeding??
+STIM_DUR_MOVE = 1000000
 START_STIM = 20
 
 dt = 0.025//<-for test0.1//0.025
-tstop_max = 10000//25000//15000//30//20//3000//1000//200//1000//200//tstop = dt*10//10//200//500//100000
+tstop_max = 10000//75000//5000//390000//230000//200000//75000//140000//75000//25000//15000//30//20//3000//1000//200//1000//200//tstop = dt*10//10//200//500//100000
 t = 0
-stimInt = 66//40//20//1000
-stimNum = 200//100//100//7//50//7//int(tstop/stimInt)
+stimInt = 25//50//30//should be less than 40Hz ??//<-learn7 66//<-learn2 learn1->//40//66//40//20//1000
+stimNum = 80//600//1600//1540//650//450//200//100//100//7//50//7//int(tstop/stimInt)
 dur = tstop_max
 //identify the VTA parameter
 vta_flag = 0
@@ -55,6 +55,12 @@ connectI2O(NCELL_E,NCELL_OUT1,NCELL_OUT1_E,NCELL_OUT2,NCELL_OUT2_E,NCELL_VTA,NCE
 
 //confirm.printf("%0.5f ")
 pc.barrier()
+/*
+read_weight(nclist.count,nclist_out1.count,nclist_out2.count,nclist_i2o.count)
+subst()
+*/
+pc.barrier()
+
 printf("finish connect section\n")
 
 
@@ -128,10 +134,12 @@ SECTION_OUT1_E = int(NCELL_OUT1_E/5)
 SECTION_OUT1_I = int((NCELL_OUT1-NCELL_OUT1_E)/5)
 SECTION_OUT2_E = int(NCELL_OUT2_E/4)
 SECTION_OUT2_I = int((NCELL_OUT2-NCELL_OUT2_E)/4)
-datiming = 1
+datiming = 1//2//1
 
-//changeFlags1(0,64,320,336,400,100,512,320,80)
-
+changeFlags1(0,64,320,336,400,100,512,320,80)
+changeFlags2(0,20,80,85,400,100,512,320,80)
+forTestOut1()
+//forTestOut2()
 for(time=0;time<tstop_max;time+=steptime){
     //printf("\n\n\nt = %lf \n\n\n",t)
     /*if(time>=tstop_max-dt){
@@ -142,15 +150,16 @@ for(time=0;time<tstop_max;time+=steptime){
     tstop += steptime
     if(time>=datiming){
 	signalDA(NCELL_VTA,NCELL_E,NSYN_MAX,NCELL_FULL,NCELL,NCELL_OUT1,NCELL_OUT2,NCELL_OUT1_E,NCELL_OUT2_E)
-	datiming = datiming + 1
+	datiming = datiming + 1//2//5//1
     }
-    if(time==1 || time==5000 || time==10000 || time == 15000 || time==20000){
+    /*if(time==1 || time==5000 || time==10000 || time == 15000 || time==20000){
 	for conf=0, 4 {
 	    if(pc.gid_exists(512+conf*12)){
 		printf("flags is %d \n",pc.gid2cell(512+conf*12).synlist_e.o(0).forSpike)
 	    }
 	}
-    }
+    }*/
+    
     if(time>=stim_timer){
 	stim_timer += STIM_DUR
 	if(stim_flag==4){
@@ -160,6 +169,7 @@ for(time=0;time<tstop_max;time+=steptime){
 	}
 	changeFlags1(0+stim_flag*SECTION_OUT1_E,64+stim_flag*SECTION_OUT1_E,320+stim_flag*SECTION_OUT1_I,336+stim_flag*SECTION_OUT1_I,400,100,512,320,80)
     }
+    
     if(time>=stim_timer_move){
 	stim_timer_move += STIM_DUR_MOVE
 	if(stim_flag_move==3){
@@ -169,6 +179,7 @@ for(time=0;time<tstop_max;time+=steptime){
 	}
 	changeFlags2(0+SECTION_OUT2_E*stim_flag_move,20+SECTION_OUT2_E*stim_flag_move,80+SECTION_OUT2_I*stim_flag_move,85+SECTION_OUT2_I*stim_flag_move,400,100,512,320,80)
     }
+    
     //test for change flags in stdp.mod
     //and test for broadcast the DA value
     /*
@@ -247,7 +258,8 @@ for rank=0, pc.nhost-1{
     pc.barrier()
 }
 
-/*
+
+gettingtime = startsw()
 objref savWeight
 strdef file
 for rank=0, pc.nhost-1{
@@ -286,7 +298,10 @@ for rank=0, pc.nhost-1{
     }
     pc.barrier()
 }
-*/	
+
+gettingtime = startsw() - gettingtime
+printf("the time elapse for write weights file is %lf \n",gettingtime)
+	
 
 //savSpike.close()
 {pc.runworker()}
