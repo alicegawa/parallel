@@ -1,0 +1,59 @@
+load_file("stdrun.hoc")
+load_file("signalDA.hoc")
+proc myrun() {
+	running_ = 1
+	stdinit()
+	mycontinuerun(tstop)
+}
+
+eventslow=1
+eventcount=0
+
+proc mycontinuerun() {local rt, rtstart, ts
+	realtime = 0  rt = screen_update_invl  rtstart = startsw()
+	eventcount=0
+	eventslow=1
+	stoprun = 0
+	if (using_cvode_) {
+		cvode.event($1)
+		ts = $1
+		if (cvode.use_local_dt) {
+			cvode.solve(ts)
+			flushPlot()
+			realtime = startsw() - rtstart
+			return
+		}
+	}else{
+		ts = $1 - dt/2
+	}
+	while(t < ts && stoprun == 0) {
+		mystep()
+		realtime = startsw() - rtstart
+		if (realtime >= rt) {
+//			if (!stdrun_quiet) fastflushPlot()
+			screen_update()
+			//really compute for at least screen_update_invl
+			realtime = startsw() - rtstart
+			rt = realtime + screen_update_invl
+		}
+	}
+	if (using_cvode_ && stoprun == 0) { // handle the "tstop" event
+		mystep() // so all recordings take place at tstop
+	}
+	flushPlot()
+	realtime = startsw() - rtstart
+}
+
+proc mystep() {local i
+	if (using_cvode_) {
+		myadvance()
+	}else for i=1,nstep_steprun {
+		myadvance()
+	}
+	Plot()
+}
+
+proc myadvance() {
+	fadvance()
+	signalDA(NCELL_VTA,NCELL_E,NSYN_MAX)
+}

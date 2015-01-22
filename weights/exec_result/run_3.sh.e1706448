@@ -1,0 +1,691 @@
++ NRNIV='./special -mpi'
++ HOC_NAME=./network.hoc
++ NRNOPT=' -c OUT1_E=0.001 -c OUT1_I=0.05 -c IO_E=0.002 -c IO_I2E=0.003 -c IO_I2I=0.001 -c OUT1_SPON_E_K=0.15 -c OUT1_SPON_E_T=0.35 -c DOPAMINE=0.008 -c LEARNING_RATE=0.0001 -c OUT1_SPON_I_K=0.15 -c OUT1_SPON_I_T=0.25 -c LTD=1'
++ LPG='lpgparm -t 4MB -s 4MB -d 4MB -p 4MB'
++ MPIEXEC='mpiexec -mca mpi_print_stats 1'
++ PROF=
++ echo ' mpiexec -mca mpi_print_stats 1 lpgparm -t 4MB -s 4MB -d 4MB -p 4MB ./special -mpi ./network.hoc'
++ mpiexec -mca mpi_print_stats 1 lpgparm -t 4MB -s 4MB -d 4MB -p 4MB ./special -mpi -c OUT1_E=0.001 -c OUT1_I=0.05 -c IO_E=0.002 -c IO_I2E=0.003 -c IO_I2I=0.001 -c OUT1_SPON_E_K=0.15 -c OUT1_SPON_E_T=0.35 -c DOPAMINE=0.008 -c LEARNING_RATE=0.0001 -c OUT1_SPON_I_K=0.15 -c OUT1_SPON_I_T=0.25 -c LTD=1 ./network.hoc
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+NEURON -- Release 7.2 (562:42a47463b504) 2011-12-21
+Duke, Yale, and the BlueBrain Project -- Copyright 1984-2008
+See http://www.neuron.yale.edu/credits.html
+
+Additional mechanisms from files
+ ../mod/exp2syn_k.mod ../mod/gamma.mod ../mod/hh_k.mod ../mod/netstim2.mod ../mod/pGPeA.mod ../mod/stdp.mod
+83 ./special: syntax error
+83  in setStim.hoc near line 97
+83  			ns = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
+           ^
+        83 xopen("setStim.hoc")
+      83 execute1("{xopen("setStim.hoc")}")
+    83 load_file("setStim.hoc")
+83 ./special: syntax error
+83  in setStim.hoc near line 98
+83  		    }
+       ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 83 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+93 ./special: syntax error
+93  in setStim.hoc near line 97
+93  			ns = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
+           ^
+        93 xopen("setStim.hoc")
+      93 execute1("{xopen("setStim.hoc")}")
+    93 load_file("setStim.hoc")
+93 ./special: syntax error
+93  in setStim.hoc near line 98
+93  		    }
+       ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 93 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+61 ./special: syntax error
+61  in setStim.hoc near line 97
+61  			ns = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
+           ^
+        61 xopen("setStim.hoc")
+      61 execute1("{xopen("setStim.hoc")}")
+    61 load_file("setStim.hoc")
+61 ./special: syntax error
+61  in setStim.hoc near line 98
+61  		    }
+       ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 61 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+139 ./special: syntax error
+139  in setStim.hoc near line 97
+139  			ns = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
+           ^
+        139 xopen("setStim.hoc")
+      139 execute1("{xopen("setStim.hoc")}")
+    139 load_file("setStim.hoc")
+139 ./special: syntax error
+139  in setStim.hoc near line 98
+139  		    }
+       ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 139 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+138 ./special: syntax error
+138  in setStim.hoc near line 97
+138  			ns = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
+           ^
+        138 xopen("setStim.hoc")
+      138 execute1("{xopen("setStim.hoc")}")
+    138 load_file("setStim.hoc")
+138 ./special: syntax error
+138  in setStim.hoc near line 98
+138  		    }
+       ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 138 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+119 ./special: syntax error
+119  in setStim.hoc near line 97
+119  			ns = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
+           ^
+        119 xopen("setStim.hoc")
+      119 execute1("{xopen("setStim.hoc")}")
+    119 load_file("setStim.hoc")
+119 ./special: syntax error
+119  in setStim.hoc near line 98
+119  		    }
+       ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 119 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+113 ./special: syntax error
+113  in setStim.hoc near line 97
+113  			ns = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
+           ^
+        113 xopen("setStim.hoc")
+      113 execute1("{xopen("setStim.hoc")}")
+    113 load_file("setStim.hoc")
+113 ./special: syntax error
+113  in setStim.hoc near line 98
+113  		    }
+       ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 113 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+123 ./special: syntax error
+123  in setStim.hoc near line 97
+123  			ns = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
+           ^
+        123 xopen("setStim.hoc")
+      123 execute1("{xopen("setStim.hoc")}")
+    123 load_file("setStim.hoc")
+123 ./special: syntax error
+123  in setStim.hoc near line 98
+123  		    }
+       ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 123 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+120 ./special: syntax error
+120  in setStim.hoc near line 97
+120  			ns = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
+           ^
+        120 xopen("setStim.hoc")
+      120 execute1("{xopen("setStim.hoc")}")
+    120 load_file("setStim.hoc")
+120 ./special: syntax error
+120  in setStim.hoc near line 98
+120  		    }
+       ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 120 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+126 ./special: syntax error
+126  in setStim.hoc near line 97
+126  			ns = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
+           ^
+        126 xopen("setStim.hoc")
+      126 execute1("{xopen("setStim.hoc")}")
+    126 load_file("setStim.hoc")
+126 ./special: syntax error
+126  in setStim.hoc near line 98
+126  		    }
+       ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 126 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+109 ./special: syntax error
+109  in setStim.hoc near line 97
+109  			ns = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
+           ^
+        109 xopen("setStim.hoc")
+      109 execute1("{xopen("setStim.hoc")}")
+    109 load_file("setStim.hoc")
+109 ./special: syntax error
+109  in setStim.hoc near line 98
+109  		    }
+       ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 109 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+20 ./special: syntax error
+20  in setStim.hoc near line 97
+20  			ns = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
+           ^
+        20 xopen("setStim.hoc")
+      20 execute1("{xopen("setStim.hoc")}")
+    20 load_file("setStim.hoc")
+20 ./special: syntax error
+20  in setStim.hoc near line 98
+20  		    }
+       ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 20 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+22 ./special: syntax error
+22  in setStim.hoc near line 97
+22  			ns = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
+           ^
+        22 xopen("setStim.hoc")
+      22 execute1("{xopen("setStim.hoc")}")
+    22 load_file("setStim.hoc")
+22 ./special: syntax error
+22  in setStim.hoc near line 98
+22  		    }
+       ^
+149 ./special: syntax error
+149  in setStim.hoc near line 97
+149  			ns = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
+           ^
+        149 xopen("setStim.hoc")
+      149 execute1("{xopen("setStim.hoc")}")
+    149 load_file("setStim.hoc")
+149 ./special: syntax error
+149  in setStim.hoc near line 98
+149  		    }
+       ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 149 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+14 ./special: syntax error
+14  in setStim.hoc near line 97
+14  			ns = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
+           ^
+        14 xopen("setStim.hoc")
+      14 execute1("{xopen("setStim.hoc")}")
+    14 load_file("setStim.hoc")
+14 ./special: syntax error
+14  in setStim.hoc near line 98
+14  		    }
+       ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 14 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+36 ./special: syntax error
+36  in setStim.hoc near line 97
+36  			ns = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
+           ^
+        36 xopen("setStim.hoc")
+      36 execute1("{xopen("setStim.hoc")}")
+    36 load_file("setStim.hoc")
+36 ./special: syntax error
+36  in setStim.hoc near line 98
+36  		    }
+       ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 36 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+64 ./special: syntax error
+64  in setStim.hoc near line 97
+64  			ns = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
+           ^
+        64 xopen("setStim.hoc")
+      64 execute1("{xopen("setStim.hoc")}")
+    64 load_file("setStim.hoc")
+64 ./special: syntax error
+64  in setStim.hoc near line 98
+64  		    }
+       ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 64 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+75 ./special: syntax error
+75  in setStim.hoc near line 97
+75  			ns = new NetCon(cs_tmp,pc.gid2cell(i).synlist.object(0),0,0.1,0.05)
+           ^
+        75 xopen("setStim.hoc")
+      75 execute1("{xopen("setStim.hoc")}")
+    75 load_file("setStim.hoc")
+75 ./special: syntax error
+75  in setStim.hoc near line 98
+75  		    }
+       ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 75 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[ERR.] PLE 0019 plexec One of MPI processes was aborted.(rank=14)(nid=0x0108004c)(CODE=1773,793443874488123392,65280)
+
+real	0m6.447s
+user	0m0.010s
+sys	0m0.050s
++ sync

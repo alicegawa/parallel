@@ -1,0 +1,2281 @@
++ NRNIV='./special -mpi'
++ HOC_NAME=./network.hoc
++ NRNOPT=' -c INPUT_E=0.03 -c INPUT_I=0.02 -c OUT1_E=0.001 -c OUT1_I=0.01 -c OUT2_E=0.002 -c OUT2_I=0.01 -c IO_E=0.002 -c IO_I2E=0.001 -c IO_I2I=0.001 -c OUT1_SPON_E_K=0.15 -c OUT1_SPON_E_T=0.35 -c OUT2_SPON_E_K=0.13 -c OUT2_SPON_E_T=0.32 -c IN_SPON_K=0.1 -c IN_SPON_T=0.32 -c DOPAMINE=0.01 -c LEARNING_RATE=0.000125 -c LR4INPUT=0.0005 -c OUT1_SPON_I_K=0.15 -c OUT1_SPON_I_T=0.3 -c LTD=1.2 -c LTD4INPUT=1'
++ LPG='lpgparm -t 4MB -s 4MB -d 4MB -p 4MB'
++ MPIEXEC='mpiexec -mca mpi_print_stats 1'
++ PROF=
++ echo ' mpiexec -mca mpi_print_stats 1 lpgparm -t 4MB -s 4MB -d 4MB -p 4MB ./special -mpi ./network.hoc'
++ mpiexec -mca mpi_print_stats 1 lpgparm -t 4MB -s 4MB -d 4MB -p 4MB ./special -mpi -c INPUT_E=0.03 -c INPUT_I=0.02 -c OUT1_E=0.001 -c OUT1_I=0.01 -c OUT2_E=0.002 -c OUT2_I=0.01 -c IO_E=0.002 -c IO_I2E=0.001 -c IO_I2I=0.001 -c OUT1_SPON_E_K=0.15 -c OUT1_SPON_E_T=0.35 -c OUT2_SPON_E_K=0.13 -c OUT2_SPON_E_T=0.32 -c IN_SPON_K=0.1 -c IN_SPON_T=0.32 -c DOPAMINE=0.01 -c LEARNING_RATE=0.000125 -c LR4INPUT=0.0005 -c OUT1_SPON_I_K=0.15 -c OUT1_SPON_I_T=0.3 -c LTD=1.2 -c LTD4INPUT=1 ./network.hoc
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+NEURON -- Release 7.2 (562:42a47463b504) 2011-12-21
+Duke, Yale, and the BlueBrain Project -- Copyright 1984-2008
+See http://www.neuron.yale.edu/credits.html
+
+Additional mechanisms from files
+ ../mod/exp2syn_k.mod ../mod/gamma.mod ../mod/hh_k.mod ../mod/netstim2.mod ../mod/pGPeA.mod ../mod/stdp.mod
+exp(1456.37) out of range, returning exp(700)
+exp(1230.66) out of range, returning exp(700)
+exp(1593.79) out of range, returning exp(700)
+exp(1456.98) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(778.135) out of range, returning exp(700)
+exp(778.509) out of range, returning exp(700)
+exp(779.256) out of range, returning exp(700)
+exp(780.377) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(781.67) out of range, returning exp(700)
+exp(781.826) out of range, returning exp(700)
+exp(782.137) out of range, returning exp(700)
+exp(782.604) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(869.23) out of range, returning exp(700)
+exp(3165.64) out of range, returning exp(700)
+exp(869.425) out of range, returning exp(700)
+exp(3166.35) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(742.935) out of range, returning exp(700)
+exp(743.065) out of range, returning exp(700)
+exp(743.325) out of range, returning exp(700)
+exp(743.715) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(945.515) out of range, returning exp(700)
+exp(3443.04) out of range, returning exp(700)
+exp(946.103) out of range, returning exp(700)
+exp(3445.17) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(5072.31) out of range, returning exp(700)
+exp(4290.3) out of range, returning exp(700)
+exp(2145.15) out of range, returning exp(700)
+exp(5543.5) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(702.144) out of range, returning exp(700)
+exp(702.548) out of range, returning exp(700)
+exp(703.357) out of range, returning exp(700)
+exp(704.572) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1619.03) out of range, returning exp(700)
+exp(1368.3) out of range, returning exp(700)
+exp(1771.46) out of range, returning exp(700)
+exp(1619.4) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1203.55) out of range, returning exp(700)
+exp(1204.25) out of range, returning exp(700)
+exp(1205.65) out of range, returning exp(700)
+exp(1207.76) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(100387) out of range, returning exp(700)
+exp(365049) out of range, returning exp(700)
+exp(100405) out of range, returning exp(700)
+exp(365113) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(4469.23) out of range, returning exp(700)
+exp(3780) out of range, returning exp(700)
+exp(1890) out of range, returning exp(700)
+exp(4884.75) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(2696.54) out of range, returning exp(700)
+exp(2280.04) out of range, returning exp(700)
+exp(1140.02) out of range, returning exp(700)
+exp(2948.44) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1764.67) out of range, returning exp(700)
+exp(1764.98) out of range, returning exp(700)
+exp(1765.6) out of range, returning exp(700)
+exp(1766.53) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(2485) out of range, returning exp(700)
+exp(2485.44) out of range, returning exp(700)
+exp(2486.32) out of range, returning exp(700)
+exp(2487.64) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1198.34) out of range, returning exp(700)
+exp(1198.55) out of range, returning exp(700)
+exp(1198.97) out of range, returning exp(700)
+exp(1199.59) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1012.81) out of range, returning exp(700)
+exp(855.346) out of range, returning exp(700)
+exp(1109.29) out of range, returning exp(700)
+exp(1013.04) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1030.52) out of range, returning exp(700)
+exp(870.328) out of range, returning exp(700)
+exp(1128.63) out of range, returning exp(700)
+exp(1031.04) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1190.03) out of range, returning exp(700)
+exp(1190.24) out of range, returning exp(700)
+exp(1190.65) out of range, returning exp(700)
+exp(1191.27) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(2243.56) out of range, returning exp(700)
+exp(2243.98) out of range, returning exp(700)
+exp(2244.83) out of range, returning exp(700)
+exp(2246.1) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1143.55) out of range, returning exp(700)
+exp(965.97) out of range, returning exp(700)
+exp(1252.09) out of range, returning exp(700)
+exp(1143.75) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1154.29) out of range, returning exp(700)
+exp(1154.5) out of range, returning exp(700)
+exp(1154.9) out of range, returning exp(700)
+exp(1155.51) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(739.38) out of range, returning exp(700)
+exp(739.668) out of range, returning exp(700)
+exp(740.242) out of range, returning exp(700)
+exp(741.105) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(10667.9) out of range, returning exp(700)
+exp(9025.05) out of range, returning exp(700)
+exp(4512.52) out of range, returning exp(700)
+exp(11655.6) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1240.95) out of range, returning exp(700)
+exp(1048.38) out of range, returning exp(700)
+exp(1358.48) out of range, returning exp(700)
+exp(1241.18) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(802.041) out of range, returning exp(700)
+exp(802.184) out of range, returning exp(700)
+exp(802.471) out of range, returning exp(700)
+exp(802.9) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1360.85) out of range, returning exp(700)
+exp(1361.52) out of range, returning exp(700)
+exp(1362.86) out of range, returning exp(700)
+exp(1364.86) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1448.39) out of range, returning exp(700)
+exp(1223.91) out of range, returning exp(700)
+exp(1585.07) out of range, returning exp(700)
+exp(1448.65) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(2370.32) out of range, returning exp(700)
+exp(2370.75) out of range, returning exp(700)
+exp(2371.62) out of range, returning exp(700)
+exp(2372.92) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1291.79) out of range, returning exp(700)
+exp(1292.02) out of range, returning exp(700)
+exp(1292.47) out of range, returning exp(700)
+exp(1293.15) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1124.7) out of range, returning exp(700)
+exp(950.016) out of range, returning exp(700)
+exp(1231.5) out of range, returning exp(700)
+exp(1124.98) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1591.16) out of range, returning exp(700)
+exp(1591.44) out of range, returning exp(700)
+exp(1591.99) out of range, returning exp(700)
+exp(1592.83) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(5757.67) out of range, returning exp(700)
+exp(4870.23) out of range, returning exp(700)
+exp(2435.11) out of range, returning exp(700)
+exp(6292.13) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1728.69) out of range, returning exp(700)
+exp(1461.08) out of range, returning exp(700)
+exp(730.542) out of range, returning exp(700)
+exp(1891.24) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(768.785) out of range, returning exp(700)
+exp(768.92) out of range, returning exp(700)
+exp(769.19) out of range, returning exp(700)
+exp(769.594) out of range, returning exp(700)
+No more errno warnings during this execution
+errno set 270 times on last execution
+errno set 10 times on last execution
+errno set 120 times on last execution
+errno set 30 times on last execution
+errno set 1350 times on last execution
+errno set 30 times on last execution
+errno set 20 times on last execution
+errno set 407 times on last execution
+errno set 4980 times on last execution
+errno set 10 times on last execution
+errno set 1060 times on last execution
+errno set 20 times on last execution
+errno set 7580 times on last execution
+errno set 70 times on last execution
+errno set 4310 times on last execution
+errno set 40 times on last execution
+errno set 10 times on last execution
+errno set 330 times on last execution
+errno set 110 times on last execution
+errno set 50 times on last execution
+errno set 50 times on last execution
+errno set 20 times on last execution
+errno set 30 times on last execution
+errno set 1980 times on last execution
+errno set 260 times on last execution
+errno set 20 times on last execution
+errno set 10 times on last execution
+errno set 50 times on last execution
+errno set 30 times on last execution
+errno set 120 times on last execution
+errno set 10 times on last execution
+errno set 200 times on last execution
+errno set 210 times on last execution
+errno set 30 times on last execution
+errno set 320 times on last execution
+48 ./special: syntax error
+48  in ./network.hoc near line 506
+48  ^
+50 ./special: syntax error
+50  in ./network.hoc near line 506
+50  ^
+80 ./special: syntax error
+80  in ./network.hoc near line 506
+80  ^
+86 ./special: syntax error
+86  in ./network.hoc near line 506
+86  ^
+93 ./special: syntax error
+93  in ./network.hoc near line 506
+93  ^
+87 ./special: syntax error
+87  in ./network.hoc near line 506
+87  ^
+92 ./special: syntax error
+92  in ./network.hoc near line 506
+92  ^
+82 ./special: syntax error
+82  in ./network.hoc near line 506
+82  ^
+94 ./special: syntax error
+94  in ./network.hoc near line 506
+94  ^
+84 ./special: syntax error
+84  in ./network.hoc near line 506
+84  ^
+88 ./special: syntax error
+88  in ./network.hoc near line 506
+88  ^
+90 ./special: syntax error
+90  in ./network.hoc near line 506
+90  ^
+83 ./special: syntax error
+83  in ./network.hoc near line 506
+83  ^
+89 ./special: syntax error
+89  in ./network.hoc near line 506
+85 ./special: syntax error
+85  in ./network.hoc near line 506
+89  ^
+85  ^
+91 ./special: syntax error
+91  in ./network.hoc near line 506
+91  ^
+81 ./special: syntax error
+81  in ./network.hoc near line 506
+81  ^
+95 ./special: syntax error
+95  in ./network.hoc near line 506
+95  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 83 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 84 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 95 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 81 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 89 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 91 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 92 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 94 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 86 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 93 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+152 ./special: syntax error
+152  in ./network.hoc near line 506
+152  ^
+112 ./special: syntax error
+112  in ./network.hoc near line 506
+112  ^
+126 ./special: syntax error
+126  in ./network.hoc near line 506
+126  ^
+113 ./special: syntax error
+113  in ./network.hoc near line 506
+113  ^
+125 ./special: syntax error
+125  in ./network.hoc near line 506
+125  ^
+116 ./special: syntax error
+116  in ./network.hoc near line 506
+116  ^
+122 ./special: syntax error
+122  in ./network.hoc near line 506
+122  ^
+124 ./special: syntax error
+124  in ./network.hoc near line 506
+124  ^
+114 ./special: syntax error
+114  in ./network.hoc near line 506
+114  ^
+117 ./special: syntax error
+117  in ./network.hoc near line 506
+117  ^
+118 ./special: syntax error
+118  in ./network.hoc near line 506
+118  ^
+115 ./special: syntax error
+115  in ./network.hoc near line 506
+115  ^
+119 ./special: syntax error
+119  in ./network.hoc near line 506
+119  ^
+120 ./special: syntax error
+120  in ./network.hoc near line 506
+120  ^
+123 ./special: syntax error
+123  in ./network.hoc near line 506
+123  ^
+121 ./special: syntax error
+121  in ./network.hoc near line 506
+121  ^
+127 ./special: syntax error
+127  in ./network.hoc near line 506
+127  ^
+32 ./special: syntax error
+32  in ./network.hoc near line 506
+42 ./special: syntax error
+42  in ./network.hoc near line 506
+42  ^
+32  ^
+40 ./special: syntax error
+40  in ./network.hoc near line 506
+40  ^
+33 ./special: syntax error
+33  in ./network.hoc near line 506
+33  ^
+46 ./special: syntax error
+46  in ./network.hoc near line 506
+46  ^
+41 ./special: syntax error
+41  in ./network.hoc near line 506
+41  ^
+44 ./special: syntax error
+44  in ./network.hoc near line 506
+44  ^
+35 ./special: syntax error
+35  in ./network.hoc near line 506
+35  ^
+45 ./special: syntax error
+45  in ./network.hoc near line 506
+45  ^
+34 ./special: syntax error
+34  in ./network.hoc near line 506
+34  ^
+43 ./special: syntax error
+43  in ./network.hoc near line 506
+43  ^
+36 ./special: syntax error
+36  in ./network.hoc near line 506
+36  ^
+39 ./special: syntax error
+39  in ./network.hoc near line 506
+39  ^
+37 ./special: syntax error
+37  in ./network.hoc near line 506
+37  ^
+47 ./special: syntax error
+47  in ./network.hoc near line 506
+47  ^
+38 ./special: syntax error
+38  in ./network.hoc near line 506
+38  ^
+16 ./special: syntax error
+16  in ./network.hoc near line 506
+16  ^
+18 ./special: syntax error
+18  in ./network.hoc near line 506
+18  ^
+25 ./special: syntax error
+25  in ./network.hoc near line 506
+25  ^
+26 ./special: syntax error
+26  in ./network.hoc near line 506
+26  ^
+30 ./special: syntax error
+30  in ./network.hoc near line 506
+30  ^
+20 ./special: syntax error
+20  in ./network.hoc near line 506
+20  ^
+28 ./special: syntax error
+28  in ./network.hoc near line 506
+28  ^
+14 ./special: syntax error
+14  in ./network.hoc near line 506
+14  ^
+8 ./special: syntax error
+8  in ./network.hoc near line 506
+8  ^
+10 ./special: syntax error
+10  in ./network.hoc near line 506
+10  ^
+12 ./special: syntax error
+12  in ./network.hoc near line 506
+12  ^
+2 ./special: syntax error
+2  in ./network.hoc near line 506
+2  ^
+0 ./special: syntax error
+6 ./special: syntax error
+6  in ./network.hoc near line 506
+6  ^
+0  in ./network.hoc near line 506
+9 ./special: syntax error
+9  in ./network.hoc near line 506
+0  ^
+9  ^
+11 ./special: syntax error
+11  in ./network.hoc near line 506
+11  ^
+13 ./special: syntax error
+13  in ./network.hoc near line 506
+13  ^
+4 ./special: syntax error
+4  in ./network.hoc near line 506
+4  ^
+3 ./special: syntax error
+3  in ./network.hoc near line 506
+3  ^
+1 ./special: syntax error
+1  in ./network.hoc near line 506
+1  ^
+5 ./special: syntax error
+5  in ./network.hoc near line 506
+5  ^
+7 ./special: syntax error
+7  in ./network.hoc near line 506
+7  ^
+15 ./special: syntax error
+15  in ./network.hoc near line 506
+15  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 14 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 8 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 0 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 10 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 9 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 2 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 3 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 4 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 15 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 5 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+76 ./special: syntax error
+76  in ./network.hoc near line 506
+76  ^
+64 ./special: syntax error
+64  in ./network.hoc near line 506
+64  ^
+74 ./special: syntax error
+74  in ./network.hoc near line 506
+74  ^
+78 ./special: syntax error
+78  in ./network.hoc near line 506
+78  ^
+68 ./special: syntax error
+68  in ./network.hoc near line 506
+68  ^
+72 ./special: syntax error
+72  in ./network.hoc near line 506
+72  ^
+77 ./special: syntax error
+77  in ./network.hoc near line 506
+77  ^
+73 ./special: syntax error
+73  in ./network.hoc near line 506
+73  ^
+66 ./special: syntax error
+66  in ./network.hoc near line 506
+66  ^
+65 ./special: syntax error
+65  in ./network.hoc near line 506
+65  ^
+69 ./special: syntax error
+69  in ./network.hoc near line 506
+69  ^
+75 ./special: syntax error
+75  in ./network.hoc near line 506
+75  ^
+70 ./special: syntax error
+70  in ./network.hoc near line 506
+70  ^
+67 ./special: syntax error
+67  in ./network.hoc near line 506
+67  ^
+71 ./special: syntax error
+71  in ./network.hoc near line 506
+71  ^
+79 ./special: syntax error
+79  in ./network.hoc near line 506
+79  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 76 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 78 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 75 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 66 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 72 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 70 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 79 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 71 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 74 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 73 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 68 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 69 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 77 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+62 ./special: syntax error
+62  in ./network.hoc near line 506
+62  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 62 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+53 ./special: syntax error
+53  in ./network.hoc near line 506
+53  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 53 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+56 ./special: syntax error
+56  in ./network.hoc near line 506
+56  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 56 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+57 ./special: syntax error
+57  in ./network.hoc near line 506
+57  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 57 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+60 ./special: syntax error
+60  in ./network.hoc near line 506
+60  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 60 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+49 ./special: syntax error
+49  in ./network.hoc near line 506
+49  ^
+59 ./special: syntax error
+59  in ./network.hoc near line 506
+59  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 59 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+54 ./special: syntax error
+54  in ./network.hoc near line 506
+54  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 54 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+58 ./special: syntax error
+58  in ./network.hoc near line 506
+58  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 58 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+52 ./special: syntax error
+52  in ./network.hoc near line 506
+52  ^
+51 ./special: syntax error
+51  in ./network.hoc near line 506
+51  ^
+61 ./special: syntax error
+61  in ./network.hoc near line 506
+61  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 61 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+55 ./special: syntax error
+55  in ./network.hoc near line 506
+55  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 55 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+63 ./special: syntax error
+63  in ./network.hoc near line 506
+63  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 63 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 48 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 50 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+96 ./special: syntax error
+96  in ./network.hoc near line 506
+96  ^
+104 ./special: syntax error
+104  in ./network.hoc near line 506
+104  ^
+110 ./special: syntax error
+110  in ./network.hoc near line 506
+110  ^
+105 ./special: syntax error
+105  in ./network.hoc near line 506
+105  ^
+106 ./special: syntax error
+106  in ./network.hoc near line 506
+106  ^
+97 ./special: syntax error
+97  in ./network.hoc near line 506
+97  ^
+100 ./special: syntax error
+100  in ./network.hoc near line 506
+100  ^
+98 ./special: syntax error
+98  in ./network.hoc near line 506
+98  ^
+103 ./special: syntax error
+103  in ./network.hoc near line 506
+99 ./special: syntax error
+99  in ./network.hoc near line 506
+99  ^
+103  ^
+109 ./special: syntax error
+109  in ./network.hoc near line 506
+107 ./special: syntax error
+107  in ./network.hoc near line 506
+107  ^
+109  ^
+102 ./special: syntax error
+102  in ./network.hoc near line 506
+102  ^
+101 ./special: syntax error
+101  in ./network.hoc near line 506
+101  ^
+108 ./special: syntax error
+108  in ./network.hoc near line 506
+108  ^
+111 ./special: syntax error
+111  in ./network.hoc near line 506
+111  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 97 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 96 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 104 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 103 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 99 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 107 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 109 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 98 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 100 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 111 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 105 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 106 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 102 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 101 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 110 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 108 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+128 ./special: syntax error
+128  in ./network.hoc near line 506
+128  ^
+138 ./special: syntax error
+138  in ./network.hoc near line 506
+138  ^
+131 ./special: syntax error
+131  in ./network.hoc near line 506
+131  ^
+130 ./special: syntax error
+130  in ./network.hoc near line 506
+130  ^
+133 ./special: syntax error
+133  in ./network.hoc near line 506
+133  ^
+140 ./special: syntax error
+140  in ./network.hoc near line 506
+140  ^
+129 ./special: syntax error
+129  in ./network.hoc near line 506
+129  ^
+142 ./special: syntax error
+142  in ./network.hoc near line 506
+142  ^
+132 ./special: syntax error
+132  in ./network.hoc near line 506
+132  ^
+134 ./special: syntax error
+134  in ./network.hoc near line 506
+134  ^
+136 ./special: syntax error
+136  in ./network.hoc near line 506
+136  ^
+141 ./special: syntax error
+141  in ./network.hoc near line 506
+135 ./special: syntax error
+135  in ./network.hoc near line 506
+135  ^
+141  ^
+139 ./special: syntax error
+139  in ./network.hoc near line 506
+139  ^
+143 ./special: syntax error
+143  in ./network.hoc near line 506
+143  ^
+137 ./special: syntax error
+137  in ./network.hoc near line 506
+137  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 133 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 132 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 142 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 140 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 138 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 136 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 143 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 137 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 139 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 141 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 88 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 82 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 87 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 90 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 85 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+156 ./special: syntax error
+156  in ./network.hoc near line 506
+156  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 156 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+144 ./special: syntax error
+144  in ./network.hoc near line 506
+144  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 144 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+148 ./special: syntax error
+148  in ./network.hoc near line 506
+148  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 148 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+157 ./special: syntax error
+157  in ./network.hoc near line 506
+157  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 157 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+158 ./special: syntax error
+158  in ./network.hoc near line 506
+158  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 158 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+155 ./special: syntax error
+155  in ./network.hoc near line 506
+155  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 155 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+154 ./special: syntax error
+154  in ./network.hoc near line 506
+154  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 154 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+146 ./special: syntax error
+146  in ./network.hoc near line 506
+146  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 146 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+150 ./special: syntax error
+150  in ./network.hoc near line 506
+150  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 150 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+147 ./special: syntax error
+147  in ./network.hoc near line 506
+147  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 147 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+149 ./special: syntax error
+149  in ./network.hoc near line 506
+149  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 149 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+145 ./special: syntax error
+145  in ./network.hoc near line 506
+145  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 145 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+151 ./special: syntax error
+151  in ./network.hoc near line 506
+151  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 151 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+159 ./special: syntax error
+159  in ./network.hoc near line 506
+159  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 159 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+153 ./special: syntax error
+153  in ./network.hoc near line 506
+153  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 153 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 152 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 124 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 112 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 118 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 126 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 116 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 115 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 122 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 119 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 120 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 117 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 125 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 123 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 127 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 121 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 45 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 40 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 41 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 38 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 46 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 47 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 42 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 34 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 35 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 43 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 36 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 44 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 39 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 37 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+24 ./special: syntax error
+24  in ./network.hoc near line 506
+24  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 24 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+19 ./special: syntax error
+19  in ./network.hoc near line 506
+19  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 19 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+23 ./special: syntax error
+23  in ./network.hoc near line 506
+23  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 23 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+22 ./special: syntax error
+22  in ./network.hoc near line 506
+22  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 22 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+29 ./special: syntax error
+29  in ./network.hoc near line 506
+29  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 29 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+27 ./special: syntax error
+27  in ./network.hoc near line 506
+27  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 27 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+21 ./special: syntax error
+21  in ./network.hoc near line 506
+21  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 21 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+17 ./special: syntax error
+17  in ./network.hoc near line 506
+17  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 17 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+31 ./special: syntax error
+31  in ./network.hoc near line 506
+31  ^
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 31 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 30 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 20 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 18 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 25 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 26 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 28 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 12 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 11 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+--------------------------------------------------------------------------
+[mpi::mpi-api::mpi-abort]
+MPI_ABORT was invoked on rank 13 in communicator MPI_COMM_WORLD 
+with errorcode -1.
+
+NOTE: invoking MPI_ABORT causes Open MPI to kill all MPI processes.
+You may or may not see output from other processes, depending on
+exactly when Open MPI kills them.
+--------------------------------------------------------------------------
+[ERR.] PLE 0019 plexec One of MPI processes was aborted.(rank=14)(nid=0x01060058)(CODE=1773,793443874488123392,65280)
+
+real	117m28.453s
+user	0m0.020s
+sys	0m0.040s
++ sync

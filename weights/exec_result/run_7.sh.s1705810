@@ -1,0 +1,23 @@
+---(Stage-In  Detail Information)---
+stgin "rank=0 /home/e16005/workspace/github/sw_2times/.d0001705810 ./ confirm=no" 2015-01-13 00:25:11         1246("/home/e16005/workspace/github/sw_2times/.d0001705810" -> "/work/run_7.sh.1705810/0/.d0001705810")
+stgin "rank=0 /home/e16005/workspace/github/sw_2times/.d0001705810p ./ confirm=no" 2015-01-13 00:25:11          131("/home/e16005/workspace/github/sw_2times/.d0001705810p" -> "/work/run_7.sh.1705810/0/.d0001705810p")
+stgin "rank=0 /home/e16005/workspace/github/sw_2times/.d0001705810e ./ confirm=no" 2015-01-13 00:25:11          131("/home/e16005/workspace/github/sw_2times/.d0001705810e" -> "/work/run_7.sh.1705810/0/.d0001705810e")
+stgin "rank=* ./* %r:./" 2015-01-13 00:16:24         2891("/home/e16005/workspace/github/sw_2times/#id.txt#" -> "/work/run_7.sh.1705810/[0-159]/#id.txt#")
+stgin "rank=* ./* %r:./" 2015-01-13 00:16:24          204("/home/e16005/workspace/github/sw_2times/#test.hoc#" -> "/work/run_7.sh.1705810/[0-159]/#test.hoc#")
+stgin "rank=* ./* %r:./" 2015-01-13 00:16:24            0("/home/e16005/workspace/github/sw_2times/8_3.dat" -> "/work/run_7.sh.1705810/[0-159]/8_3.dat")
+stgin "rank=* ./* %r:./" 2015-01-13 00:16:24           11("/home/e16005/workspace/github/sw_2times/README" -> "/work/run_7.sh.1705810/[0-159]/README")
+stgin "rank=* ./* %r:./" 2015-01-13 00:16:24         3410("/home/e16005/workspace/github/sw_2times/cells.hoc" -> "/work/run_7.sh.1705810/[0-159]/cells.hoc")
+stgin "rank=* ./* %r:./" 2015-01-13 00:16:24       213022("/home/e16005/workspace/github/sw_2times/compare.txt" -> "/work/run_7.sh.1705810/[0-159]/compare.txt")
+stgin "rank=* ./* %r:./" 2015-01-13 00:16:24         3000("/home/e16005/workspace/github/sw_2times/con.dat" -> "/work/run_7.sh.1705810/[0-159]/con.dat")
+stgin "rank=* ./* %r:./" 2015-01-13 00:16:24       131328("/home/e16005/workspace/github/sw_2times/con_var.dat" -> "/work/run_7.sh.1705810/[0-159]/con_var.dat")
+stgin "rank=* ./* %r:./" 2015-01-13 00:16:24       205200("/home/e16005/workspace/github/sw_2times/con_var_i2o1.dat" -> "/work/run_7.sh.1705810/[0-159]/con_var_i2o1.dat")
+stgin "rank=* ./* %r:./" 2015-01-13 00:16:24        51300("/home/e16005/workspace/github/sw_2times/con_var_i2o2.dat" -> "/work/run_7.sh.1705810/[0-159]/con_var_i2o2.dat")
+stgin "rank=* ./* %r:./" 2015-01-13 00:16:24       320400("/home/e16005/workspace/github/sw_2times/con_var_out1.dat" -> "/work/run_7.sh.1705810/[0-159]/con_var_out1.dat")
+stgin "rank=* ./* %r:./" 2015-01-13 00:16:24        20100("/home/e16005/workspace/github/sw_2times/con_var_out2.dat" -> "/work/run_7.sh.1705810/[0-159]/con_var_out2.dat")
+stgin "rank=* ./* %r:./" 2015-01-13 00:16:24            0("/home/e16005/workspace/github/sw_2times/connect.dat" -> "/work/run_7.sh.1705810/[0-159]/connect.dat")
+stgin "rank=* ./* %r:./" 2015-01-13 00:16:24        10761("/home/e16005/workspace/github/sw_2times/connectCells.hoc" -> "/work/run_7.sh.1705810/[0-159]/connectCells.hoc")
+stgin "rank=* ./* %r:./" 2015-01-13 00:16:24        10720("/home/e16005/workspace/github/sw_2times/connectCells.hoc~" -> "/work/run_7.sh.1705810/[0-159]/connectCells.hoc~")
+
+------------------------------------------------------
+<Error Information>
+---(Stage-In  Error Information)---

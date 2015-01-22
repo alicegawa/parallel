@@ -1,0 +1,873 @@
++ NRNIV='./special -mpi'
++ HOC_NAME=./network.hoc
++ NRNOPT=' -c INPUT_E=0.04 -c INPUT_I=0.0001 -c OUT1_E=0.001 -c OUT1_I=0.01 -c OUT2_E=0.002 -c OUT2_I=0.01 -c IO_E=0.002 -c IO_I2E=0.001 -c IO_I2I=0.001 -c OUT1_SPON_E_K=0.15 -c OUT1_SPON_E_T=0.35 -c OUT2_SPON_E_K=0.13 -c OUT2_SPON_E_T=0.32 -c IN_SPON_K=0.1 -c IN_SPON_T=0.32 -c DOPAMINE=0.01 -c LEARNING_RATE=0.00015 -c LR4INPUT=0.0005 -c OUT1_SPON_I_K=0.15 -c OUT1_SPON_I_T=0.3 -c LTD=0.8 -c LTD4INPUT=1'
++ LPG='lpgparm -t 4MB -s 4MB -d 4MB -p 4MB'
++ MPIEXEC='mpiexec -mca mpi_print_stats 1'
++ PROF=
++ echo ' mpiexec -mca mpi_print_stats 1 lpgparm -t 4MB -s 4MB -d 4MB -p 4MB ./special -mpi ./network.hoc'
++ mpiexec -mca mpi_print_stats 1 lpgparm -t 4MB -s 4MB -d 4MB -p 4MB ./special -mpi -c INPUT_E=0.04 -c INPUT_I=0.0001 -c OUT1_E=0.001 -c OUT1_I=0.01 -c OUT2_E=0.002 -c OUT2_I=0.01 -c IO_E=0.002 -c IO_I2E=0.001 -c IO_I2I=0.001 -c OUT1_SPON_E_K=0.15 -c OUT1_SPON_E_T=0.35 -c OUT2_SPON_E_K=0.13 -c OUT2_SPON_E_T=0.32 -c IN_SPON_K=0.1 -c IN_SPON_T=0.32 -c DOPAMINE=0.01 -c LEARNING_RATE=0.00015 -c LR4INPUT=0.0005 -c OUT1_SPON_I_K=0.15 -c OUT1_SPON_I_T=0.3 -c LTD=0.8 -c LTD4INPUT=1 ./network.hoc
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+NEURON -- Release 7.2 (562:42a47463b504) 2011-12-21
+Duke, Yale, and the BlueBrain Project -- Copyright 1984-2008
+See http://www.neuron.yale.edu/credits.html
+
+Additional mechanisms from files
+ ../mod/exp2syn_k.mod ../mod/gamma.mod ../mod/hh_k.mod ../mod/netstim2.mod ../mod/pGPeA.mod ../mod/stdp.mod
+exp(1130.76) out of range, returning exp(700)
+exp(955.15) out of range, returning exp(700)
+exp(1238.12) out of range, returning exp(700)
+exp(1130.96) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(125347) out of range, returning exp(700)
+exp(106061) out of range, returning exp(700)
+exp(53030.4) out of range, returning exp(700)
+exp(136920) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(900.629) out of range, returning exp(700)
+exp(901.016) out of range, returning exp(700)
+exp(901.79) out of range, returning exp(700)
+exp(902.951) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(934.532) out of range, returning exp(700)
+exp(934.699) out of range, returning exp(700)
+exp(935.032) out of range, returning exp(700)
+exp(935.531) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(704.418) out of range, returning exp(700)
+exp(704.565) out of range, returning exp(700)
+exp(704.859) out of range, returning exp(700)
+exp(705.299) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1196.95) out of range, returning exp(700)
+exp(1197.29) out of range, returning exp(700)
+exp(1197.96) out of range, returning exp(700)
+exp(1198.97) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(985.024) out of range, returning exp(700)
+exp(985.509) out of range, returning exp(700)
+exp(986.479) out of range, returning exp(700)
+exp(987.934) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(720.541) out of range, returning exp(700)
+exp(2624.95) out of range, returning exp(700)
+exp(720.681) out of range, returning exp(700)
+exp(2625.46) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(10757.9) out of range, returning exp(700)
+exp(9101.2) out of range, returning exp(700)
+exp(4550.6) out of range, returning exp(700)
+exp(11753.9) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1164.1) out of range, returning exp(700)
+exp(1164.3) out of range, returning exp(700)
+exp(1164.71) out of range, returning exp(700)
+exp(1165.33) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(971.807) out of range, returning exp(700)
+exp(820.649) out of range, returning exp(700)
+exp(1064.49) out of range, returning exp(700)
+exp(972.246) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(2002.5) out of range, returning exp(700)
+exp(2003.41) out of range, returning exp(700)
+exp(2005.25) out of range, returning exp(700)
+exp(2008) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(860.122) out of range, returning exp(700)
+exp(860.332) out of range, returning exp(700)
+exp(860.752) out of range, returning exp(700)
+exp(861.382) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1333.18) out of range, returning exp(700)
+exp(1333.44) out of range, returning exp(700)
+exp(1333.95) out of range, returning exp(700)
+exp(1334.72) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(31468) out of range, returning exp(700)
+exp(26625.1) out of range, returning exp(700)
+exp(13312.5) out of range, returning exp(700)
+exp(34375.7) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1944.02) out of range, returning exp(700)
+exp(1944.99) out of range, returning exp(700)
+exp(1946.94) out of range, returning exp(700)
+exp(1949.86) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1033.91) out of range, returning exp(700)
+exp(1034.09) out of range, returning exp(700)
+exp(1034.46) out of range, returning exp(700)
+exp(1035.02) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(928.669) out of range, returning exp(700)
+exp(928.834) out of range, returning exp(700)
+exp(929.164) out of range, returning exp(700)
+exp(929.658) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1777.01) out of range, returning exp(700)
+exp(1501.97) out of range, returning exp(700)
+exp(750.987) out of range, returning exp(700)
+exp(1944.02) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1489.33) out of range, returning exp(700)
+exp(1489.69) out of range, returning exp(700)
+exp(1490.42) out of range, returning exp(700)
+exp(1491.51) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1777.45) out of range, returning exp(700)
+exp(1502.34) out of range, returning exp(700)
+exp(751.172) out of range, returning exp(700)
+exp(1944.5) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1002.35) out of range, returning exp(700)
+exp(846.492) out of range, returning exp(700)
+exp(1097.86) out of range, returning exp(700)
+exp(1002.53) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1609.55) out of range, returning exp(700)
+exp(1360.27) out of range, returning exp(700)
+exp(1761.1) out of range, returning exp(700)
+exp(1609.94) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(755.406) out of range, returning exp(700)
+exp(755.539) out of range, returning exp(700)
+exp(755.805) out of range, returning exp(700)
+exp(756.203) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1266.68) out of range, returning exp(700)
+exp(1070.16) out of range, returning exp(700)
+exp(1386.59) out of range, returning exp(700)
+exp(1266.92) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1140.84) out of range, returning exp(700)
+exp(1141.05) out of range, returning exp(700)
+exp(1141.46) out of range, returning exp(700)
+exp(1142.08) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1220.81) out of range, returning exp(700)
+exp(4444.1) out of range, returning exp(700)
+exp(1221.04) out of range, returning exp(700)
+exp(4444.96) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(2668.17) out of range, returning exp(700)
+exp(2256.03) out of range, returning exp(700)
+exp(1128.02) out of range, returning exp(700)
+exp(2917.44) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(874.841) out of range, returning exp(700)
+exp(738.6) out of range, returning exp(700)
+exp(958.578) out of range, returning exp(700)
+exp(875.252) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1259) out of range, returning exp(700)
+exp(1063.66) out of range, returning exp(700)
+exp(1378.2) out of range, returning exp(700)
+exp(1259.65) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1059.1) out of range, returning exp(700)
+exp(1059.29) out of range, returning exp(700)
+exp(1059.66) out of range, returning exp(700)
+exp(1060.22) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1410.94) out of range, returning exp(700)
+exp(1411.21) out of range, returning exp(700)
+exp(1411.77) out of range, returning exp(700)
+exp(1412.6) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(996.85) out of range, returning exp(700)
+exp(841.838) out of range, returning exp(700)
+exp(1091.85) out of range, returning exp(700)
+exp(997.078) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1794.15) out of range, returning exp(700)
+exp(6528.98) out of range, returning exp(700)
+exp(1794.5) out of range, returning exp(700)
+exp(6530.24) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(705.338) out of range, returning exp(700)
+exp(773.428) out of range, returning exp(700)
+exp(705.462) out of range, returning exp(700)
+exp(773.563) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(928.976) out of range, returning exp(700)
+exp(929.426) out of range, returning exp(700)
+exp(930.327) out of range, returning exp(700)
+exp(931.68) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(923.707) out of range, returning exp(700)
+exp(3363.73) out of range, returning exp(700)
+exp(923.871) out of range, returning exp(700)
+exp(3364.33) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(775.523) out of range, returning exp(700)
+exp(850.092) out of range, returning exp(700)
+exp(775.659) out of range, returning exp(700)
+exp(850.24) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1199.34) out of range, returning exp(700)
+exp(1199.56) out of range, returning exp(700)
+exp(1199.99) out of range, returning exp(700)
+exp(1200.63) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(866.858) out of range, returning exp(700)
+exp(867.061) out of range, returning exp(700)
+exp(867.466) out of range, returning exp(700)
+exp(868.075) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(5553.44) out of range, returning exp(700)
+exp(4697.41) out of range, returning exp(700)
+exp(2348.71) out of range, returning exp(700)
+exp(6069.04) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1085.54) out of range, returning exp(700)
+exp(916.882) out of range, returning exp(700)
+exp(1188.72) out of range, returning exp(700)
+exp(1086.05) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1524.7) out of range, returning exp(700)
+exp(1525.08) out of range, returning exp(700)
+exp(1525.86) out of range, returning exp(700)
+exp(1527.02) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(720.983) out of range, returning exp(700)
+exp(721.31) out of range, returning exp(700)
+exp(721.965) out of range, returning exp(700)
+exp(722.948) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1329.43) out of range, returning exp(700)
+exp(1329.66) out of range, returning exp(700)
+exp(1330.14) out of range, returning exp(700)
+exp(1330.85) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(848.375) out of range, returning exp(700)
+exp(716.205) out of range, returning exp(700)
+exp(929.668) out of range, returning exp(700)
+exp(848.526) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1931.94) out of range, returning exp(700)
+exp(1932.43) out of range, returning exp(700)
+exp(1933.39) out of range, returning exp(700)
+exp(1934.83) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1483.42) out of range, returning exp(700)
+exp(1253.56) out of range, returning exp(700)
+exp(1623.34) out of range, returning exp(700)
+exp(1483.71) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1825.08) out of range, returning exp(700)
+exp(6641.47) out of range, returning exp(700)
+exp(1825.96) out of range, returning exp(700)
+exp(6644.65) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(5410.58) out of range, returning exp(700)
+exp(4576.53) out of range, returning exp(700)
+exp(2288.27) out of range, returning exp(700)
+exp(5913) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1993.59) out of range, returning exp(700)
+exp(1994.41) out of range, returning exp(700)
+exp(1996.05) out of range, returning exp(700)
+exp(1998.52) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(2341.53) out of range, returning exp(700)
+exp(2341.98) out of range, returning exp(700)
+exp(2342.89) out of range, returning exp(700)
+exp(2344.25) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(2147.84) out of range, returning exp(700)
+exp(7815.11) out of range, returning exp(700)
+exp(2148.22) out of range, returning exp(700)
+exp(7816.5) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1409.34) out of range, returning exp(700)
+exp(1190.87) out of range, returning exp(700)
+exp(1542.41) out of range, returning exp(700)
+exp(1409.7) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1224.62) out of range, returning exp(700)
+exp(1225.12) out of range, returning exp(700)
+exp(1226.11) out of range, returning exp(700)
+exp(1227.61) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(701.896) out of range, returning exp(700)
+exp(705.807) out of range, returning exp(700)
+exp(710.071) out of range, returning exp(700)
+exp(709.556) out of range, returning exp(700)
+exp(772.579) out of range, returning exp(700)
+exp(772.959) out of range, returning exp(700)
+exp(773.719) out of range, returning exp(700)
+exp(774.86) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(3592.87) out of range, returning exp(700)
+exp(13069.8) out of range, returning exp(700)
+exp(3593.52) out of range, returning exp(700)
+exp(13072.1) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1407.62) out of range, returning exp(700)
+exp(1407.87) out of range, returning exp(700)
+exp(1408.36) out of range, returning exp(700)
+exp(1409.1) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(5172.96) out of range, returning exp(700)
+exp(4375.47) out of range, returning exp(700)
+exp(2187.74) out of range, returning exp(700)
+exp(5653.45) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(7002.67) out of range, returning exp(700)
+exp(25469.1) out of range, returning exp(700)
+exp(7003.9) out of range, returning exp(700)
+exp(25473.5) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1414.84) out of range, returning exp(700)
+exp(1195.52) out of range, returning exp(700)
+exp(1548.42) out of range, returning exp(700)
+exp(1415.09) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1786.66) out of range, returning exp(700)
+exp(6501.75) out of range, returning exp(700)
+exp(1786.99) out of range, returning exp(700)
+exp(6502.96) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1720.71) out of range, returning exp(700)
+exp(1721.32) out of range, returning exp(700)
+exp(1722.54) out of range, returning exp(700)
+exp(1724.37) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(20328.2) out of range, returning exp(700)
+exp(17199.2) out of range, returning exp(700)
+exp(8599.58) out of range, returning exp(700)
+exp(22207.7) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1659.53) out of range, returning exp(700)
+exp(6039.46) out of range, returning exp(700)
+exp(1660.02) out of range, returning exp(700)
+exp(6041.22) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(2009.87) out of range, returning exp(700)
+exp(2010.38) out of range, returning exp(700)
+exp(2011.39) out of range, returning exp(700)
+exp(2012.91) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(831.584) out of range, returning exp(700)
+exp(701.998) out of range, returning exp(700)
+exp(911.327) out of range, returning exp(700)
+exp(831.731) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(765.777) out of range, returning exp(700)
+exp(765.989) out of range, returning exp(700)
+exp(766.413) out of range, returning exp(700)
+exp(767.05) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1771.12) out of range, returning exp(700)
+exp(1771.55) out of range, returning exp(700)
+exp(1772.41) out of range, returning exp(700)
+exp(1773.7) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1205.71) out of range, returning exp(700)
+exp(1206.16) out of range, returning exp(700)
+exp(1207.06) out of range, returning exp(700)
+exp(1208.4) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1771.89) out of range, returning exp(700)
+exp(1772.2) out of range, returning exp(700)
+exp(1772.82) out of range, returning exp(700)
+exp(1773.75) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(5253.27) out of range, returning exp(700)
+exp(4443.42) out of range, returning exp(700)
+exp(2221.71) out of range, returning exp(700)
+exp(5741.17) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1589.04) out of range, returning exp(700)
+exp(1589.32) out of range, returning exp(700)
+exp(1589.89) out of range, returning exp(700)
+exp(1590.74) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(2001.92) out of range, returning exp(700)
+exp(1692.28) out of range, returning exp(700)
+exp(846.139) out of range, returning exp(700)
+exp(2189.69) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(4990.37) out of range, returning exp(700)
+exp(18151.6) out of range, returning exp(700)
+exp(4991.27) out of range, returning exp(700)
+exp(18154.9) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(894.33) out of range, returning exp(700)
+exp(894.487) out of range, returning exp(700)
+exp(894.801) out of range, returning exp(700)
+exp(895.273) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(50439.7) out of range, returning exp(700)
+exp(42678.1) out of range, returning exp(700)
+exp(21339) out of range, returning exp(700)
+exp(55098.6) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(885.204) out of range, returning exp(700)
+exp(747.369) out of range, returning exp(700)
+exp(969.897) out of range, returning exp(700)
+exp(885.438) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(2129.48) out of range, returning exp(700)
+exp(2130.07) out of range, returning exp(700)
+exp(2131.25) out of range, returning exp(700)
+exp(2133.02) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1204.23) out of range, returning exp(700)
+exp(1017.31) out of range, returning exp(700)
+exp(1318.37) out of range, returning exp(700)
+exp(1204.85) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1227.54) out of range, returning exp(700)
+exp(1227.79) out of range, returning exp(700)
+exp(1228.3) out of range, returning exp(700)
+exp(1229.06) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1216.29) out of range, returning exp(700)
+exp(1027.52) out of range, returning exp(700)
+exp(1331.54) out of range, returning exp(700)
+exp(1216.5) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1496.34) out of range, returning exp(700)
+exp(1497.09) out of range, returning exp(700)
+exp(1498.61) out of range, returning exp(700)
+exp(1500.89) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(2447.7) out of range, returning exp(700)
+exp(2448.13) out of range, returning exp(700)
+exp(2448.99) out of range, returning exp(700)
+exp(2450.28) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1493.96) out of range, returning exp(700)
+exp(5437.39) out of range, returning exp(700)
+exp(1494.25) out of range, returning exp(700)
+exp(5438.45) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(3971.9) out of range, returning exp(700)
+exp(3359.19) out of range, returning exp(700)
+exp(1679.6) out of range, returning exp(700)
+exp(4341.52) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1328.74) out of range, returning exp(700)
+exp(1329.01) out of range, returning exp(700)
+exp(1329.54) out of range, returning exp(700)
+exp(1330.34) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(746.183) out of range, returning exp(700)
+exp(818.043) out of range, returning exp(700)
+exp(746.45) out of range, returning exp(700)
+exp(818.335) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1033.48) out of range, returning exp(700)
+exp(1033.7) out of range, returning exp(700)
+exp(1034.14) out of range, returning exp(700)
+exp(1034.8) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(841.359) out of range, returning exp(700)
+exp(710.269) out of range, returning exp(700)
+exp(922.005) out of range, returning exp(700)
+exp(841.549) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(709.718) out of range, returning exp(700)
+exp(709.868) out of range, returning exp(700)
+exp(710.166) out of range, returning exp(700)
+exp(710.614) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(886.417) out of range, returning exp(700)
+exp(886.587) out of range, returning exp(700)
+exp(886.926) out of range, returning exp(700)
+exp(887.435) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(3624) out of range, returning exp(700)
+exp(13183) out of range, returning exp(700)
+exp(3625.45) out of range, returning exp(700)
+exp(13188.2) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1324.57) out of range, returning exp(700)
+exp(1324.82) out of range, returning exp(700)
+exp(1325.32) out of range, returning exp(700)
+exp(1326.07) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(896.826) out of range, returning exp(700)
+exp(897.092) out of range, returning exp(700)
+exp(897.624) out of range, returning exp(700)
+exp(898.423) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(872.969) out of range, returning exp(700)
+exp(3179.23) out of range, returning exp(700)
+exp(873.415) out of range, returning exp(700)
+exp(3180.86) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(896.088) out of range, returning exp(700)
+exp(896.316) out of range, returning exp(700)
+exp(896.772) out of range, returning exp(700)
+exp(897.455) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1418.97) out of range, returning exp(700)
+exp(1419.29) out of range, returning exp(700)
+exp(1419.93) out of range, returning exp(700)
+exp(1420.9) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(971.84) out of range, returning exp(700)
+exp(3538.76) out of range, returning exp(700)
+exp(972.028) out of range, returning exp(700)
+exp(3539.45) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(734.492) out of range, returning exp(700)
+exp(734.62) out of range, returning exp(700)
+exp(734.875) out of range, returning exp(700)
+exp(735.258) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(988.036) out of range, returning exp(700)
+exp(988.212) out of range, returning exp(700)
+exp(988.563) out of range, returning exp(700)
+exp(989.09) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(54157.1) out of range, returning exp(700)
+exp(196940) out of range, returning exp(700)
+exp(54174.2) out of range, returning exp(700)
+exp(197002) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(821.429) out of range, returning exp(700)
+exp(821.576) out of range, returning exp(700)
+exp(821.869) out of range, returning exp(700)
+exp(822.31) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1213.88) out of range, returning exp(700)
+exp(1025.48) out of range, returning exp(700)
+exp(1328.91) out of range, returning exp(700)
+exp(1214.09) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(712.609) out of range, returning exp(700)
+exp(2596.1) out of range, returning exp(700)
+exp(712.847) out of range, returning exp(700)
+exp(2596.97) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(860.649) out of range, returning exp(700)
+exp(860.802) out of range, returning exp(700)
+exp(861.107) out of range, returning exp(700)
+exp(861.566) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(799.587) out of range, returning exp(700)
+exp(799.832) out of range, returning exp(700)
+exp(800.323) out of range, returning exp(700)
+exp(801.06) out of range, returning exp(700)
+No more errno warnings during this execution

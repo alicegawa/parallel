@@ -1,0 +1,4162 @@
+ mpiexec -mca mpi_print_stats 1 lpgparm -t 4MB -s 4MB -d 4MB -p 4MB ./special -mpi ./network.hoc
+numprocs=160
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	0.1412837 
+	0.12804063 
+	0.1784484 
+	0.16623284 
+	0.18699922 
+	0.14638017 
+	0.1632795 
+	0.14215572 
+	0.092165342 
+	0.13033656 
+	0.1036498 
+	0.13446891 
+	0.18058063 
+	0.1707183 
+	0.15393057 
+	0.20486486 
+	0.17012827 
+	0.16614042 
+	0.22168666 
+	0.16815124 
+	0.20009867 
+	0.18442506 
+	0.17901709 
+	0.21546618 
+	0.1201485 
+	0.17700936 
+	0.14011267 
+	0.17095868 
+	0.18515177 
+	0.20053648 
+	0.19683633 
+	0.22806694 
+	0.024263588 
+	0.029167426 
+	0.023110879 
+	0.024000486 
+	0.040653316 
+	0.10180299 
+	0.035022172 
+	0.12450737 
+	0.0080540623 
+	0.025877301 
+	0.014630713 
+	0.022050571 
+	0.084484359 
+	0.04488485 
+	0.064790906 
+	0.05000599 
+	0.12367535 
+	0.1192738 
+	0.11858749 
+	0.12926203 
+	0.19198237 
+	0.15819612 
+	0.13619572 
+	0.15074852 
+	0.10193677 
+	0.084792536 
+	0.12851772 
+	0.11798418 
+	0.12518107 
+	0.13304448 
+	0.16174847 
+	0.14300131 
+	0.21146423 
+	0.22630295 
+	0.2087376 
+	0.22113941 
+	0.20758579 
+	0.26049663 
+	0.21206683 
+	0.24935073 
+	0.20656078 
+	0.1957435 
+	0.17557253 
+	0.22242562 
+	0.22531974 
+	0.22991218 
+	0.24778592 
+	0.25487518 
+	0.12487466 
+	0.12079581 
+	0.12621858 
+	0.13384768 
+	0.13103414 
+	0.12636528 
+	0.16275096 
+	0.13754753 
+	0.091215513 
+	0.12393755 
+	0.1050138 
+	0.12271783 
+	0.14072477 
+	0.19743533 
+	0.14049037 
+	0.16515309 
+	0.037902401 
+	0.078879224 
+	0.036311488 
+	0.067516734 
+	0.066443525 
+	0.093179438 
+	0.042965441 
+	0.057971958 
+	0.033197764 
+	0.0095456773 
+	0.02383199 
+	0.035058978 
+	0.042439238 
+	0.068906746 
+	0.12927662 
+	0.096763267 
+	0.011597992 
+	0.012788801 
+	0.010365882 
+	0.012367298 
+	0.032861361 
+	0.024898798 
+	0.019789957 
+	0.04411505 
+	0.00056130392 
+	0.010728085 
+	0.0046857372 
+	0.015867725 
+	0.075846901 
+	0.031027746 
+	0.054693834 
+	0.069321649 
+	0.0510093 
+	0.047823975 
+	0.097333265 
+	0.11806223 
+	0.13457486 
+	0.099782885 
+	0.15123899 
+	0.056868146 
+	0.051964907 
+	0.050075992 
+	0.056395742 
+	0.048269078 
+	0.070961158 
+	0.062144388 
+	0.081693542 
+	0.11884693 
+	0.1960375 
+	0.20139685 
+	0.19446389 
+	0.21521876 
+	0.20546878 
+	0.208337 
+	0.20230696 
+	0.25003594 
+	0.17843796 
+	0.19724581 
+	0.18765113 
+	0.1959105 
+	0.19965363 
+	0.20076134 
+	0.21087373 
+	0.24163768 
+	0.019417854 
+	0.017944642 
+	0.018667548 
+	0.020088959 
+	0.018470246 
+	0.019781956 
+	0.019874357 
+	0.018159644 
+	0.017400738 
+	0.018769249 
+	0.022599079 
+	0.018236944 
+	0.018337045 
+	0.017096035 
+	0.02031416 
+	0.018306445 
+	0.0045906617 
+	0.003152343 
+	0.0069844942 
+	0.005803478 
+	0.0059845811 
+	0.0040108538 
+	0.0038143522 
+	0.0055872761 
+	0.0041477568 
+	8.9701731e-05 
+	0.0048564659 
+	0.0030738423 
+	0.006920394 
+	0.006582289 
+	0.0030997428 
+	0.0036599501 
+	0.00064780936 
+	0.00068021007 
+	0.00084131164 
+finish connect section
+	0.00053030718 
+finish connect section
+	23 
+	0.00050850678 
+finish connect section
+	23 
+	0.0003768052 
+finish connect section
+	23 
+	6.5700617e-05 
+finish connect section
+	23 
+	0.00060880836 
+finish connect section
+	23 
+	0.00046520587 
+finish connect section
+	23 
+	0.00052800728 
+finish connect section
+	23 
+	0.00054520788 
+finish connect section
+	23 
+	0.00075411005 
+finish connect section
+	23 
+	0.00072500994 
+finish connect section
+	23 
+	0.00057950802 
+finish connect section
+	23 
+finish connect section
+	23 
+	23 
+	0.00098861335 
+finish connect section
+	23 
+	0.00087121176 
+finish connect section
+	23 
+finish connect section
+	23 
+	0.014087687 
+	0.01428749 
+	0.012236762 
+	0.015593807 
+	0.013368877 
+	0.010695042 
+	0.01201636 
+	0.012101461 
+	0.012240662 
+	0.01204706 
+	0.010265737 
+	0.013209176 
+	0.01049054 
+	0.015090201 
+	0.011450152 
+	0.011188949 
+	0.0017756242 
+	0.0017146231 
+	0.0019466258 
+	0.001780224 
+finish connect section
+	0.0020591277 
+finish connect section
+	0.0016434221 
+finish connect section
+	0.0016511218 
+finish connect section
+	23 
+	0.0017115227 
+finish connect section
+	23 
+	0.0016607228 
+finish connect section
+	23 
+	0.0015854221 
+finish connect section
+	23 
+	0.0015647211 
+finish connect section
+	23 
+	0.0017373241 
+	0.001803624 
+finish connect section
+	23 
+	0.0015696213 
+finish connect section
+	23 
+	0.00222563 
+finish connect section
+	23 
+	0.0019136257 
+finish connect section
+	23 
+finish connect section
+	23 
+finish connect section
+	23 
+finish connect section
+	23 
+	23 
+	23 
+	23 
+finish connect section
+	23 
+	0.015905224 
+	0.017549437 
+	0.017419636 
+	0.016952432 
+	0.014539313 
+	0.018071541 
+	0.020726061 
+	0.016288827 
+	0.015636222 
+	0.016867832 
+	0.01657073 
+	0.018246843 
+	0.015732023 
+	0.014511714 
+	0.015933125 
+	0.018900548 
+	0.0018113153 
+	0.0018660147 
+finish connect section
+	0.0014419123 
+finish connect section
+	23 
+	0.0016053133 
+finish connect section
+	23 
+	0.001935415 
+finish connect section
+	23 
+	0.0016124127 
+finish connect section
+	23 
+	0.0014227112 
+finish connect section
+	23 
+	0.0016343128 
+finish connect section
+	23 
+	0.0019037151 
+finish connect section
+	23 
+	0.0017999141 
+finish connect section
+	23 
+	0.0016994141 
+finish connect section
+	23 
+	0.0015608119 
+finish connect section
+	23 
+	0.0018256148 
+	0.0015042117 
+finish connect section
+	23 
+	0.001325611 
+finish connect section
+	23 
+	0.0015630131 
+finish connect section
+	23 
+finish connect section
+	23 
+	23 
+finish connect section
+	23 
+	0.006133181 
+	0.009198721 
+	0.008164207 
+	0.011875857 
+	0.0077790022 
+	0.0076144002 
+	0.010868044 
+	0.0084740124 
+	0.007732701 
+	0.0095886267 
+	0.0082790102 
+	0.0037801499 
+	0.010370937 
+	0.003112541 
+	0.0079744048 
+	0.0069804918 
+	0.00064190803 
+	0.0012855171 
+	0.00082171103 
+	0.00084961113 
+finish connect section
+	0.0008154111 
+finish connect section
+	0.0011033141 
+finish connect section
+	0.0010078126 
+finish connect section
+	0.001240416 
+finish connect section
+	23 
+	0.001007813 
+finish connect section
+	23 
+	0.0010792143 
+finish connect section
+	23 
+	0.00083001098 
+finish connect section
+	23 
+	0.0012417161 
+finish connect section
+	23 
+	0.00091921212 
+finish connect section
+	23 
+	0.0012294161 
+finish connect section
+	23 
+	0.000296304 
+finish connect section
+	23 
+finish connect section
+	23 
+finish connect section
+	23 
+	23 
+	23 
+	23 
+	23 
+	0.00027570315 
+finish connect section
+	23 
+finish connect section
+	23 
+	0.019325359 
+	0.016660637 
+	0.01704354 
+	0.017237542 
+	0.014314418 
+	0.01332401 
+	0.018122849 
+	0.020497468 
+	0.013646013 
+	0.017848447 
+	0.017991548 
+	0.019699662 
+	0.021320374 
+	0.016046032 
+	0.022434283 
+	0.017145641 
+	0.00065540522 
+	0.0010685083 
+	0.001038508 
+finish connect section
+	0.0015044119 
+finish connect section
+	0.0018813158 
+finish connect section
+	0.00051830383 
+finish connect section
+	23 
+	0.001388012 
+finish connect section
+	23 
+	0.0012030103 
+finish connect section
+	23 
+	0.00089850789 
+finish connect section
+	23 
+	0.0010223091 
+	0.00064830622 
+finish connect section
+	23 
+	0.0011622091 
+finish connect section
+	23 
+	0.001653214 
+finish connect section
+	23 
+	0.0013024108 
+finish connect section
+	23 
+	0.0010892088 
+finish connect section
+	23 
+	0.001402312 
+finish connect section
+	23 
+finish connect section
+	23 
+finish connect section
+	23 
+	23 
+	23 
+	23 
+finish connect section
+	23 
+	0.0095538292 
+	0.015154404 
+	0.010192937 
+	0.012243465 
+	0.013165077 
+	0.012728071 
+	0.0078883059 
+	0.013780985 
+	0.011341052 
+	0.013483481 
+	0.015121603 
+	0.011506354 
+	0.011595455 
+	0.010091035 
+	0.014793198 
+	0.012748371 
+	0.0018687253 
+	0.001664022 
+	0.0014175191 
+	0.0018610251 
+	0.0012721168 
+finish connect section
+	0.002105128 
+finish connect section
+	0.0016562217 
+finish connect section
+	0.0013777181 
+finish connect section
+	23 
+	0.0016329219 
+finish connect section
+	23 
+	0.0017345231 
+finish connect section
+	23 
+	0.0011409149 
+finish connect section
+	23 
+	0.0018006237 
+finish connect section
+	23 
+	0.0017174231 
+finish connect section
+	23 
+	0.0018611252 
+finish connect section
+	23 
+finish connect section
+	23 
+finish connect section
+	23 
+finish connect section
+	23 
+	23 
+	23 
+	23 
+	0.0019761259 
+finish connect section
+	23 
+	0.0014335187 
+finish connect section
+	23 
+finish connect section
+	23 
+	0.013427306 
+	0.001395511 
+finish connect section
+	23 
+	0.010513083 
+	0.00094190799 
+finish connect section
+	23 
+	0.0084695667 
+	0.00033980329 
+finish connect section
+	23 
+	0.016869234 
+	0.001633713 
+finish connect section
+	23 
+	0.015005619 
+	0.0012789103 
+finish connect section
+	23 
+	0.0126556 
+	0.0011235094 
+finish connect section
+	23 
+	0.012527999 
+	0.0012510098 
+finish connect section
+	23 
+	0.014312713 
+	0.0012906101 
+finish connect section
+	23 
+	0.010901186 
+	0.00094630709 
+finish connect section
+	23 
+	0.007981563 
+	0.00071410602 
+finish connect section
+	23 
+	0.0126932 
+	0.0012596101 
+finish connect section
+	23 
+	0.011808993 
+	0.0011134087 
+finish connect section
+	23 
+	0.014589915 
+	0.0011370089 
+finish connect section
+	23 
+	0.013616908 
+	0.00133071 
+finish connect section
+	23 
+	0.011518692 
+	0.0010296078 
+finish connect section
+	23 
+	0.010789886 
+	0.00091530709 
+finish connect section
+	23 
+	0.013413205 
+	0.001108109 
+finish connect section
+	23 
+	0.013354704 
+	0.0012343102 
+finish connect section
+	23 
+	0.011717492 
+	0.001033708 
+finish connect section
+	23 
+	0.014718215 
+	0.001342311 
+finish connect section
+	23 
+	0.013973509 
+	0.0011003092 
+finish connect section
+	23 
+	0.010108979 
+	0.00082560675 
+finish connect section
+	23 
+	0.0080242632 
+	0.00048390357 
+finish connect section
+	23 
+	0.011719492 
+	0.00089840684 
+finish connect section
+	23 
+	0.012604498 
+	0.00087800715 
+finish connect section
+	23 
+	0.011770292 
+	0.0011861087 
+finish connect section
+	23 
+	0.010002378 
+	0.00083990721 
+finish connect section
+	23 
+	0.012050494 
+	0.00098290807 
+finish connect section
+	23 
+	0.014394712 
+	0.001218609 
+finish connect section
+	23 
+	0.013948609 
+	0.0012303088 
+finish connect section
+	23 
+	0.013050502 
+	0.0011284091 
+finish connect section
+	23 
+	0.014626514 
+	0.0010831081 
+finish connect section
+	23 
+	0.021301572 
+	0.0015396131 
+finish connect section
+	23 
+	0.022187179 
+	0.0018238151 
+finish connect section
+	23 
+	0.020867669 
+	0.0015595127 
+finish connect section
+	23 
+	0.023715692 
+	0.0020112167 
+finish connect section
+	23 
+	0.020132963 
+	0.0015181117 
+finish connect section
+	23 
+	0.021732077 
+	0.0018451149 
+finish connect section
+	23 
+	0.027579325 
+	0.0023389189 
+finish connect section
+	23 
+	0.020254565 
+	0.0014710119 
+finish connect section
+	23 
+	0.022893486 
+	0.0019431161 
+finish connect section
+	23 
+	0.022419682 
+	0.0018016151 
+finish connect section
+	23 
+	0.022281981 
+	0.0018642149 
+finish connect section
+	23 
+	0.020522867 
+	0.001529512 
+finish connect section
+	23 
+	0.023120488 
+	0.0019756164 
+finish connect section
+	23 
+	0.019966162 
+	0.001553013 
+finish connect section
+	23 
+	0.022021979 
+	0.0016824142 
+finish connect section
+	23 
+	0.02090277 
+	0.0016519129 
+finish connect section
+	23 
+	0.0018036142 
+finish connect section
+	23 
+	0.0017860141 
+finish connect section
+	23 
+	0.0017411127 
+finish connect section
+	23 
+	0.001779214 
+finish connect section
+	23 
+	0.001675813 
+finish connect section
+	23 
+	0.0016827141 
+finish connect section
+	23 
+	0.0016799141 
+finish connect section
+	23 
+	0.0017411141 
+finish connect section
+	23 
+	0.0018161139 
+finish connect section
+	23 
+	0.0018038149 
+finish connect section
+	23 
+	0.0018034149 
+finish connect section
+	23 
+	0.0013917112 
+finish connect section
+	23 
+	0.0020465171 
+finish connect section
+	23 
+	0.0020332169 
+finish connect section
+	23 
+	0.0019340161 
+finish connect section
+	23 
+	0.0014872123 
+finish connect section
+	23 
+	1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+the first DA = 0.020000
+	24 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+	1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+the first DA = 0.020000
+	1 
+	24 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+	1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+	1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+the first DA = 0.020000
+	24 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	1 
+	1 
+the first DA = 0.020000
+	24 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	0.1 
+	9.7900163e-05 
+	7.9700258e-05 
+	9.6800271e-05 
+	9.6399803e-05 
+	0.00010020006 
+	9.3800016e-05 
+	0.00010850001 
+	0.0001009996 
+	9.5800031e-05 
+	0.0001050001 
+	6.5000262e-05 
+	0.00011010002 
+	9.9600293e-05 
+	0.00011140015 
+	0.00010970002 
+	0.00011010002 
+	7.7900942e-05 
+	0.00010120124 
+	9.470107e-05 
+	9.9000987e-05 
+	0.000100601 
+	9.4001181e-05 
+	9.7601209e-05 
+	0.00010840083 
+	0.00010650093 
+	5.4801349e-05 
+	9.5701311e-05 
+	0.00011200085 
+	8.3800871e-05 
+	0.00010920083 
+	9.2000701e-05 
+	0.00010950118 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+	9.6500851e-05 
+	9.5400959e-05 
+	9.4500836e-05 
+	6.4700842e-05 
+	9.5901079e-05 
+	0.00010730093 
+	0.00010090088 
+	9.6200965e-05 
+	6.2101055e-05 
+	8.9000911e-05 
+	0.0001092013 
+	0.00010780105 
+	0.00010470068 
+	0.00010640081 
+	9.420095e-05 
+	0.0001056008 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+	0.00011480134 
+	9.5700845e-05 
+	0.00011150073 
+	0.00011450099 
+	0.00011280226 
+	0.00011550123 
+	0.00011640182 
+	0.00010650139 
+	9.4600953e-05 
+	9.4600953e-05 
+	0.00011170143 
+	0.00011040084 
+	0.00010220101 
+	0.00010000123 
+	0.00010150112 
+	9.4900839e-05 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+	0.00010080077 
+	9.3501061e-05 
+	9.470107e-05 
+	9.4000716e-05 
+	0.00011320086 
+	0.00011330098 
+	7.7601057e-05 
+	9.5400959e-05 
+	7.0500188e-05 
+	0.00011410099 
+	0.0001119012 
+	0.00010930095 
+	9.4600953e-05 
+	9.8801218e-05 
+	0.00010730093 
+	0.00011090096 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+	7.7701174e-05 
+	9.8901801e-05 
+	0.00010070205 
+	0.00011330191 
+	0.00010540197 
+	9.5801894e-05 
+	0.00010760175 
+	0.0001008017 
+	0.00010820199 
+	9.8201912e-05 
+	0.000109802 
+	0.00011430215 
+	8.1700739e-05 
+	0.00010050181 
+	0.00010420196 
+	7.3101372e-05 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+	8.4300991e-05 
+	7.8300014e-05 
+	7.85999e-05 
+	7.8999903e-05 
+	9.720074e-05 
+	0.00012110127 
+	8.1600156e-05 
+	9.1900583e-05 
+	0.0001138011 
+	0.000115701 
+	0.00011330098 
+	0.00010170089 
+	0.00010190113 
+	0.00011480087 
+	0.00010070112 
+	5.0799921e-05 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+	6.7800749e-05 
+	9.1501046e-05 
+	9.4000716e-05 
+	9.4900839e-05 
+	9.2301052e-05 
+	6.3901301e-05 
+	8.9701265e-05 
+	9.1901049e-05 
+	9.0801157e-05 
+	0.00010490092 
+	0.00010410137 
+	9.7800978e-05 
+	0.00010180101 
+	0.00010570092 
+	9.9200755e-05 
+	0.00010390114 
+the last da = 0.678234
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+	7.1200542e-05 
+	9.9300873e-05 
+	0.00010010088 
+	0.00010310113 
+	9.2200935e-05 
+	0.00010760128 
+	0.00010910071 
+	9.8501332e-05 
+	9.5801428e-05 
+	0.00011430122 
+	9.8200981e-05 
+	0.00010830071 
+	0.0001123012 
+	0.00010310113 
+	0.00011010095 
+	7.930072e-05 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+	7.1100891e-05 
+	0.00010040123 
+	0.00010720082 
+	5.8899634e-05 
+	0.00010450091 
+	0.00011480087 
+	9.720074e-05 
+	0.00010840083 
+	9.5201191e-05 
+	7.800106e-05 
+	9.5201191e-05 
+	9.9601224e-05 
+	0.00010910071 
+	9.2600938e-05 
+	9.4900839e-05 
+	0.00011000084 
+the last da = 0.678234
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the last da = 0.678234
+	23 
+the time elapse for write weights file is 135.260000 
+	54 
+the time elapse for write weights file is 135.340000 
+	54 
+the time elapse for write weights file is 136.670000 
+	54 
+the time elapse for write weights file is 136.800000 
+	54 
+the time elapse for write weights file is 138.030000 
+	54 
+the time elapse for write weights file is 140.480000 
+	54 
+the time elapse for write weights file is 143.180000 
+	54 
+the time elapse for write weights file is 143.550000 
+	54 
+the time elapse for write weights file is 144.640000 
+	54 
+the time elapse for write weights file is 144.640000 
+	54 
+the time elapse for write weights file is 145.260000 
+	54 
+the time elapse for write weights file is 145.520000 
+	54 
+the time elapse for write weights file is 145.740000 
+	54 
+the time elapse for write weights file is 146.140000 
+	54 
+the time elapse for write weights file is 147.350000 
+	54 
+the time elapse for write weights file is 147.730000 
+	54 
+the time elapse for write weights file is 149.200000 
+	54 
+the time elapse for write weights file is 149.450000 
+	54 
+the time elapse for write weights file is 149.570000 
+	54 
+the time elapse for write weights file is 149.930000 
+	54 
+the time elapse for write weights file is 151.230000 
+	54 
+the time elapse for write weights file is 151.990000 
+	54 
+the time elapse for write weights file is 152.040000 
+	54 
+the time elapse for write weights file is 152.820000 
+	54 
+the time elapse for write weights file is 152.890000 
+	54 
+the time elapse for write weights file is 153.010000 
+	54 
+the time elapse for write weights file is 153.230000 
+	54 
+the time elapse for write weights file is 154.310000 
+	54 
+the time elapse for write weights file is 154.780000 
+	54 
+the time elapse for write weights file is 155.260000 
+	54 
+the time elapse for write weights file is 155.490000 
+	54 
+the time elapse for write weights file is 155.660000 
+	54 
+the time elapse for write weights file is 155.700000 
+	54 
+the time elapse for write weights file is 156.020000 
+	54 
+the time elapse for write weights file is 156.250000 
+	54 
+the time elapse for write weights file is 156.320000 
+	54 
+the time elapse for write weights file is 156.440000 
+	54 
+the time elapse for write weights file is 156.980000 
+	54 
+the time elapse for write weights file is 157.070000 
+	54 
+the time elapse for write weights file is 157.590000 
+	54 
+the time elapse for write weights file is 157.670000 
+	54 
+the time elapse for write weights file is 158.170000 
+	54 
+the time elapse for write weights file is 158.180000 
+	54 
+the time elapse for write weights file is 158.210000 
+	54 
+the time elapse for write weights file is 158.680000 
+	54 
+the time elapse for write weights file is 159.060000 
+	54 
+the time elapse for write weights file is 159.280000 
+	54 
+the time elapse for write weights file is 159.830000 
+	54 
+the time elapse for write weights file is 160.190000 
+	54 
+the time elapse for write weights file is 160.940000 
+	54 
+the time elapse for write weights file is 161.150000 
+	54 
+the time elapse for write weights file is 161.400000 
+	54 
+the time elapse for write weights file is 161.540000 
+	54 
+the time elapse for write weights file is 161.580000 
+	54 
+the time elapse for write weights file is 161.980000 
+	54 
+the time elapse for write weights file is 162.190000 
+	54 
+the time elapse for write weights file is 162.440000 
+	54 
+the time elapse for write weights file is 163.050000 
+	54 
+the time elapse for write weights file is 163.460000 
+	54 
+the time elapse for write weights file is 163.750000 
+	54 
+the time elapse for write weights file is 163.840000 
+	54 
+the time elapse for write weights file is 166.130000 
+	54 
+the time elapse for write weights file is 166.290000 
+	54 
+the time elapse for write weights file is 166.400000 
+	54 
+the time elapse for write weights file is 166.450000 
+	54 
+the time elapse for write weights file is 167.000000 
+	54 
+the time elapse for write weights file is 167.260000 
+	54 
+the time elapse for write weights file is 167.700000 
+	54 
+the time elapse for write weights file is 168.450000 
+	54 
+the time elapse for write weights file is 169.490000 
+	54 
+the time elapse for write weights file is 169.760000 
+	54 
+the time elapse for write weights file is 171.920000 
+	54 
+the time elapse for write weights file is 172.380000 
+	54 
+the time elapse for write weights file is 172.780000 
+	54 
+the time elapse for write weights file is 172.900000 
+	54 
+the time elapse for write weights file is 173.740000 
+	54 
+the time elapse for write weights file is 177.440000 
+	54 
+the time elapse for write weights file is 177.640000 
+	54 
+the time elapse for write weights file is 178.570000 
+	54 
+the time elapse for write weights file is 179.040000 
+	54 
+the time elapse for write weights file is 179.270000 
+	54 
+the time elapse for write weights file is 179.460000 
+	54 
+the time elapse for write weights file is 179.830000 
+	54 
+the time elapse for write weights file is 180.010000 
+	54 
+the time elapse for write weights file is 180.640000 
+	54 
+the time elapse for write weights file is 183.370000 
+	54 
+the time elapse for write weights file is 184.070000 
+	54 
+the time elapse for write weights file is 184.220000 
+	54 
+the time elapse for write weights file is 185.120000 
+	54 
+the time elapse for write weights file is 185.610000 
+	54 
+the time elapse for write weights file is 185.980000 
+	54 
+the time elapse for write weights file is 186.010000 
+	54 
+the time elapse for write weights file is 186.660000 
+	54 
+the time elapse for write weights file is 187.290000 
+	54 
+the time elapse for write weights file is 187.770000 
+	54 
+the time elapse for write weights file is 188.360000 
+	54 
+the time elapse for write weights file is 188.880000 
+	54 
+the time elapse for write weights file is 189.210000 
+	54 
+the time elapse for write weights file is 189.590000 
+	54 
+the time elapse for write weights file is 190.430000 
+	54 
+the time elapse for write weights file is 190.510000 
+	54 
+the time elapse for write weights file is 191.370000 
+	54 
+the time elapse for write weights file is 191.680000 
+	54 
+the time elapse for write weights file is 191.690000 
+	54 
+the time elapse for write weights file is 192.530000 
+	54 
+the time elapse for write weights file is 193.350000 
+	54 
+the time elapse for write weights file is 193.570000 
+	54 
+the time elapse for write weights file is 194.280000 
+	54 
+the time elapse for write weights file is 194.290000 
+	54 
+the time elapse for write weights file is 194.330000 
+	54 
+the time elapse for write weights file is 195.260000 
+	54 
+the time elapse for write weights file is 196.120000 
+	54 
+the time elapse for write weights file is 196.650000 
+	54 
+the time elapse for write weights file is 197.630000 
+	54 
+the time elapse for write weights file is 197.970000 
+	54 
+the time elapse for write weights file is 198.110000 
+	54 
+the time elapse for write weights file is 198.380000 
+	54 
+the time elapse for write weights file is 198.540000 
+	54 
+the time elapse for write weights file is 199.240000 
+	54 
+the time elapse for write weights file is 201.950000 
+	54 
+the time elapse for write weights file is 203.760000 
+	54 
+the time elapse for write weights file is 203.970000 
+	54 
+the time elapse for write weights file is 204.070000 
+	54 
+the time elapse for write weights file is 205.290000 
+	54 
+the time elapse for write weights file is 205.390000 
+	54 
+the time elapse for write weights file is 206.380000 
+	54 
+the time elapse for write weights file is 206.740000 
+	54 
+the time elapse for write weights file is 206.740000 
+	54 
+the time elapse for write weights file is 207.180000 
+	54 
+the time elapse for write weights file is 207.750000 
+	54 
+the time elapse for write weights file is 207.950000 
+	54 
+the time elapse for write weights file is 207.980000 
+	54 
+the time elapse for write weights file is 210.510000 
+	54 
+the time elapse for write weights file is 210.880000 
+	54 
+the time elapse for write weights file is 211.820000 
+	54 
+the time elapse for write weights file is 212.010000 
+	54 
+the time elapse for write weights file is 212.440000 
+	54 
+the time elapse for write weights file is 213.320000 
+	54 
+the time elapse for write weights file is 213.690000 
+	54 
+the time elapse for write weights file is 213.880000 
+	54 
+the time elapse for write weights file is 215.260000 
+	54 
+the time elapse for write weights file is 217.760000 
+	54 
+the time elapse for write weights file is 222.480000 
+	54 
+the time elapse for write weights file is 224.480000 
+	54 
+the time elapse for write weights file is 224.900000 
+	54 
+the time elapse for write weights file is 225.430000 
+	54 
+the time elapse for write weights file is 225.940000 
+	54 
+the time elapse for write weights file is 226.300000 
+	54 
+the time elapse for write weights file is 227.260000 
+	54 
+the time elapse for write weights file is 227.350000 
+	54 
+the time elapse for write weights file is 227.810000 
+	54 
+the time elapse for write weights file is 230.010000 
+	54 
+the time elapse for write weights file is 230.640000 
+	54 
+the time elapse for write weights file is 231.450000 
+	54 
+the time elapse for write weights file is 236.040000 
+	54 
+the time elapse for write weights file is 237.520000 
+	54 
+the time elapse for write weights file is 240.090000 
+	54 
+the time elapse for write weights file is 240.440000 
+	54 
+the time elapse for write weights file is 243.250000 
+	54 
+the time elapse for write weights file is 257.780000 
+	54 

@@ -1,0 +1,17 @@
+{load_file("nrngui.hoc")}
+/*
+load_file("read.hoc")
+
+objref pc
+pc = new ParallelContext()
+
+read_mat()
+printf("col = %d, row = %d\n",con.ncol,con.nrow)
+*/
+
+strdef s
+a=0
+
+print(s,"spike%d.txt",a)
+
+{print s}

@@ -1,0 +1,94 @@
+Job Information
+
+ JOB ID                    : 1705833
+ JOB NAME                  : run_4.sh
+ JOB TYPE                  : BATCH
+ JOB MODEL                 : NM
+ RETRY NUM                 : 0
+ SUB JOB NUM               : -
+ USER                      : e16005
+ GROUP                     : gh16
+ RESOURCE UNIT             : oakleaf-fx
+ RESOURCE GROUP            : short
+ APRIORITY                 : 127
+ PRIORITY                  : 63
+ SHELL                     : /bin/bash
+ COMMENT                   : 
+ LAST STATE                : SIN
+ STATE                     : CCL
+ PRM DATE                  : -
+ EXIT CODE                 : 0
+ SIGNAL NO                 : 0
+ PJM CODE                  : 1
+ REASON                    : -
+ MAIL SEND FLAG            : -e--
+ MAIL ADDRESS              : e16005@oakleaf-fx-3
+ STEP DEPENDENCY EXP       : -
+ STEP EXITING WAIT MODE    : -
+ FILE MASK                 : 0022
+ STANDARD OUT FILE         : /home/e16005/workspace/github/sw_2times/run_4.sh.o1705833
+ STANDARD ERR FILE         : /home/e16005/workspace/github/sw_2times/run_4.sh.e1705833
+ INFORMATION FILE          : /home/e16005/workspace/github/sw_2times/run_4.sh.i1705833
+ PJSUB DIRECTORY           : /home/e16005/workspace/github/sw_2times
+ FILE SYSTEM NAME          : 
+ APPLICATION NAME          : :submitted on oakleaf-fx-3
+ ACCEPT DATE               : 2015/01/13 00:31:25
+ QUEUED DATE               : 2015/01/13 00:31:26
+ EXIT DATE                 : 2015/01/13 00:32:39
+ LAST HOLD USER            : 
+ HOLD NUM                  : 0
+ HOLD TIME                 : 00:00:00 (0)
+ JOB START DATE            : -
+ JOB END DATE              : -
+ JOB DELETE DATE (REQUIRE) : 2015/01/13 00:32:11
+ JOB DELETE DATE           : 2015/01/13 00:32:33
+ STAGE IN START DATE       : 2015/01/13 00:31:40
+ STAGE IN END DATE         : 2015/01/13 00:32:11
+ STAGE IN SIZE             : 0.0 MB (0)
+ STAGE OUT START DATE      : -
+ STAGE OUT END DATE        : -
+ STAGE OUT SIZE            : 0.0 MB (0)
+ NODE NUM (REQUIRE)        : 10
+ CPU NUM (REQUIRE)         : 160
+ ELAPSE TIME (LIMIT)       : 00:30:00 (1800)
+ MEMORY SIZE (LIMIT)       : 28672.0 MiB (30064771072) <DEFAULT>
+ DISK SIZE (LIMIT)         : 240000.0 MB (240000000000) <DEFAULT>
+ CPU TIME (LIMIT)          : unlimited <DEFAULT>
+ PROC CPU LIMIT            : unlimited <DEFAULT>
+ PROC COREFILE LIMIT       : 0.0 MB (0) <DEFAULT>
+ PROC CREATE PROC LIMIT    : 512 <DEFAULT>
+ PROC DATA LIMIT           : unlimited <DEFAULT>
+ PROC LOCKED MEMORY LIMIT  : unlimited <DEFAULT>
+ PROC MESSAGE QUEUE LIMIT  : unlimited <DEFAULT>
+ PROC OPEN FILES LIMIT     : 1048576 <DEFAULT>
+ PROC PENDING SIGNAL LIMIT : unlimited <DEFAULT>
+ PROC PERMFILE LIMIT       : unlimited <DEFAULT>
+ PROC STACK LIMIT          : unlimited <DEFAULT>
+ PROC VIRTUAL MEMORY LIMIT : unlimited <DEFAULT>
+ NODE NUM (ALLOC)          : 12:2x3x2
+ MEMORY SIZE (ALLOC)       : 0.0 MiB (0)
+ CPU NUM (ALLOC)           : 0
+ ELAPSE TIME (USE)         : 00:00:00 (0)
+ NODE NUM (UNUSED)         : 2
+ NODE NUM (USE)            : 0
+ NODE ID (USE)             : 
+ TOFU COORDINATE (USE)     : 
+ MAX MEMORY SIZE (USE)     : 0.0 MiB (0)
+ CPU NUM (USE)             : 0
+ USER CPU TIME (USE)       : 0 ms
+ SYSTEM CPU TIME (USE)     : 0 ms
+ CPU TIME (TOTAL)          : 0 ms
+ DISK SIZE (USE)           : -
+ I/O SIZE                  : 0.0 MB (0)
+ FILE I/O SIZE             : 0.0 MB (0)
+ EXEC INST NUM             : 0
+ EXEC SIMD NUM             : 0
+ PRO START DATE            : -
+ PRO END DATE              : -
+ PRO EXIT CODE             : 0
+ EPI START DATE            : -
+ EPI END DATE              : -
+ EPI EXIT CODE             : 0
+ HOST NAME                 : oakleaf-fx-3
+ NODE ID (RANK)            : -
+

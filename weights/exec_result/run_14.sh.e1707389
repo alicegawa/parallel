@@ -1,0 +1,566 @@
++ NRNIV='./special -mpi'
++ HOC_NAME=./network.hoc
++ NRNOPT=' -c OUT1_E=0.001 -c OUT1_I=0.03 -c IO_E=0.002 -c IO_I2E=0.003 -c IO_I2I=0.001 -c OUT1_SPON_E_K=0.15 -c OUT1_SPON_E_T=0.35 -c DOPAMINE=0.01 -c LEARNING_RATE=0.0001 -c OUT1_SPON_I_K=0.15 -c OUT1_SPON_I_T=0.3 -c LTD=0.8'
++ LPG='lpgparm -t 4MB -s 4MB -d 4MB -p 4MB'
++ MPIEXEC='mpiexec -mca mpi_print_stats 1'
++ PROF=
++ echo ' mpiexec -mca mpi_print_stats 1 lpgparm -t 4MB -s 4MB -d 4MB -p 4MB ./special -mpi ./network.hoc'
++ mpiexec -mca mpi_print_stats 1 lpgparm -t 4MB -s 4MB -d 4MB -p 4MB ./special -mpi -c OUT1_E=0.001 -c OUT1_I=0.03 -c IO_E=0.002 -c IO_I2E=0.003 -c IO_I2I=0.001 -c OUT1_SPON_E_K=0.15 -c OUT1_SPON_E_T=0.35 -c DOPAMINE=0.01 -c LEARNING_RATE=0.0001 -c OUT1_SPON_I_K=0.15 -c OUT1_SPON_I_T=0.3 -c LTD=0.8 ./network.hoc
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+jwe1050i-w The hardware barrier couldn't be used and continues processing using the software barrier.
+taken to (standard) corrective action, execution continuing.
+NEURON -- Release 7.2 (562:42a47463b504) 2011-12-21
+Duke, Yale, and the BlueBrain Project -- Copyright 1984-2008
+See http://www.neuron.yale.edu/credits.html
+
+Additional mechanisms from files
+ ../mod/exp2syn_k.mod ../mod/gamma.mod ../mod/hh_k.mod ../mod/netstim2.mod ../mod/pGPeA.mod ../mod/stdp.mod
+exp(1194.39) out of range, returning exp(700)
+exp(1008.99) out of range, returning exp(700)
+exp(1307.63) out of range, returning exp(700)
+exp(1194.62) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1476.31) out of range, returning exp(700)
+exp(5373.22) out of range, returning exp(700)
+exp(1476.58) out of range, returning exp(700)
+exp(5374.17) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(29663) out of range, returning exp(700)
+exp(25097.8) out of range, returning exp(700)
+exp(12548.9) out of range, returning exp(700)
+exp(32404.1) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1279.97) out of range, returning exp(700)
+exp(1280.2) out of range, returning exp(700)
+exp(1280.65) out of range, returning exp(700)
+exp(1281.32) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(766.7) out of range, returning exp(700)
+exp(766.888) out of range, returning exp(700)
+exp(767.264) out of range, returning exp(700)
+exp(767.829) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(752.191) out of range, returning exp(700)
+exp(752.324) out of range, returning exp(700)
+exp(752.589) out of range, returning exp(700)
+exp(752.988) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1362.6) out of range, returning exp(700)
+exp(1151.32) out of range, returning exp(700)
+exp(1491.36) out of range, returning exp(700)
+exp(1362.84) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1098.96) out of range, returning exp(700)
+exp(4001.02) out of range, returning exp(700)
+exp(1099.19) out of range, returning exp(700)
+exp(4001.87) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(3025.43) out of range, returning exp(700)
+exp(2558.33) out of range, returning exp(700)
+exp(1279.17) out of range, returning exp(700)
+exp(3307.69) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(2878.1) out of range, returning exp(700)
+exp(10470.6) out of range, returning exp(700)
+exp(2879.09) out of range, returning exp(700)
+exp(10474.2) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(18149) out of range, returning exp(700)
+exp(15355.2) out of range, returning exp(700)
+exp(7677.61) out of range, returning exp(700)
+exp(19827.3) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(796.346) out of range, returning exp(700)
+exp(796.489) out of range, returning exp(700)
+exp(796.775) out of range, returning exp(700)
+exp(797.204) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(2100.74) out of range, returning exp(700)
+exp(1775.9) out of range, returning exp(700)
+exp(887.951) out of range, returning exp(700)
+exp(2297.64) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(19466.6) out of range, returning exp(700)
+exp(70792.5) out of range, returning exp(700)
+exp(19470) out of range, returning exp(700)
+exp(70804.8) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1150.18) out of range, returning exp(700)
+exp(1150.58) out of range, returning exp(700)
+exp(1151.38) out of range, returning exp(700)
+exp(1152.58) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(901.548) out of range, returning exp(700)
+exp(761.198) out of range, returning exp(700)
+exp(987.75) out of range, returning exp(700)
+exp(901.714) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1387.61) out of range, returning exp(700)
+exp(1388.09) out of range, returning exp(700)
+exp(1389.03) out of range, returning exp(700)
+exp(1390.45) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1105.68) out of range, returning exp(700)
+exp(933.927) out of range, returning exp(700)
+exp(1210.73) out of range, returning exp(700)
+exp(1105.88) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1649.86) out of range, returning exp(700)
+exp(1394.39) out of range, returning exp(700)
+exp(1805.14) out of range, returning exp(700)
+exp(1650.15) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(6319.38) out of range, returning exp(700)
+exp(22984.4) out of range, returning exp(700)
+exp(6320.5) out of range, returning exp(700)
+exp(22988.4) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(858.562) out of range, returning exp(700)
+exp(724.825) out of range, returning exp(700)
+exp(940.796) out of range, returning exp(700)
+exp(858.715) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(1946.17) out of range, returning exp(700)
+exp(1946.51) out of range, returning exp(700)
+exp(1947.2) out of range, returning exp(700)
+exp(1948.23) out of range, returning exp(700)
+No more errno warnings during this execution
+exp(839.149) out of range, returning exp(700)
+exp(708.399) out of range, returning exp(700)
+exp(919.59) out of range, returning exp(700)
+exp(839.297) out of range, returning exp(700)
+No more errno warnings during this execution
+errno set 3260 times on last execution
+errno set 80 times on last execution
+errno set 140 times on last execution
+errno set 80 times on last execution
+errno set 120 times on last execution
+errno set 20 times on last execution
+errno set 260 times on last execution
+errno set 120 times on last execution
+errno set 10 times on last execution
+errno set 60 times on last execution
+errno set 20 times on last execution
+errno set 630 times on last execution
+errno set 600 times on last execution
+errno set 370 times on last execution
+errno set 20 times on last execution
+errno set 60 times on last execution
+errno set 10 times on last execution
+errno set 193 times on last execution
+errno set 20 times on last execution
+errno set 150 times on last execution
+errno set 210 times on last execution
+errno set 10 times on last execution
+errno set 100 times on last execution
+
+===================================================================
+/****************** MPI Statistical Information ******************/
+===================================================================
+
+------------------------- MPI Information -------------------------
+Dimension                      1 
+Shape                         10 
+
+---------------------- MPI Memory Usage (MiB) ---------------------
+                              MAX              MIN              AVE
+Estimated_Memory_Size      219.57 [   0]     36.25 [   4]     40.70
+
+------------------- Per-peer Communication Count ------------------
+                              MAX              MIN              AVE
+In_Node                        15 [   0]         0 [  16]       0.2
+Neighbor                       48 [   0]         0 [   1]       0.6
+Not_Neighbor                   96 [   0]         0 [   1]       1.2
+Total_Count                   159 [   0]         1 [   1]       2.0
+Connection                    144 [   0]         7 [   4]      10.3
+Max_Hop                         3 [   0]         3 [   0]       3.0
+Average_Hop                  2.22 [ 100]      1.30 [  32]      1.65
+
+----------------- Per-peer Transmission Size (MiB) ----------------
+                              MAX              MIN              AVE
+In_Node                      0.00 [   1]      0.00 [   0]      0.00
+Neighbor                     0.00 [  16]      0.00 [   0]      0.00
+Not_Neighbor                 0.00 [  48]      0.00 [   0]      0.00
+Total_Size                   0.00 [   1]      0.00 [   0]      0.00
+
+----------------- Per-protocol Communication Count ----------------
+                              MAX              MIN              AVE
+Eager                         159 [   0]         1 [   1]       2.0
+Rendezvous                      0 [   0]         0 [   0]       0.0
+Hasty_Rendezvous                0 [   0]         0 [   0]       0.0
+Unexpected_Message              2 [   0]         1 [   1]       1.2
+
+------------------- Barrier Communication Count -------------------
+                              MAX              MIN              AVE
+Tofu                            0 [   0]         0 [   0]       0.0
+Soft                      1481097 [   0]   1481097 [   0]  1481097.0
+
+----------- Tofu Barrier Collective Communication Count -----------
+                              MAX              MIN              AVE
+Bcast                           0 [   0]         0 [   0]       0.0
+Reduce                          0 [   0]         0 [   0]       0.0
+Allreduce                       0 [   0]         0 [   0]       0.0
+
+--------- 6D-Tofu-specific Collective Communication Count ---------
+                              MAX              MIN              AVE
+Alltoall                        0 [   0]         0 [   0]       0.0
+
+----------- Tofu-specific Collective Communication Count ----------
+                              MAX              MIN              AVE
+Bcast                           0 [   0]         0 [   0]       0.0
+Reduce                          0 [   0]         0 [   0]       0.0
+Gather                      32999 [   0]     32999 [   0]   32999.0
+Gatherv                         0 [   0]         0 [   0]       0.0
+Allreduce                       0 [   0]         0 [   0]       0.0
+Alltoall                        0 [   0]         0 [   0]       0.0
+Alltoallv                       0 [   0]         0 [   0]       0.0
+Allgather                       0 [   0]         0 [   0]       0.0
+Allgatherv                      0 [   0]         0 [   0]       0.0
+
+--------- Non-Tofu-specific Collective Communication Count --------
+                              MAX              MIN              AVE
+Bcast                       65998 [   0]     65998 [   0]   65998.0
+Reduce                          0 [   0]         0 [   0]       0.0
+Gather                          0 [   0]         0 [   0]       0.0
+Gatherv                         0 [   0]         0 [   0]       0.0
+Allreduce                       2 [   0]         2 [   0]       2.0
+Alltoall                        0 [   0]         0 [   0]       0.0
+Alltoallv                       0 [   0]         0 [   0]       0.0
+Allgather                 1650000 [   0]   1650000 [   0]  1650000.0
+Allgatherv                 160353 [   0]    160353 [   0]  160353.0
+
+
+------------------------- Process Mapping -------------------------
+(0)                    0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+(1)                    16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31
+(2)                    32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47
+(3)                    48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63
+(4)                    64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79
+(5)                    80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95
+(6)                    96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111
+(7)                    112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127
+(8)                    128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143
+(9)                    144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159
+
+
+real	46m7.547s
+user	0m0.020s
+sys	0m0.020s
++ sync

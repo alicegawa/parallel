@@ -1,0 +1,128 @@
+/************************************************************************************************
+in the spontaneous section, whether the frequency that cells are firing is suited or not is unclear:
+1. cells are injected current that makes cells fired 2 Hz in separated situation (now is this)
+2. cells in network are fired in 2Hz on average ( each in network is firing in 2 Hz??) 
+************************************************************************************************/
+
+
+/******************************************************************************************/
+/*
+mpi ni kansite
+tabun saishoni gid_exists() de sonzai wo kakunin sitekara yattahouga bunan!!
+*/
+/*****************************************************************************************/
+load_file("nrngui.hoc")
+
+objref nclist_us, nclist_spon, nclist_cs
+objref  us, cs, sponFire
+//ins setStim section, it is remained to describe that what cells is potentiated by DA. So, let's add in next case.
+proc setStim(){local i, j, stim_num, num_vta, dur, num_cs, stim_int, num_ecell_input, l_times, stim_dur, stim_start, stim_set_interval, stim_interval localobj nc, us_tmp, cs_tmp, spon_tmp
+    stim_num = $1 //stim_dur = $1
+    num_vta = $2
+    dur = $3
+    num_cs = $4
+    stim_int = $5
+    num_ecell_input = $6
+    l_times = $7
+    stim_start = $8
+    
+    stim_dur = 2000// karigime
+    stim_set_interval = (stim_dur + 1000) * 5
+    stim_interval = stim_dur + 1000
+    
+    
+    
+
+
+    /*
+    nclist_us = new List()
+    us = new List()
+    if(pc.gid_exists(0)){
+	pc.gid2cell(0).soma {
+	    us_tmp = new NetStim()
+	    us_tmp.start = 15
+	    us_tmp.interval = 0
+	    us_tmp.number = 1
+	    us_tmp.noise = 0
+	    us.append(us_tmp)
+	    nc = new NetCon(us_tmp,pc.gid2cell(0).synlist.object(0),0,0.1,0.02)
+	    nclist_us.append(nc)
+	}
+    }
+    */
+    
+    /*
+    nclist_us = new List()
+    us = new List()
+    for i=0, num_vta-1 {
+	if(pc.gid_exists(i)){
+	    pc.gid2cell(i).soma{
+		us_tmp = new NetStim()
+		us_tmp.seed(25525)
+		us_tmp.number = stim_num
+		us_tmp.start = 25
+		us_tmp.interval = stim_int
+		us_tmp.noise = 0.1
+		us.append(us_tmp)
+		nc = new NetCon(us_tmp, pc.gid2cell(i).synlist.object(0),0,0.1,0.02)
+		nclist_us.append(nc)
+		//nclist_us.append(new NetCon(us_tmp, pc.gid2cell(i).synlist.object(0),0,0.0,0.02))//weight should be modified
+	    }
+	}
+    }
+
+    nclist_cs = new List()
+    cs = new List()
+    for i=0, num_cs-1{
+	if(pc.gid_exists(num_cs+i)){
+	    pc.gid2cell(num_cs+i).soma{
+		cs_tmp = new NetStim2()
+		cs_tmp.seed(25525)
+		cs_tmp.number = stim_num
+		cs_tmp.start = 45
+		cs_tmp.interval = stim_int
+		cs_tmp.noise = 0.1
+		//	printf("%d\n",num_cs)
+		cs.append(cs_tmp)
+		nc = new NetCon(cs_tmp,pc.gid2cell(num_cs+i).synlist.object(0),0,0.1,0.02)
+		nclist_cs.append(nc)
+		//nclist_cs.append(new NetCon(cs_tmp,pc.gid2cell(num_cs+i).synlist.object(0),0,0.0,0.02))//sasiatari No. NCELL_CS~ no 10 ko wo sitei
+	    }
+	}
+    }
+    */
+    
+    nclist_spon = new List()
+    sponFire = new List()
+   
+    for i=0, cells.count-1 {
+	cells.object(i).soma {
+	    spon_tmp = new GammaNoise(0.85)
+	    spon_tmp.amp = 0.065
+	    spon_tmp.dur = dur
+	    spon_tmp.del = 20
+	    nc = new NetCon(spon_tmp,cells.object(i).synlist.object(1),0,0.1,0.02)
+	    sponFire.append(spon_tmp)
+	    nclist_spon.append(nc)
+	}
+    }
+    
+     /*
+    for i=0, NCELL-1 {
+	if(pc.gid_exists(i)){
+	    //  printf("host id = %d , my gid = %d\n",pc.id,i)
+	    pc.gid2cell(i).soma {
+		spon_tmp = new GammaNoise(0.85)
+		//print sponFire
+		spon_tmp.amp = 0.065
+		spon_tmp.dur = dur
+		spon_tmp.del = 20
+		sponFire.append(spon_tmp)
+		nc = new NetCon(spon_tmp,pc.gid2cell(i).synlist.object(1),0,0.1,0.02)
+		//nclist_spon.append(new NetCon(spon_tmp, pc.gid2cell(i).synlist.object(1),0,0.0,0.02))
+		nclist_spon.append(nc)
+		//nclist_spon.append(new NetCon(sponFire[i],cells.object(i).synlist.object(1),0,0,0.02))//0.02 ha imanotokoro koteide
+	    }
+	}
+    }*/
+}

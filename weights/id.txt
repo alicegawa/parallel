@@ -1,0 +1,463 @@
+numprocs=10
+				1 
+		1 
+	1 
+1 
+	1 
+		1 
+	1 1 
+
+	1 
+			1 
+	1 
+1 
+	1 
+	1 
+	1 
+	1 
+1 	
+		1 
+	1 
+1 	1 
+	1 
+
+	1 
+	1 
+	1 
+	1 
+		1 
+
+
+
+aaa
+
+
+	9 
+
+
+
+bbb
+
+
+1 
+	1 1 
+	
+	1 
+		1 
+	1 1 1 
+
+
+
+
+aaa
+
+
+	
+		9 
+1 
+		1 
+1 	
+1 
+		1 
+	1 
+	
+
+
+bbb
+
+
+1 
+	1 
+1 
+
+
+aaa
+
+
+
+	1 
+1 
+	9 
+	1 
+1 
+	1 
+
+
+
+aaa
+
+
+		1 
+9 
+	1 
+	1 
+	1 
+
+
+
+aaa
+
+
+	9 
+	1 
+	1 
+	1 1 
+
+		1 
+1 
+		1 
+	1 
+	1 
+	1 
+	1 
+
+
+
+bbb
+
+
+
+
+
+aaa
+
+
+	9 
+1 
+
+
+
+aaa
+
+
+	9 
+	9 
+
+
+
+bbb
+
+
+1 
+	1 
+	
+
+
+bbb
+
+
+	9 
+
+
+
+bbb
+
+
+1 
+	1 
+	
+
+
+bbb
+
+
+	9 
+	9 
+	1 
+	1 
+	1 
+
+
+
+aaa
+
+
+	9 
+
+
+
+bbb
+
+
+		9 
+9 
+	9 
+	9 
+	1 
+	1 
+	1 
+1 	
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+
+
+
+aaa
+
+
+	9 
+1 
+	1 
+	1 
+	1 
+
+
+
+aaa
+
+
+	9 
+
+
+
+bbb
+
+
+	9 
+
+
+
+bbb
+
+
+	9 
+	0.12689805 
+cell 0 exists!!
+cell 10 exists!!
+cell 20 exists!!
+cell 30 exists!!
+cell 40 exists!!
+cell 50 exists!!
+cell 60 exists!!
+cell 70 exists!!
+cell 80 exists!!
+cell 90 exists!!
+	0.1078341 
+cell 2 exists!!
+cell 12 exists!!
+cell 22 exists!!
+cell 32 exists!!
+cell 42 exists!!
+cell 52 exists!!
+cell 62 exists!!
+cell 72 exists!!
+cell 82 exists!!
+cell 92 exists!!
+	0.049748898 
+cell 3 exists!!
+cell 13 exists!!
+cell 23 exists!!
+cell 33 exists!!
+cell 43 exists!!
+cell 53 exists!!
+cell 63 exists!!
+cell 73 exists!!
+cell 83 exists!!
+cell 93 exists!!
+	0.12693691 
+cell 1 exists!!
+cell 11 exists!!
+cell 21 exists!!
+cell 31 exists!!
+cell 41 exists!!
+cell 51 exists!!
+cell 61 exists!!
+cell 71 exists!!
+cell 81 exists!!
+cell 91 exists!!
+	0.12508011 
+cell 8 exists!!
+cell 18 exists!!
+cell 28 exists!!
+cell 38 exists!!
+cell 48 exists!!
+cell 58 exists!!
+cell 68 exists!!
+cell 78 exists!!
+cell 88 exists!!
+cell 98 exists!!
+	0.12877989 
+cell 4 exists!!
+cell 14 exists!!
+cell 24 exists!!
+cell 34 exists!!
+cell 44 exists!!
+cell 54 exists!!
+cell 64 exists!!
+cell 74 exists!!
+cell 84 exists!!
+cell 94 exists!!
+	0.12255979 
+cell 9 exists!!
+cell 19 exists!!
+cell 29 exists!!
+cell 39 exists!!
+cell 49 exists!!
+cell 59 exists!!
+cell 69 exists!!
+cell 79 exists!!
+cell 89 exists!!
+cell 99 exists!!
+	0.1493721 
+cell 6 exists!!
+cell 16 exists!!
+cell 26 exists!!
+cell 36 exists!!
+cell 46 exists!!
+cell 56 exists!!
+cell 66 exists!!
+cell 76 exists!!
+cell 86 exists!!
+cell 96 exists!!
+	0.17055297 
+cell 7 exists!!
+cell 17 exists!!
+cell 27 exists!!
+cell 37 exists!!
+cell 47 exists!!
+cell 57 exists!!
+cell 67 exists!!
+cell 77 exists!!
+cell 87 exists!!
+cell 97 exists!!
+	0.10762787 
+cell 5 exists!!
+cell 15 exists!!
+cell 25 exists!!
+cell 35 exists!!
+cell 45 exists!!
+cell 55 exists!!
+cell 65 exists!!
+cell 75 exists!!
+cell 85 exists!!
+cell 95 exists!!
+	0.095129967 
+	0.085475206 
+		0.096745968 
+0.10159612 
+	0.097177029 
+	0.071681976 
+	0.086436033 
+		0.073498011 
+0.079881907 
+	0.071355104 
+	0.092394114 
+finish connect section
+	23 
+		0.091007948 
+finish connect section
+	1 23 
+	
+	0.081671 
+finish connect section
+0 
+	1 
+	23 
+	1 
+	0 
+	1 
+	1 
+	0 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+	1 
+		0.092621088 
+finish connect section
+0.092417002 
+	0.09432292 
+finish connect section
+	23 
+finish connect section
+	1 
+		23 0 
+
+	1 	1 
+
+	1 
+	1 
+	0 
+		23 
+1 	1 
+
+	0 
+	1 
+		0.092965841 	
+1 finish connect section
+	23 
+	
+		0.076415062 1 
+finish connect section
+1 	
+23 	
+
+	1 
+1 
+	1 
+	0 
+	0 
+		0.089434147 
+finish connect section
+	23 
+	1 
+	0 
+	1 
+	1 
+	1 1 
+
+		1 1 
+
+1 	0.099894047 
+finish connect section
+	23 
+
+	1 	1 
+	
+	0 
+1 
+	1 
+	1 
+	1 
+	10 
+	10 
+	10 
+		10 
+	10 
+10 
+	10 
+	10 
+		10 
+10 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0 
+	0.022748947 
+	0.027544022 
+	0.021506071 
+	0.045418024 
+	0.043045044 
+	0.050756931 
+	0.061331034 
+	0.071870804 
+	0.078352928 
+	0.08503294 
+	0 
+	0 
