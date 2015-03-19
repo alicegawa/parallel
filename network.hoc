@@ -46,6 +46,8 @@ read_mat(NCELL_E,NCELL_OUT1, NCELL_OUT2)
 makeCells(NCELL_FULL)
 makeConvert(NCELL_FULL)
 pc.barrier()
+//printf("FINISH MAKE CELL SECTION!!\n")
+
 //checkgid()
 //pc.barrier()
 //initCount()
@@ -60,8 +62,8 @@ pc.barrier()
 printf("my id = %d, nclist.count is %d, out1 is %d, out2 is %d, i2o is %d\n",pc.id, nclist.count, nclist_out1.count, nclist_out2.count, nclist_i2o.count)
 
 
-read_weight(nclist.count,nclist_out1.count,nclist_out2.count,nclist_i2o.count)
-subst()
+//read_weight(nclist.count,nclist_out1.count,nclist_out2.count,nclist_i2o.count)
+//subst()
 
 pc.barrier()
 
@@ -89,8 +91,8 @@ proc spikerecord2(){
     pc.spike_record(-1,tvec,idvec)
 }
 
-spikerecord2()
-
+//spikerecord2()
+setSpikeRecord()
 //setSpikeRecord()
 
 /////////////////for record and watching section///////////////////////
