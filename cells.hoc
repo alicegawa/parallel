@@ -1,7 +1,7 @@
 load_file("nrngui.hoc")
 begintemplate HHneuron
 //functions
-public init, connect2target, connectNearCells, connectFarCells, makeSyn
+public init, connect2target, connectNearCells, connectFarCells, makeSyn, makeSynUpDown
 //sections
 public soma, axon, dend, dend_parent
 //lists
@@ -127,7 +127,7 @@ obfunc connectFarCells() { localobj nc
 
 objref syn_
 
-obfunc makeSyn() {local targetno, hostno, num_ecell, num_vta, rw_flag, start_i, end_i
+obfunc makeSyn() {local targetno, hostno, num_ecell, num_vta, rw_flag, start_i, end_i, which_dend, where_dend
     targetno = $1
     hostno = $2
     num_ecell = $3
@@ -135,10 +135,12 @@ obfunc makeSyn() {local targetno, hostno, num_ecell, num_vta, rw_flag, start_i, 
     rw_flag = $5
     start_i = $6
     end_i = $7
+    which_dend = $8
+    where_dend = $9
     //if(targetno<num_ecell){
     if(hostno<num_ecell){
-	soma {
-	    syn_ = new ExpSynSTDP(0.5)
+	dend[which_dend] {
+	    syn_ = new ExpSynSTDP(where_dend)
 	    //synlist.append(syn_)
 	    synlist_e.append(syn_)
 	}
@@ -152,13 +154,36 @@ obfunc makeSyn() {local targetno, hostno, num_ecell, num_vta, rw_flag, start_i, 
 	    syn_.e=-100
 	}*/
     }else{
-	soma {
-	    syn_ = new Exp2Syn(0.5)
+	dend[which_dend] {
+	    syn_ = new Exp2Syn(where_dend)
+	    //syn_ = new ExpSynSTDP(where_dend)
 	    //synlist.append(syn_)
 	    synlist_i.append(syn_)
 	    // if(hostno>=num_ecell){
 	    syn_.e = -100
 	    // }
+	}
+    }
+    return syn_
+}
+
+obfunc makeSynUpDown(){local targetno, hostno, num_ecell, num_vta, rw_flag, start_i, end_i
+    targetno = $1
+    hostno = $2
+    num_ecell = $3
+    num_vta = $4
+    rw_flag = $5
+    start_i = $6
+    end_i = $7
+    if(hostno<num_ecell){
+	soma {
+	    syn_ = new ExpSynSTDP(0.5)
+	    synlist_e.append(syn_)
+	}
+    }else{
+	soma {
+	    syn_ = new Exp2Syn(0.5)
+	    synlist_i.append(syn_)
 	}
     }
     return syn_

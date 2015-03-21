@@ -7,16 +7,18 @@ objref con_out1
 objref con_out2
 objref con_i2o1
 objref con_i2o2
+objref con_order_input, con_order_out1, con_order_out2, con_order_i2o1, con_order_i2o2
 objref stim_data1, stim_data2, stim_data3, stim_data4, stim_data5
 objref weight_input, weight_out1, weight_out2, weight_i2o
 objref f
 strdef filename
 
 
-proc read_mat() {local i,j,k,num_ecell, num_out1
+proc read_mat() {local i,j,k,num_ecell, num_out1, branch_num
     num_ecell = $1
     num_out1 = $2
     num_out2 = $3
+    branch_num = $4
     
     data_num = 5
     
@@ -28,6 +30,11 @@ proc read_mat() {local i,j,k,num_ecell, num_out1
     con.scanf(f,num_ecell,num_ecell)
     f.close()
     
+    con_order_input = new Matrix()
+    f = new File()
+    f.ropen("con_order_input.dat")
+    con_order_input.scanf(f,num_ecell*branch_num,16)
+    
     //read the connection file of output1 layer
     con_out1 = new Matrix()
     f = new File()
@@ -35,12 +42,24 @@ proc read_mat() {local i,j,k,num_ecell, num_out1
     con_out1.scanf(f,num_out1,num_out1)
     f.close()
     
+    con_order_out1 = new Matrix()
+    f = new File()
+    f.ropen("con_order_out1.dat")
+    con_order_out1.scanf(f,num_out1*branch_num,61)
+    
+
     //read the connection file of output2 layer    
     con_out2 = new Matrix()
     f = new File()
     f.ropen("con_var_out2.dat")
     con_out2.scanf(f,num_out2,num_out2)
     f.close()
+    
+    con_order_out2 = new Matrix()
+    f = new File()
+    f.ropen("con_order_out2.dat")
+    con_order_out2.scanf(f,num_out2*branch_num,19)
+    
     
     //read the connection file from input layer to output1 layer
     con_i2o1 = new Matrix()
@@ -49,12 +68,23 @@ proc read_mat() {local i,j,k,num_ecell, num_out1
     con_i2o1.scanf(f,num_out1,num_ecell)
     f.close()
     
+    con_order_i2o1 = new Matrix()
+    f = new File()
+    f.ropen("con_order_i2o1.dat")
+    con_order_i2o1.scanf(f,num_out1*branch_num,82)
+    
+    
     //read the connection file from input layer to output2 layer
     con_i2o2 = new Matrix()
     f = new File()
     f.ropen("con_var_i2o2.dat")
     con_i2o2.scanf(f,num_out2,num_ecell)
     f.close()
+    
+    con_order_i2o2 = new Matrix()
+    f = new File()
+    f.ropen("con_order_i2o2.dat")
+    con_order_i2o2.scanf(f,num_out2*branch_num,72)
     
     
     //read the stimulus pattern

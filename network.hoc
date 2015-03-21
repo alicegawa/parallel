@@ -19,6 +19,8 @@ MDIM = sqrt(NCELL/2)
 
 NCELL_FULL = NCELL + NCELL_OUT1 + NCELL_OUT2
 
+BRANCH_NUM = 10//20
+
 LEARNING_TIMES = 1//2//30
 STIM_DUR = 2000//5//30
 STIM_DUR_MOVE = 1
@@ -42,7 +44,7 @@ load_file("connectCells.hoc")
 load_file("setStim.hoc")
 load_file("signalDA.hoc")
 //load_file("myrun.hoc")
-read_mat(NCELL_E,NCELL_OUT1, NCELL_OUT2)
+read_mat(NCELL_E,NCELL_OUT1, NCELL_OUT2, BRANCH_NUM)
 makeCells(NCELL_FULL)
 makeConvert(NCELL_FULL)
 pc.barrier()
@@ -51,10 +53,23 @@ pc.barrier()
 //checkgid()
 //pc.barrier()
 //initCount()
-connectInputCells(NCELL_E, NCELL_VTA, NCELL, NCELL_FULL)
-connectOutput1Cells(NCELL_OUT1_E,NCELL_VTA,NCELL_OUT1,NCELL,NCELL_FULL)
-connectOutput2Cells(NCELL_OUT2_E,NCELL_VTA,NCELL_OUT2,NCELL+NCELL_OUT1,NCELL_FULL)
-connectI2O(NCELL_E,NCELL_OUT1,NCELL_OUT1_E,NCELL_OUT2,NCELL_OUT2_E,NCELL_VTA,NCELL)
+connectInputCells(NCELL_E, NCELL_VTA, NCELL, NCELL_FULL, BRANCH_NUM)
+connectOutput1Cells(NCELL_OUT1_E,NCELL_VTA,NCELL_OUT1,NCELL,NCELL_FULL,BRANCH_NUM)
+connectOutput2Cells(NCELL_OUT2_E,NCELL_VTA,NCELL_OUT2,NCELL+NCELL_OUT1,NCELL_FULL,BRANCH_NUM)
+connectI2O(NCELL_E,NCELL_OUT1,NCELL_OUT1_E,NCELL_OUT2,NCELL_OUT2_E,NCELL_VTA,NCELL,BRANCH_NUM)
+
+
+{con.resize(1,1)}
+{con_out1.resize(1,1)}
+{con_out2.resize(1,1)}
+{con_i2o1.resize(1,1)}
+{con_i2o2.resize(1,1)}
+
+{con_order_input.resize(1,1)}
+{con_order_out1.resize(1,1)}
+{con_order_out2.resize(1,1)}
+{con_order_i2o1.resize(1,1)}
+{con_order_i2o2.resize(1,1)}
 
 //confirm.printf("%0.5f ")
 pc.barrier()

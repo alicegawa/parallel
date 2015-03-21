@@ -2,9 +2,9 @@
 #include <time.h>
 #include <unistd.h>
 
-#define PARENT_NUM 16
-#define CHILD_NUM 256
-#define BRANCH_NUM 20
+#define PARENT_NUM 72
+#define CHILD_NUM 100
+#define BRANCH_NUM 10
 
 int main(int argc, char** argv){
   int child, branch;
@@ -43,7 +43,7 @@ int main(int argc, char** argv){
 	counter = 0;
       }
     }
-    if((fp=fopen("con_orderlist.dat","a+"))==NULL){
+    if((fp=fopen("con_order_i2o2.dat","a+"))==NULL){
       printf("file open error\n");
       return -1;
     }
